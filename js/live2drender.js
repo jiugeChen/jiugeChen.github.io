@@ -1,5 +1,5 @@
 
-let homePath = 'https://www.96486d9b.cn/';
+let homePath = 'https://jiugework.gitee.io/';
 
 function showHitokoto() {
     $.getJSON('https://v1.hitokoto.cn/', function (result) {
