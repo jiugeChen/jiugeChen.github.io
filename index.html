@@ -220,13 +220,13 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/jsMM/">
-        字符串
+      <a href="/2019/07/11/js/jsMM/">
+        字符串常用操作
       </a>
     </h2>
     
     <time>
-      07-05, 2018
+      07-11, 2019
     </time>
     
 
@@ -242,12 +242,21 @@
   </section>
   <section class="article typo">
     
-    startsWidth
-判断以什么开头
- 123456789    let str='https://www.4399.com';//   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值  if(str.startsWith('http://'))&#123;      alert('地址')  &#125;else if(str.start...
+    判断开头结尾
+startsWidth判断以什么开头  
+endsWidth判断以什么结尾 
+1let str='https://www.4399.com'; //   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值 endsWidth同理
+
+
+字符串截取
+slice
+substring
+substr
+
+12345678910111213141...
     
     <!-- <div class="readmore">
-      <a href="/2018/07/05/js/jsMM/">Read More</a>
+      <a href="/2019/07/11/js/jsMM/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
@@ -431,15 +440,15 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
       <a href="/tags/遍历/">
         遍历</a>
       
       <a href="/tags/循环/">
         循环</a>
       
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
+      
     </div>
     
   </section>
@@ -451,8 +460,8 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/模板/">
-        变量let与常量const
+      <a href="/2018/07/05/js/js1 copy 7/">
+        generator
       </a>
     </h2>
     
@@ -469,83 +478,19 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
   </section>
   <section class="article typo">
     
-    变量let与常量const
-ES5 var 问题
-可以重复声明
-无法限制修改
-没有块级作用域
-
-
-ES6 变量 let
-不能重复声明
-可以重新定义
-有块级作用域
-
-
-ES6 常量 const
-不能重复声明
-不可以重新定义
-有块级作用域
-
-
-
-
+    generatorgenerator-生成器
+普通函数- 一路到底
+generator函数- 中间可以停 走走停停
+12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
     
     <!-- <div class="readmore">
-      <a href="/2018/07/05/js/模板/">Read More</a>
+      <a href="/2018/07/05/js/js1 copy 7/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/变量/">
-        变量</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/js/js1 copy 6/">
-        模块化
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    模块化
-模块-组件-元件
-模块：
-
-12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/05/js/js1 copy 6/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/ES6/">
-        ES6</a>
-      
-      <a href="/tags/模块化/">
-        模块化</a>
+      <a href="/tags/generator/">
+        generator</a>
       
     </div>
     
@@ -609,49 +554,6 @@ Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/js1 copy 7/">
-        generator
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    generatorgenerator-生成器
-普通函数- 一路到底
-generator函数- 中间可以停 走走停停
-12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/05/js/js1 copy 7/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/generator/">
-        generator</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
       <a href="/2018/07/05/js/js1/">
         箭头函数
       </a>
@@ -687,11 +589,118 @@ generator函数- 中间可以停 走走停停
     
     <div class="full-width auto-padding tags">
       
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
+      
       <a href="/tags/ES6/">
         ES6</a>
       
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/js1 copy 6/">
+        模块化
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    模块化
+模块-组件-元件
+模块：
+
+12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
+    
+    <!-- <div class="readmore">
+      <a href="/2018/07/05/js/js1 copy 6/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/ES6/">
+        ES6</a>
+      
+      <a href="/tags/模块化/">
+        模块化</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/模板/">
+        变量let与常量const
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    变量let与常量const
+ES5 var 问题
+可以重复声明
+无法限制修改
+没有块级作用域
+
+
+ES6 变量 let
+不能重复声明
+可以重新定义
+有块级作用域
+
+
+ES6 常量 const
+不能重复声明
+不可以重新定义
+有块级作用域
+
+
+
+
+    
+    <!-- <div class="readmore">
+      <a href="/2018/07/05/js/模板/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/变量/">
+        变量</a>
       
     </div>
     

@@ -12,18 +12,18 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="startsWidth 判断以什么开头  123456789    let str=&apos;https://www.4399.com&apos;;//   alert(str.startsWith(&apos;a&apos;))  //判断是否以&apos;a&apos;开头，返回bool值  if(str.startsWith(&apos;http://&apos;))&amp;#123;      alert(&apos;地址&apos;)  &amp;#125;else if(str.startsWi">
+  <meta name="description" content="判断开头结尾 startsWidth判断以什么开头   endsWidth判断以什么结尾  1let str=&apos;https://www.4399.com&apos;; //   alert(str.startsWith(&apos;a&apos;))  //判断是否以&apos;a&apos;开头，返回bool值 endsWidth同理   字符串截取 slice substring substr  12345678910111213141516">
 <meta name="keywords" content="String,字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="字符串">
-<meta property="og:url" content="http://jiugework.gitee.io/2018/07/05/js/jsMM/index.html">
+<meta property="og:title" content="字符串常用操作">
+<meta property="og:url" content="http://jiugework.gitee.io/2019/07/11/js/jsMM/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="startsWidth 判断以什么开头  123456789    let str=&apos;https://www.4399.com&apos;;//   alert(str.startsWith(&apos;a&apos;))  //判断是否以&apos;a&apos;开头，返回bool值  if(str.startsWith(&apos;http://&apos;))&amp;#123;      alert(&apos;地址&apos;)  &amp;#125;else if(str.startsWi">
+<meta property="og:description" content="判断开头结尾 startsWidth判断以什么开头   endsWidth判断以什么结尾  1let str=&apos;https://www.4399.com&apos;; //   alert(str.startsWith(&apos;a&apos;))  //判断是否以&apos;a&apos;开头，返回bool值 endsWidth同理   字符串截取 slice substring substr  12345678910111213141516">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-11T09:53:42.647Z">
+<meta property="og:updated_time" content="2019-07-16T09:12:57.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="字符串">
-<meta name="twitter:description" content="startsWidth 判断以什么开头  123456789    let str=&apos;https://www.4399.com&apos;;//   alert(str.startsWith(&apos;a&apos;))  //判断是否以&apos;a&apos;开头，返回bool值  if(str.startsWith(&apos;http://&apos;))&amp;#123;      alert(&apos;地址&apos;)  &amp;#125;else if(str.startsWi">
+<meta name="twitter:title" content="字符串常用操作">
+<meta name="twitter:description" content="判断开头结尾 startsWidth判断以什么开头   endsWidth判断以什么结尾  1let str=&apos;https://www.4399.com&apos;; //   alert(str.startsWith(&apos;a&apos;))  //判断是否以&apos;a&apos;开头，返回bool值 endsWidth同理   字符串截取 slice substring substr  12345678910111213141516">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -221,22 +221,22 @@
         <article class="post reveal" itemscope itemprop="blogPost">
 	<section class='meta'>
 		<h2 class="title">
-			<a href="/2018/07/05/js/jsMM/">
-				字符串
+			<a href="/2019/07/11/js/jsMM/">
+				字符串常用操作
 			</a>
 		</h2>
 		<time>
-			07-05, 2018
+			07-11, 2019
 		</time>
 		
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;startsWidth\n判断以什么开头\n 123456789    let str=&#39;https://www.4399.com&#39;;//   alert(str.startsWith(&#39;a&#39;))  //判断是否以&#39;a&#39;开头，返回bool值  if(str.startsWith(&#39;http://&#39;))&amp;#123;      alert(&#39;地址&#39;)  &amp;#125;else if(str.startsWith(&#39;https://&#39;))&amp;#123;    alert(&#39;加密地址&#39;)  &amp;#125;else&amp;#123;    alert(&#39;什么地址&#39;)  &amp;#125;\n\n\nendsWidth\n判断以什么结尾 \n\n123456let str11 = &#39;xxx.txt&#39;;     if(str11.endsWith(&#39;txt&#39;))&amp;#123;         alert(&#39;文本文件&#39;)     &amp;#125;else&amp;#123;         alert(&#39;其他文件&#39;)     &amp;#125;\n字符串模板12let strr=`12`;console.log(`新的字符串模板$&amp;#123;strr&amp;#125;`);\n&#34;');
+  count('&#34;判断开头结尾\nstartsWidth判断以什么开头  \nendsWidth判断以什么结尾 \n1let str=&#39;https://www.4399.com&#39;; //   alert(str.startsWith(&#39;a&#39;))  //判断是否以&#39;a&#39;开头，返回bool值 endsWidth同理\n\n\n字符串截取\nslice\nsubstring\nsubstr\n\n1234567891011121314151617let str = &#39;abcdef&#39;;str = str.slice(0);//返回整个字符串 abcdefstr = str.substring(0);//返回整个字符串 abcdefstr = str.substr(0);//返回整个字符串 abcdef// 使用一个参数str = str.slice(2);//截取第二个之后所有的字符 cdefstr = str.substring(2);//截取第二个之后所有的字符 cdefstr = str.substr(2);//截取第二个之后所有的字符 cdef// 使用两个参数str = str.slice(2,4);//截取第二个到第四个之间的字符 cdstr = str.substring(2,4);//截取第二个到第四个之间的字符 cdstr = str.substr(2,4);//截取从第3个开始往后数4位之间的字符 cdef// 使用两个负数str = str.slice(1,-3);//截取第二个到第四个之间的字符 bcstr = str.substring(1,-3);//截取第二个到第四个之间的字符 a #负数转换为0str = str.substr(1,-3);//不能为负数，若强行传递负数，会被当成0处理 &#39; &#39; #负数转换为0\n字符串和数组相互转换\nsplit\njoin\n\n123456789// 字符串转数组let str = \&#34;abc,abcd,aaa\&#34;;t = str.split(\&#34;,\&#34;);// 在每个逗号(,)处进行分解  [\&#34;abc\&#34;, \&#34;abcd\&#34;, \&#34;aaa\&#34;]var str = \&#34;helloworld\&#34;;t1 = str.split(&#39;&#39;);  //[\&#34;h\&#34;, \&#34;e\&#34;, \&#34;l\&#34;, \&#34;l\&#34;, \&#34;o\&#34;, \&#34;w\&#34;, \&#34;o\&#34;, \&#34;r\&#34;, \&#34;l\&#34;, \&#34;d\&#34;]//  数组转字符串var a, b;a = new Array(0,1,2,3,4);b = a.join(\&#34;-\&#34;);      //\&#34;0-1-2-3-4\&#34;\n&#34;');
 </script>
 
 		
-<span id="/2018/07/05/js/jsMM/" class="leancloud_visitors" data-flag-title="字符串">
+<span id="/2019/07/11/js/jsMM/" class="leancloud_visitors" data-flag-title="字符串常用操作">
     <time>#<span class="leancloud-visitors-count"></span></time>
 </span>
 <script>AV.initialize("", "");</script>
@@ -262,16 +262,23 @@
 
 	<section class="article typo">
 		<div class="article-entry" itemprop="articleBody">
-			<h3 id="startsWidth"><a href="#startsWidth" class="headerlink" title="startsWidth"></a>startsWidth</h3><ul>
-<li><p>判断以什么开头</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">let</span> str=<span class="string">'https://www.4399.com'</span>;</span><br><span class="line"><span class="comment">//   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值</span></span><br><span class="line">  <span class="keyword">if</span>(str.startsWith(<span class="string">'http://'</span>))&#123;</span><br><span class="line">      alert(<span class="string">'地址'</span>)</span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(str.startsWith(<span class="string">'https://'</span>))&#123;</span><br><span class="line">    alert(<span class="string">'加密地址'</span>)</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    alert(<span class="string">'什么地址'</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+			<h3 id="判断开头结尾"><a href="#判断开头结尾" class="headerlink" title="判断开头结尾"></a>判断开头结尾</h3><ul>
+<li><b>startsWidth</b>判断以什么开头  </li>
+<li><p><b>endsWidth</b>判断以什么结尾 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str=<span class="string">'https://www.4399.com'</span>; <span class="comment">//   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值 endsWidth同理</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="endsWidth"><a href="#endsWidth" class="headerlink" title="endsWidth"></a>endsWidth</h3><ul>
-<li>判断以什么结尾 </li>
+<h3 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h3><ul>
+<li><b>slice</b></li>
+<li><b>substring</b></li>
+<li><b>substr</b></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str11 = <span class="string">'xxx.txt'</span>;</span><br><span class="line">     <span class="keyword">if</span>(str11.endsWith(<span class="string">'txt'</span>))&#123;</span><br><span class="line">         alert(<span class="string">'文本文件'</span>)</span><br><span class="line">     &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">         alert(<span class="string">'其他文件'</span>)</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-<h1 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> strr=<span class="string">`12`</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`新的字符串模板<span class="subst">$&#123;strr&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">'abcdef'</span>;</span><br><span class="line">str = str.slice(<span class="number">0</span>);<span class="comment">//返回整个字符串 abcdef</span></span><br><span class="line">str = str.substring(<span class="number">0</span>);<span class="comment">//返回整个字符串 abcdef</span></span><br><span class="line">str = str.substr(<span class="number">0</span>);<span class="comment">//返回整个字符串 abcdef</span></span><br><span class="line"><span class="comment">// 使用一个参数</span></span><br><span class="line">str = str.slice(<span class="number">2</span>);<span class="comment">//截取第二个之后所有的字符 cdef</span></span><br><span class="line">str = str.substring(<span class="number">2</span>);<span class="comment">//截取第二个之后所有的字符 cdef</span></span><br><span class="line">str = str.substr(<span class="number">2</span>);<span class="comment">//截取第二个之后所有的字符 cdef</span></span><br><span class="line"><span class="comment">// 使用两个参数</span></span><br><span class="line">str = str.slice(<span class="number">2</span>,<span class="number">4</span>);<span class="comment">//截取第二个到第四个之间的字符 cd</span></span><br><span class="line">str = str.substring(<span class="number">2</span>,<span class="number">4</span>);<span class="comment">//截取第二个到第四个之间的字符 cd</span></span><br><span class="line">str = str.substr(<span class="number">2</span>,<span class="number">4</span>);<span class="comment">//截取从第3个开始往后数4位之间的字符 cdef</span></span><br><span class="line"><span class="comment">// 使用两个负数</span></span><br><span class="line">str = str.slice(<span class="number">1</span>,<span class="number">-3</span>);<span class="comment">//截取第二个到第四个之间的字符 bc</span></span><br><span class="line">str = str.substring(<span class="number">1</span>,<span class="number">-3</span>);<span class="comment">//截取第二个到第四个之间的字符 a #负数转换为0</span></span><br><span class="line">str = str.substr(<span class="number">1</span>,<span class="number">-3</span>);<span class="comment">//不能为负数，若强行传递负数，会被当成0处理 ' ' #负数转换为0</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符串和数组相互转换"><a href="#字符串和数组相互转换" class="headerlink" title="字符串和数组相互转换"></a>字符串和数组相互转换</h3><ul>
+<li><b>split</b></li>
+<li><b>join</b></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串转数组</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">"abc,abcd,aaa"</span>;</span><br><span class="line">t = str.split(<span class="string">","</span>);<span class="comment">// 在每个逗号(,)处进行分解  ["abc", "abcd", "aaa"]</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"helloworld"</span>;</span><br><span class="line">t1 = str.split(<span class="string">''</span>);  <span class="comment">//["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"]</span></span><br><span class="line"><span class="comment">//  数组转字符串</span></span><br><span class="line"><span class="keyword">var</span> a, b;</span><br><span class="line">a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">b = a.join(<span class="string">"-"</span>);      <span class="comment">//"0-1-2-3-4"</span></span><br></pre></td></tr></table></figure>
 
 		</div>
 		
@@ -289,12 +296,12 @@
 		
 		<div class="art-item-footer">
 			
-			<span class="art-item-left">
-				<a href="/2018/07/05/js/js1/" rel="prev" title="箭头函数">
-					箭头函数
+			
+			<span class="art-item-right">
+				<a href="/2019/07/05/st/" rel="next" title="st">
+					st
 				</a>
 			</span>
-			
 			
 		</div>
 		
