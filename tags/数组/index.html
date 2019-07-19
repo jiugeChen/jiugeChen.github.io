@@ -12,18 +12,13 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="变量let与常量const ES5 var 问题 可以重复声明 无法限制修改 没有块级作用域   ES6 变量 let 不能重复声明 可以重新定义 有块级作用域   ES6 常量 const 不能重复声明 不可以重新定义 有块级作用域">
-<meta name="keywords" content="变量">
-<meta property="og:type" content="article">
-<meta property="og:title" content="变量let与常量const">
-<meta property="og:url" content="http://jiugework.gitee.io/2018/07/05/js/模板/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="’’Sun--(*^▽^*)">
+<meta property="og:url" content="http://jiugework.gitee.io/tags/数组/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="变量let与常量const ES5 var 问题 可以重复声明 无法限制修改 没有块级作用域   ES6 变量 let 不能重复声明 可以重新定义 有块级作用域   ES6 常量 const 不能重复声明 不可以重新定义 有块级作用域">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-11T09:59:43.757Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="变量let与常量const">
-<meta name="twitter:description" content="变量let与常量const ES5 var 问题 可以重复声明 无法限制修改 没有块级作用域   ES6 变量 let 不能重复声明 可以重新定义 有块级作用域   ES6 常量 const 不能重复声明 不可以重新定义 有块级作用域">
+<meta name="twitter:title" content="’’Sun--(*^▽^*)">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -218,128 +213,66 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div id='l_pjax' class='l_main'>
-        <article class="post reveal" itemscope itemprop="blogPost">
-	<section class='meta'>
-		<h2 class="title">
-			<a href="/2018/07/05/js/模板/">
-				变量let与常量const
-			</a>
-		</h2>
-		<time>
-			07-05, 2018
-		</time>
-		
-<time>#<span id="wordcount"></span></time>
-<time>#<span id="min2read"></span></time>
-<script>
-  count('&#34;变量let与常量const\nES5 var 问题\n可以重复声明\n无法限制修改\n没有块级作用域\n\n\nES6 变量 let\n不能重复声明\n可以重新定义\n有块级作用域\n\n\nES6 常量 const\n不能重复声明\n不可以重新定义\n有块级作用域\n\n\n\n&#34;');
-</script>
-
-		
-<span id="/2018/07/05/js/模板/" class="leancloud_visitors" data-flag-title="变量let与常量const">
-    <time>#<span class="leancloud-visitors-count"></span></time>
-</span>
-<script>AV.initialize("", "");</script>
-<script>
-    $(function () {
-        var Counter = AV.Object.extend("Counter");
-        if ($('.leancloud_visitors').length == 1) {
-            addCount(Counter);
-        }
-    });
-</script>
-
-		
+        <section class="post-list">
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/19/js/素组/">
+        数组中常用的方法
+      </a>
+    </h2>
+    
+    <time>
+      07-19, 2019
+    </time>
+    
 
 <div class='categories'>
     <a href="/categories/JavaScript/">JavaScript</a>
 </div>
 
-		
-	</section>
+    
+  </section>
+  <section class="article typo">
+    
+    
+开发中数组的使用场景非常多, 这里就简单整理总结一些常用的方法;从改变原有数据的方法、不改变原有数组的方法以及数据遍历的方法三方面总结。
 
-	
+改变原有数组的方法splice() 添加/删除数组元素
 
-	<section class="article typo">
-		<div class="article-entry" itemprop="articleBody">
-			<h4 id="变量let与常量const"><a href="#变量let与常量const" class="headerlink" title="变量let与常量const"></a>变量let与常量const</h4><ul>
-<li>ES5 var 问题<ul>
-<li>可以重复声明</li>
-<li>无法限制修改</li>
-<li>没有块级作用域</li>
-</ul>
-</li>
-<li>ES6 变量 let<ul>
-<li>不能重复声明</li>
-<li>可以重新定义</li>
-<li>有块级作用域</li>
-</ul>
-</li>
-<li>ES6 常量 const<ul>
-<li>不能重复声明</li>
-<li>不可以重新定义</li>
-<li>有块级作用域</li>
-</ul>
-</li>
-</ul>
-
-		</div>
-		
-		<div class="article-tags tags">
-			
-			<a href="/tags/变量/">
-				变量</a>
-			
-		</div>
-		
-
-		
-		<div class="art-item-footer">
-			
-			<span class="art-item-left">
-				<a href="/2018/07/05/js/js1 copy 7/" rel="prev" title="generator">
-					generator
-				</a>
-			</span>
-			
-			
-			<span class="art-item-right">
-				<a href="/2018/07/05/js/js1/" rel="next" title="箭头函数">
-					箭头函数
-				</a>
-			</span>
-			
-		</div>
-		
-	</section>
+1234567let a = [1, 2, 3, 4, 5, 6, 7];let item = a.splice(0, 3); // [1,2,3]console.log(a); // [4,5...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/19/js/素组/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/数组/">
+        数组</a>
+      
+      <a href="/tags/Array/">
+        Array</a>
+      
+    </div>
+    
+  </section>
 </article>
+  </div>
+  
+</section>
 
 
 
-    
-    <article class="post reveal" itemscope itemprop="blogPost">
-        <div id="gitalk-container"></div>
-        <script type="text/javascript">
-            var gitalk = new Gitalk({
-                clientID: 'c16c460c0dd45134c1ab',
-                clientSecret: 'f2261eedbfa7b0fce5bef9cc9dc48f7bfb82d977',
-                id: window.location.pathname,
-                repo: 'comment',
-                owner: 'jiugechen',
-                admin: 'jiugechen',
-                distractionFreeMode: false,
-                language: 'zh-CN'
-            })
-            gitalk.render('gitalk-container')
-        </script>
-    </article>
-    
-
-    
-
-    
-
-
+<script>
+  window.subData = {
+    title: 'Home',
+    tools: true
+  }
+</script>
         
       </div>
       <aside class='l_side'>
