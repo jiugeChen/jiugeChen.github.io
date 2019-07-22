@@ -241,28 +241,19 @@
     v-cloak
 可以解决插值表达式闪烁问题
 
-v-html
-可以渲染出带有标签的文本
-
-v-text
-可以解决插值表达式闪烁问题
-
-v-bind
-缩写 是“:”
-Vue的属性绑定机制
-v-bind只能实现数据的单项绑定，只能从M绑定到V，无法实现数据的双向绑定
-
-v-on
-Vue提供的事件绑定机制
-缩写是“@” 
-
-v-model
-只能在表单元素中使用
+V-for
+组件中使用v-for需要绑定key
 
 
-实现双向数据绑定
+in后面可以放 数组，对象数组，对象，数字
 
-使用v-mod...
+循环普通数组
+
+
+1&lt;h1 v-for=&quot;(item,i) in list &quot;&gt;&#123;&#123;item&#125;&#125;&lt;/h1&gt;
+
+迭代数字
+1&lt;h1 v-for=&quot;cou...
     
     <!-- <div class="readmore">
       <a href="/2019/07/21/Vue/Vue指令/">Read More</a>
