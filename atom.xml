@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiugework.gitee.io/"/>
-  <updated>2019-07-22T13:10:29.870Z</updated>
+  <updated>2019-07-22T14:11:44.995Z</updated>
   <id>http://jiugework.gitee.io/</id>
   
   <author>
@@ -17,23 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Vue样式绑定方式</title>
     <link href="http://jiugework.gitee.io/2019/07/22/Vue/%E6%A0%B7%E5%BC%8F/"/>
     <id>http://jiugework.gitee.io/2019/07/22/Vue/样式/</id>
     <published>2019-07-22T12:33:15.236Z</published>
-    <updated>2019-07-22T13:10:29.870Z</updated>
+    <updated>2019-07-22T14:11:44.995Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Vue样式绑定方式"><a href="#Vue样式绑定方式" class="headerlink" title="Vue样式绑定方式"></a>Vue样式绑定方式</h3><h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><ul><li>直接传递一个数组 这里的class需要用v-bind绑定</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.red</span> &#123;</span></span><br><span class="line">      color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.thin</span> &#123;</span></span><br><span class="line">      font-weight: 200;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.italic</span> &#123;</span></span><br><span class="line">      font-style: italic;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.active</span>&#123;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">letter-spacing</span>: 0<span class="selector-class">.5em</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"['red','active']"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><ul><li>通过三元表达式</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :class="['red','active']"&gt;这是一个很大很大的H1，打到你无法想象&lt;/h1&gt;1 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"['red','active',flag?'thin':'']"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  let vm = new Vue(&#123;</span><br><span class="line">    el: '#app',</span><br><span class="line">    data: &#123;</span><br><span class="line">      flag:true</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="第三种方式"><a href="#第三种方式" class="headerlink" title="第三种方式"></a>第三种方式</h3><ul><li>把样式放到对象里把key为样式名，把value值绑定到一个bool值上</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"['red','active',&#123;'thin':flag&#125;]"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="第四种方式"><a href="#第四种方式" class="headerlink" title="第四种方式"></a>第四种方式</h3><ul><li>传入一个对象本质跟第三种方法差不多</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"&#123;red:flag,active:true,active:true&#125;"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :class="['red','active']"&gt;这是一个很大很大的H1，打到你无法想象&lt;/h1&gt;1 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :class="['red','active',flag?'thin':'']"&gt;这是一个很大很大的H1，打到你无法想象&lt;/h1&gt;2 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">'classObj'</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  let vm = new Vue(&#123;</span><br><span class="line">    el: '#app',</span><br><span class="line">    data: &#123;</span><br><span class="line">      flag:true,</span><br><span class="line">      classObj:&#123;red:true,active:true,active:true&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><ul><li><p>直接在元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```html</span><br><span class="line">&lt;h1 :style=&quot;&#123;color:&apos;red&apos;,&apos;font-weight&apos;:200 &#125;&quot;&gt;变色&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p></li><li><p>在data中引用到<code>:style</code></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:style</span>=<span class="string">"styleObj1"</span>&gt;</span>变色<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :style="&#123;color:'red','font-weight':200 &#125;"&gt;变色&lt;/h1&gt; --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>   </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"> let vm =  new Vue(&#123;</span><br><span class="line">     el:'#app',</span><br><span class="line">     data:&#123;</span><br><span class="line">      styleObj1:&#123;</span><br><span class="line">        color:'red','font-weight':200 </span><br><span class="line">      &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     methods: &#123;</span><br><span class="line">      </span><br><span class="line">     &#125;,</span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ul><ul><li><p>第三种绑定一个数组</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:style</span>=<span class="string">"[ styleObj1,styleObj2 ]"</span>&gt;</span>变色<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> data:&#123;</span><br><span class="line">      styleObj1:&#123;</span><br><span class="line">        color:'red','font-weight':200 </span><br><span class="line">      &#125;,</span><br><span class="line">      styleObj2:&#123;</span><br><span class="line">        'font-size':'60px'</span><br><span class="line">      &#125;</span><br><span class="line">     &#125;,</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><ul><li>直接传递一个数组 这里的class需要用v-bind绑定</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.red</span> &#123;</span></span><br><span class="line">      color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.thin</span> &#123;</span></span><br><span class="line">      font-weight: 200;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.italic</span> &#123;</span></span><br><span class="line">      font-style: italic;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.active</span>&#123;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">letter-spacing</span>: 0<span class="selector-class">.5em</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"['red','active']"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><ul><li>通过三元表达式</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :class="['red','active']"&gt;这是一个很大很大的H1，打到你无法想象&lt;/h1&gt;1 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"['red','active',flag?'thin':'']"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    data: &#123;</span><br><span class="line"><span class="javascript">      flag:<span class="literal">true</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="第三种方式"><a href="#第三种方式" class="headerlink" title="第三种方式"></a>第三种方式</h3><ul><li>把样式放到对象里把key为样式名，把value值绑定到一个bool值上</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"['red','active',&#123;'thin':flag&#125;]"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="第四种方式"><a href="#第四种方式" class="headerlink" title="第四种方式"></a>第四种方式</h3><ul><li>传入一个对象本质跟第三种方法差不多</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"&#123;red:flag,active:true,active:true&#125;"</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :class="['red','active']"&gt;这是一个很大很大的H1，打到你无法想象&lt;/h1&gt;1 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :class="['red','active',flag?'thin':'']"&gt;这是一个很大很大的H1，打到你无法想象&lt;/h1&gt;2 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">'classObj'</span>&gt;</span>这是一个很大很大的H1，打到你无法想象<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    data: &#123;</span><br><span class="line"><span class="javascript">      flag:<span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">      classObj:&#123;<span class="attr">red</span>:<span class="literal">true</span>,<span class="attr">active</span>:<span class="literal">true</span>,<span class="attr">active</span>:<span class="literal">true</span>&#125;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><ul><li><p>直接在元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```html</span><br><span class="line">&lt;h1 :style=&quot;&#123;color:&apos;red&apos;,&apos;font-weight&apos;:200 &#125;&quot;&gt;变色&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p></li><li><p>在data中引用到<code>:style</code></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:style</span>=<span class="string">"styleObj1"</span>&gt;</span>变色<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;h1 :style="&#123;color:'red','font-weight':200 &#125;"&gt;变色&lt;/h1&gt; --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>   </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="javascript"> <span class="keyword">let</span> vm =  <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">     el:<span class="string">'#app'</span>,</span></span><br><span class="line">     data:&#123;</span><br><span class="line">      styleObj1:&#123;</span><br><span class="line"><span class="javascript">        color:<span class="string">'red'</span>,<span class="string">'font-weight'</span>:<span class="number">200</span> </span></span><br><span class="line">      &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     methods: &#123;</span><br><span class="line">      </span><br><span class="line">     &#125;,</span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ul><ul><li><p>第三种绑定一个数组</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:style</span>=<span class="string">"[ styleObj1,styleObj2 ]"</span>&gt;</span>变色<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> data:&#123;</span><br><span class="line">      styleObj1:&#123;</span><br><span class="line">        color:'red','font-weight':200 </span><br><span class="line">      &#125;,</span><br><span class="line">      styleObj2:&#123;</span><br><span class="line">        'font-size':'60px'</span><br><span class="line">      &#125;</span><br><span class="line">     &#125;,</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;Vue样式绑定方式&quot;&gt;&lt;a href=&quot;#Vue样式绑定方式&quot; class=&quot;headerlink&quot; title=&quot;Vue样式绑定方式&quot;&gt;&lt;/a&gt;Vue样式绑定方式&lt;/h3&gt;&lt;h4 id=&quot;第一种方式&quot;&gt;&lt;a href=&quot;#第一种方式&quot; class=&quot;header
+        &lt;h4 id=&quot;第一种方式&quot;&gt;&lt;a href=&quot;#第一种方式&quot; class=&quot;headerlink&quot; title=&quot;第一种方式&quot;&gt;&lt;/a&gt;第一种方式&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;直接传递一个数组 这里的class需要用v-bind绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure clas
       
     
     </summary>
     
+      <category term="Vue" scheme="http://jiugework.gitee.io/categories/Vue/"/>
+    
+    
+      <category term="Vue样式" scheme="http://jiugework.gitee.io/tags/Vue%E6%A0%B7%E5%BC%8F/"/>
     
   </entry>
   
@@ -266,39 +273,9 @@
       <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/tags/JavaScript/"/>
-    
       <category term="遍历" scheme="http://jiugework.gitee.io/tags/%E9%81%8D%E5%8E%86/"/>
     
       <category term="循环" scheme="http://jiugework.gitee.io/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解构赋值</title>
-    <link href="http://jiugework.gitee.io/2018/07/05/js/8451/"/>
-    <id>http://jiugework.gitee.io/2018/07/05/js/8451/</id>
-    <published>2018-07-05T10:57:42.000Z</published>
-    <updated>2019-07-11T09:55:59.502Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="结构赋值"><a href="#结构赋值" class="headerlink" title="结构赋值"></a>结构赋值</h4><ol><li>左右两边结构必须一样;</li><li>右边必须是个东西;</li><li>声明和赋值不能分开(必须在一句话里说完);<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 数组</span></span><br><span class="line"><span class="keyword">let</span> [aq,bq,cq]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"> <span class="built_in">console</span>.log(aq);<span class="comment">//1</span></span><br><span class="line"> <span class="built_in">console</span>.log(bq);<span class="comment">//2</span></span><br><span class="line"> <span class="built_in">console</span>.log(cq);<span class="comment">//3</span></span><br><span class="line"> <span class="comment">// 对象</span></span><br><span class="line"> <span class="keyword">let</span> &#123;w,z,y&#125; = &#123;<span class="attr">w</span>:<span class="number">12</span>,<span class="attr">z</span>:<span class="number">66</span>,<span class="attr">y</span>:<span class="number">15</span>&#125;;</span><br><span class="line"> <span class="built_in">console</span>.log(w,z,y);<span class="comment">// 12 66 15</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;结构赋值&quot;&gt;&lt;a href=&quot;#结构赋值&quot; class=&quot;headerlink&quot; title=&quot;结构赋值&quot;&gt;&lt;/a&gt;结构赋值&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;左右两边结构必须一样;&lt;/li&gt;
-&lt;li&gt;右边必须是个东西;&lt;/li&gt;
-&lt;li&gt;声明和赋值不能分开(必须在一句话
-      
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
-    
-    
-      <category term="ES6" scheme="http://jiugework.gitee.io/tags/ES6/"/>
     
       <category term="JavaScript" scheme="http://jiugework.gitee.io/tags/JavaScript/"/>
     
@@ -336,57 +313,6 @@
   </entry>
   
   <entry>
-    <title>generator</title>
-    <link href="http://jiugework.gitee.io/2018/07/05/js/js1%20copy%207/"/>
-    <id>http://jiugework.gitee.io/2018/07/05/js/js1 copy 7/</id>
-    <published>2018-07-05T10:57:42.000Z</published>
-    <updated>2019-07-11T09:53:42.647Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h2><h3 id="generator-生成器"><a href="#generator-生成器" class="headerlink" title="generator-生成器"></a>generator-生成器</h3><ul><li>普通函数- 一路到底</li><li><p>generator函数- 中间可以停 走走停停</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> *<span class="title">show</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     alert(<span class="string">'a'</span>);</span><br><span class="line">     <span class="keyword">yield</span>;</span><br><span class="line">     alert(<span class="string">'b'</span>)</span><br><span class="line"> &#125;</span><br><span class="line"> show();</span><br><span class="line"> <span class="keyword">let</span> gentObj = show();</span><br><span class="line"> gentObj.next(); <span class="comment">//a</span></span><br><span class="line"> gentObj.next();<span class="comment">//b</span></span><br><span class="line"><span class="built_in">console</span>.log(gentObj)</span><br></pre></td></tr></table></figure></li><li><p>generator-yield是什么</p><ul><li>可以传参、可以返回</li><li>…..<br>本质：无感觉处理异步操作</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;generator&quot;&gt;&lt;a href=&quot;#generator&quot; class=&quot;headerlink&quot; title=&quot;generator&quot;&gt;&lt;/a&gt;generator&lt;/h2&gt;&lt;h3 id=&quot;generator-生成器&quot;&gt;&lt;a href=&quot;#generator-生成
-      
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
-    
-    
-      <category term="generator" scheme="http://jiugework.gitee.io/tags/generator/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git常用操作</title>
-    <link href="http://jiugework.gitee.io/2018/07/05/GIt%E6%93%8D%E4%BD%9C/"/>
-    <id>http://jiugework.gitee.io/2018/07/05/GIt操作/</id>
-    <published>2018-07-05T10:57:42.000Z</published>
-    <updated>2019-07-18T08:39:59.351Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><code>git config --global user.name &quot;你的账号&quot;</code></p><p><code>git config --global user.email &quot;你的邮箱&quot;</code></p><p> 在文件中初始化Git（创建Git仓库）<code>git init</code></p><h3 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h3><ol><li>创建文件 <code>git touch a1.html</code> </li><li>文件提交到暂存区 <code>git add a1.html</code></li><li>文件提交描述 <code>git commit -m &#39;描述&#39;</code></li><li>查看文件状态 <code>git status</code></li><li>提交到仓库 <code>git push</code></li></ol><h3 id="Git克隆操作"><a href="#Git克隆操作" class="headerlink" title="Git克隆操作"></a>Git克隆操作</h3><p> <code>git clone 仓库地址</code></p><h3 id="新仓库添加本地文件"><a href="#新仓库添加本地文件" class="headerlink" title="新仓库添加本地文件"></a>新仓库添加本地文件</h3><ul><li>新建<b>码云/github</b>仓库</li><li>本地新建文件夹</li><li>新建的文件夹，点击鼠标右键，选择git bash here <code>git init</code></li><li>复制项目地址</li><li>然后<code>git remote add origin 地址</code></li><li>继续输入<code>git pull origin master</code> 命令，将码云上的仓库pull到本地文件夹</li><li>使用<code>git add -A  （. 表示所有的）或者 git add + 文件名</code>            // 将文件保存到缓存区</li><li>使用<code>git commit -m</code>‘新添加的文件内容描述’     //添加文件描述</li><li>使用<code>git push origin master</code> ，将本地仓库推送到远程仓库</li><li>ok了</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git config --global user.name &amp;quot;你的账号&amp;quot;&lt;/code&gt;&lt;/p&gt;
-&lt;p
-      
-    
-    </summary>
-    
-      <category term="Git" scheme="http://jiugework.gitee.io/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="http://jiugework.gitee.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>箭头函数</title>
     <link href="http://jiugework.gitee.io/2018/07/05/js/js1/"/>
     <id>http://jiugework.gitee.io/2018/07/05/js/js1/</id>
@@ -409,9 +335,64 @@
       <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
     
     
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/tags/JavaScript/"/>
+    
       <category term="ES6" scheme="http://jiugework.gitee.io/tags/ES6/"/>
     
+  </entry>
+  
+  <entry>
+    <title>解构赋值</title>
+    <link href="http://jiugework.gitee.io/2018/07/05/js/8451/"/>
+    <id>http://jiugework.gitee.io/2018/07/05/js/8451/</id>
+    <published>2018-07-05T10:57:42.000Z</published>
+    <updated>2019-07-11T09:55:59.502Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="结构赋值"><a href="#结构赋值" class="headerlink" title="结构赋值"></a>结构赋值</h4><ol><li>左右两边结构必须一样;</li><li>右边必须是个东西;</li><li>声明和赋值不能分开(必须在一句话里说完);<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 数组</span></span><br><span class="line"><span class="keyword">let</span> [aq,bq,cq]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"> <span class="built_in">console</span>.log(aq);<span class="comment">//1</span></span><br><span class="line"> <span class="built_in">console</span>.log(bq);<span class="comment">//2</span></span><br><span class="line"> <span class="built_in">console</span>.log(cq);<span class="comment">//3</span></span><br><span class="line"> <span class="comment">// 对象</span></span><br><span class="line"> <span class="keyword">let</span> &#123;w,z,y&#125; = &#123;<span class="attr">w</span>:<span class="number">12</span>,<span class="attr">z</span>:<span class="number">66</span>,<span class="attr">y</span>:<span class="number">15</span>&#125;;</span><br><span class="line"> <span class="built_in">console</span>.log(w,z,y);<span class="comment">// 12 66 15</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;结构赋值&quot;&gt;&lt;a href=&quot;#结构赋值&quot; class=&quot;headerlink&quot; title=&quot;结构赋值&quot;&gt;&lt;/a&gt;结构赋值&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;左右两边结构必须一样;&lt;/li&gt;
+&lt;li&gt;右边必须是个东西;&lt;/li&gt;
+&lt;li&gt;声明和赋值不能分开(必须在一句话
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
+    
+    
       <category term="JavaScript" scheme="http://jiugework.gitee.io/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="http://jiugework.gitee.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>generator</title>
+    <link href="http://jiugework.gitee.io/2018/07/05/js/js1%20copy%207/"/>
+    <id>http://jiugework.gitee.io/2018/07/05/js/js1 copy 7/</id>
+    <published>2018-07-05T10:57:42.000Z</published>
+    <updated>2019-07-11T09:53:42.647Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h2><h3 id="generator-生成器"><a href="#generator-生成器" class="headerlink" title="generator-生成器"></a>generator-生成器</h3><ul><li>普通函数- 一路到底</li><li><p>generator函数- 中间可以停 走走停停</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> *<span class="title">show</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     alert(<span class="string">'a'</span>);</span><br><span class="line">     <span class="keyword">yield</span>;</span><br><span class="line">     alert(<span class="string">'b'</span>)</span><br><span class="line"> &#125;</span><br><span class="line"> show();</span><br><span class="line"> <span class="keyword">let</span> gentObj = show();</span><br><span class="line"> gentObj.next(); <span class="comment">//a</span></span><br><span class="line"> gentObj.next();<span class="comment">//b</span></span><br><span class="line"><span class="built_in">console</span>.log(gentObj)</span><br></pre></td></tr></table></figure></li><li><p>generator-yield是什么</p><ul><li>可以传参、可以返回</li><li>…..<br>本质：无感觉处理异步操作</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;generator&quot;&gt;&lt;a href=&quot;#generator&quot; class=&quot;headerlink&quot; title=&quot;generator&quot;&gt;&lt;/a&gt;generator&lt;/h2&gt;&lt;h3 id=&quot;generator-生成器&quot;&gt;&lt;a href=&quot;#generator-生成
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
+    
+    
+      <category term="generator" scheme="http://jiugework.gitee.io/tags/generator/"/>
     
   </entry>
   
@@ -442,6 +423,32 @@
     
     
       <category term="ES6" scheme="http://jiugework.gitee.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git常用操作</title>
+    <link href="http://jiugework.gitee.io/2018/07/05/GIt%E6%93%8D%E4%BD%9C/"/>
+    <id>http://jiugework.gitee.io/2018/07/05/GIt操作/</id>
+    <published>2018-07-05T10:57:42.000Z</published>
+    <updated>2019-07-18T08:39:59.351Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><code>git config --global user.name &quot;你的账号&quot;</code></p><p><code>git config --global user.email &quot;你的邮箱&quot;</code></p><p> 在文件中初始化Git（创建Git仓库）<code>git init</code></p><h3 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h3><ol><li>创建文件 <code>git touch a1.html</code> </li><li>文件提交到暂存区 <code>git add a1.html</code></li><li>文件提交描述 <code>git commit -m &#39;描述&#39;</code></li><li>查看文件状态 <code>git status</code></li><li>提交到仓库 <code>git push</code></li></ol><h3 id="Git克隆操作"><a href="#Git克隆操作" class="headerlink" title="Git克隆操作"></a>Git克隆操作</h3><p> <code>git clone 仓库地址</code></p><h3 id="新仓库添加本地文件"><a href="#新仓库添加本地文件" class="headerlink" title="新仓库添加本地文件"></a>新仓库添加本地文件</h3><ul><li>新建<b>码云/github</b>仓库</li><li>本地新建文件夹</li><li>新建的文件夹，点击鼠标右键，选择git bash here <code>git init</code></li><li>复制项目地址</li><li>然后<code>git remote add origin 地址</code></li><li>继续输入<code>git pull origin master</code> 命令，将码云上的仓库pull到本地文件夹</li><li>使用<code>git add -A  （. 表示所有的）或者 git add + 文件名</code>            // 将文件保存到缓存区</li><li>使用<code>git commit -m</code>‘新添加的文件内容描述’     //添加文件描述</li><li>使用<code>git push origin master</code> ，将本地仓库推送到远程仓库</li><li>ok了</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git config --global user.name &amp;quot;你的账号&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="http://jiugework.gitee.io/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://jiugework.gitee.io/tags/Git/"/>
     
   </entry>
   
