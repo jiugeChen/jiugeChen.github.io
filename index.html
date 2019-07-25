@@ -220,7 +220,7 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/19/js/素组/">
+      <a href="/2019/07/19/js/数组/">
         数组中常用的方法
       </a>
     </h2>
@@ -247,10 +247,10 @@
 
 改变原有数组的方法splice() 添加/删除数组元素
 
-1234567let a = [1, 2, 3, 4, 5, 6, 7];let item = a.splice(0, 3); // [1,2,3]console.log(a); // [4,5...
+1234567let a = [1, 2, 3, 4, 5, 6, 7];let item = a.splice(0, 3); // [1,2,3]// 从0开始截取到第三个位置console....
     
     <!-- <div class="readmore">
-      <a href="/2019/07/19/js/素组/">Read More</a>
+      <a href="/2019/07/19/js/数组/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
@@ -344,12 +344,9 @@ endsWidth判断以什么结尾
 1let str='https://www.4399.com'; //   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值 endsWidth同理
 
 
-字符串截取
-slice
-substring
-substr
-
-12345678910111213141...
+判断包含
+includes判断是够包含某个字符串 返回bool值
+indexOf判断是否包含并且返回...
     
     <!-- <div class="readmore">
       <a href="/2019/07/11/js/jsMM/">Read More</a>
@@ -364,6 +361,28 @@ substr
         字符串</a>
       
     </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <time>
+      07-23, 2019
+    </time>
+    
+    
+  </section>
+  <section class="article typo">
+    
+    
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/23/Vue/vue/">Read More</a>
+    </div> -->
     
   </section>
 </article>
@@ -624,53 +643,6 @@ PUT:发送东...
 </article>
   </div>
   
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/08/js/js1 copy 2/">
-        数据遍历
-      </a>
-    </h2>
-    
-    <time>
-      07-08, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    
-map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及格","不及格","及格","及格","及格","不及格"];// 1.使arr中数字乘以2，输出结果let arr = [12, 5, 8];let result = arr.map(item =&gt; item * 2)console.log(result);//(...
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/08/js/js1 copy 2/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/遍历/">
-        遍历</a>
-      
-      <a href="/tags/循环/">
-        循环</a>
-      
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
 </section>
 
 
@@ -725,7 +697,7 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
 <section class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #404040">JavaScript</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue/" style="font-size: 14px; color: #808080">Vue</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/games/" style="font-size: 14px; color: #808080">games</a> <a href="/tags/generator/" style="font-size: 14px; color: #808080">generator</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/青川/" style="font-size: 14px; color: #808080">青川</a>
+        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #404040">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue/" style="font-size: 14px; color: #808080">Vue</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/games/" style="font-size: 14px; color: #808080">games</a> <a href="/tags/generator/" style="font-size: 14px; color: #808080">generator</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/青川/" style="font-size: 14px; color: #808080">青川</a>
     </div>
 </section>
 
@@ -759,7 +731,7 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
                         JavaScript
                     </div>
                     <div class='badget'>
-                        9
+                        10
                     </div>
                 </a></li>
             
