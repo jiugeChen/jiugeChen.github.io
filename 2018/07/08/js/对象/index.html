@@ -12,18 +12,18 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="结构赋值 左右两边结构必须一样; 右边必须是个东西; 声明和赋值不能分开(必须在一句话里说完);12345678 // 数组let [aq,bq,cq]=[1,2,3]; console.log(aq);//1 console.log(bq);//2 console.log(cq);//3 // 对象 let &amp;#123;w,z,y&amp;#125; = &amp;#123;w:12,z:66,y:15&amp;#12">
-<meta name="keywords" content="ES6,JavaScript">
+  <meta name="description" content="对象方法Object.defineProperty（）定义对象中新属性或修改原有的属性。 Object.defineProperty（obj,prop,des）  obj:必需。目标对象 prop :必需。需定义或修改的属性的名 descriptor :必需。目标属性所拥有的特性 Object.defineProperty()第三个参数descriptor说明:以对象形式(}书写 value:设">
+<meta name="keywords" content="ES5新增方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解构赋值">
-<meta property="og:url" content="http://jiugework.gitee.io/2018/07/05/js/8451/index.html">
+<meta property="og:title" content="ES5中新增的方法">
+<meta property="og:url" content="http://jiugework.gitee.io/2018/07/08/js/对象/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="结构赋值 左右两边结构必须一样; 右边必须是个东西; 声明和赋值不能分开(必须在一句话里说完);12345678 // 数组let [aq,bq,cq]=[1,2,3]; console.log(aq);//1 console.log(bq);//2 console.log(cq);//3 // 对象 let &amp;#123;w,z,y&amp;#125; = &amp;#123;w:12,z:66,y:15&amp;#12">
+<meta property="og:description" content="对象方法Object.defineProperty（）定义对象中新属性或修改原有的属性。 Object.defineProperty（obj,prop,des）  obj:必需。目标对象 prop :必需。需定义或修改的属性的名 descriptor :必需。目标属性所拥有的特性 Object.defineProperty()第三个参数descriptor说明:以对象形式(}书写 value:设">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-11T09:55:59.502Z">
+<meta property="og:updated_time" content="2019-07-27T08:30:25.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解构赋值">
-<meta name="twitter:description" content="结构赋值 左右两边结构必须一样; 右边必须是个东西; 声明和赋值不能分开(必须在一句话里说完);12345678 // 数组let [aq,bq,cq]=[1,2,3]; console.log(aq);//1 console.log(bq);//2 console.log(cq);//3 // 对象 let &amp;#123;w,z,y&amp;#125; = &amp;#123;w:12,z:66,y:15&amp;#12">
+<meta name="twitter:title" content="ES5中新增的方法">
+<meta name="twitter:description" content="对象方法Object.defineProperty（）定义对象中新属性或修改原有的属性。 Object.defineProperty（obj,prop,des）  obj:必需。目标对象 prop :必需。需定义或修改的属性的名 descriptor :必需。目标属性所拥有的特性 Object.defineProperty()第三个参数descriptor说明:以对象形式(}书写 value:设">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -221,22 +221,22 @@
         <article class="post reveal" itemscope itemprop="blogPost">
 	<section class='meta'>
 		<h2 class="title">
-			<a href="/2018/07/05/js/8451/">
-				解构赋值
+			<a href="/2018/07/08/js/对象/">
+				ES5中新增的方法
 			</a>
 		</h2>
 		<time>
-			07-05, 2018
+			07-08, 2018
 		</time>
 		
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;结构赋值\n左右两边结构必须一样;\n右边必须是个东西;\n声明和赋值不能分开(必须在一句话里说完);12345678 // 数组let [aq,bq,cq]=[1,2,3]; console.log(aq);//1 console.log(bq);//2 console.log(cq);//3 // 对象 let &amp;#123;w,z,y&amp;#125; = &amp;#123;w:12,z:66,y:15&amp;#125;; console.log(w,z,y);// 12 66 15\n\n&#34;');
+  count('&#34;\n对象方法Object.defineProperty（）定义对象中新属性或修改原有的属性。\nObject.defineProperty（obj,prop,des）\n\nobj:必需。目标对象\nprop :必需。需定义或修改的属性的名\ndescriptor :必需。目标属性所拥有的特性\nObject.defineProperty()第三个参数descriptor说明:以对象形式(}书写\nvalue:设置属性的值默认为undefinedwritable:值是否可以重写truel false默认为false\nenumerable:目标属性是否可以被枚举。true | false默认为false\nconfigurable:目标属性是否可以被删除或是否可以再次修改特性true | false默认为false\n\n\n\nObject.keys()用于获取对象自身所有的属性\n12345let obj=&amp;#123;    name:&#39;小米&#39;,    age:9,  &amp;#125;  console.log( Object.keys(obj));//[\&#34;name\&#34;, \&#34;age\&#34;]\n&#34;');
 </script>
 
 		
-<span id="/2018/07/05/js/8451/" class="leancloud_visitors" data-flag-title="解构赋值">
+<span id="/2018/07/08/js/对象/" class="leancloud_visitors" data-flag-title="ES5中新增的方法">
     <time>#<span class="leancloud-visitors-count"></span></time>
 </span>
 <script>AV.initialize("", "");</script>
@@ -262,21 +262,29 @@
 
 	<section class="article typo">
 		<div class="article-entry" itemprop="articleBody">
-			<h4 id="结构赋值"><a href="#结构赋值" class="headerlink" title="结构赋值"></a>结构赋值</h4><ol>
-<li>左右两边结构必须一样;</li>
-<li>右边必须是个东西;</li>
-<li>声明和赋值不能分开(必须在一句话里说完);<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 数组</span></span><br><span class="line"><span class="keyword">let</span> [aq,bq,cq]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"> <span class="built_in">console</span>.log(aq);<span class="comment">//1</span></span><br><span class="line"> <span class="built_in">console</span>.log(bq);<span class="comment">//2</span></span><br><span class="line"> <span class="built_in">console</span>.log(cq);<span class="comment">//3</span></span><br><span class="line"> <span class="comment">// 对象</span></span><br><span class="line"> <span class="keyword">let</span> &#123;w,z,y&#125; = &#123;<span class="attr">w</span>:<span class="number">12</span>,<span class="attr">z</span>:<span class="number">66</span>,<span class="attr">y</span>:<span class="number">15</span>&#125;;</span><br><span class="line"> <span class="built_in">console</span>.log(w,z,y);<span class="comment">// 12 66 15</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+			<a id="more"></a>
+<h4 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a>对象方法</h4><p><strong>Object.defineProperty（）</strong>定义对象中新属性或修改原有的属性。</p>
+<p><code>Object.defineProperty（obj,prop,des）</code></p>
+<ul>
+<li>obj:必需。目标对象</li>
+<li>prop :必需。需定义或修改的属性的名</li>
+<li>descriptor :必需。目标属性所拥有的特性<ul>
+<li>Object.defineProperty()第三个参数descriptor说明:以对象形式(}书写</li>
+<li>value:设置属性的值默认为undefinedwritable:值是否可以重写truel false默认为false</li>
+<li>enumerable:目标属性是否可以被枚举。true | false默认为false</li>
+<li>configurable:目标属性是否可以被删除或是否可以再次修改特性true | false默认为false</li>
+</ul>
+</li>
+</ul>
+<p><strong>Object.keys()</strong>用于获取对象自身所有的属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj=&#123;</span><br><span class="line">    name:<span class="string">'小米'</span>,</span><br><span class="line">    age:<span class="number">9</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">Object</span>.keys(obj));<span class="comment">//["name", "age"]</span></span><br></pre></td></tr></table></figure>
 
 		</div>
 		
 		<div class="article-tags tags">
 			
-			<a href="/tags/ES6/">
-				ES6</a>
-			
-			<a href="/tags/JavaScript/">
-				JavaScript</a>
+			<a href="/tags/ES5新增方法/">
+				ES5新增方法</a>
 			
 		</div>
 		
@@ -285,15 +293,15 @@
 		<div class="art-item-footer">
 			
 			<span class="art-item-left">
-				<a href="/2018/07/05/js/模板/" rel="prev" title="变量let与常量const">
-					变量let与常量const
+				<a href="/2018/07/11/data/数据交互/" rel="prev" title="数据交互">
+					数据交互
 				</a>
 			</span>
 			
 			
 			<span class="art-item-right">
-				<a href="/2018/07/05/js/number/" rel="next" title="Number">
-					Number
+				<a href="/2018/07/08/js/遍历方法/" rel="next" title="数据遍历">
+					数据遍历
 				</a>
 			</span>
 			
@@ -363,7 +371,7 @@
 <section class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #404040">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue/" style="font-size: 14px; color: #808080">Vue</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/games/" style="font-size: 14px; color: #808080">games</a> <a href="/tags/generator/" style="font-size: 14px; color: #808080">generator</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/青川/" style="font-size: 14px; color: #808080">青川</a>
+        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #404040">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue/" style="font-size: 14px; color: #808080">Vue</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/games/" style="font-size: 14px; color: #808080">games</a> <a href="/tags/generator/" style="font-size: 14px; color: #808080">generator</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/青川/" style="font-size: 14px; color: #808080">青川</a>
     </div>
 </section>
 
@@ -397,7 +405,7 @@
                         JavaScript
                     </div>
                     <div class='badget'>
-                        10
+                        12
                     </div>
                 </a></li>
             
