@@ -221,8 +221,8 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/模板/">
-        变量let与常量const
+      <a href="/2018/07/05/js/箭头函数/">
+        箭头函数
       </a>
     </h2>
     
@@ -239,79 +239,28 @@
   </section>
   <section class="article typo">
     
-    变量let与常量const
-ES5 var 问题
-可以重复声明
-无法限制修改
-没有块级作用域
+    
+之前的函数是这样写的
+123function 名字()&#123;   //  code&#125;
 
+而ES6是↓
 
-ES6 变量 let
-不能重复声明
-可以重新定义
-有块级作用域
+箭头函数
 
-
-ES6 常量 const
-不能重复声明
-不可以重新定义
-有块级作用域
-
-
-
-
+如果只有一个参数，()可以省略
+如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
     
     <!-- <div class="readmore">
-      <a href="/2018/07/05/js/模板/">Read More</a>
+      <a href="/2018/07/05/js/箭头函数/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/变量/">
-        变量</a>
+      <a href="/tags/ES6/">
+        ES6</a>
       
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/js/generator/">
-        generator
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    generatorgenerator-生成器
-普通函数- 一路到底
-generator函数- 中间可以停 走走停停
-12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/05/js/generator/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/generator/">
-        generator</a>
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
       
     </div>
     
@@ -421,7 +370,7 @@ generator函数- 中间可以停 走走停停
 <section class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #404040">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue/" style="font-size: 14px; color: #808080">Vue</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/games/" style="font-size: 14px; color: #808080">games</a> <a href="/tags/generator/" style="font-size: 14px; color: #808080">generator</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/青川/" style="font-size: 14px; color: #808080">青川</a>
+        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/Call/" style="font-size: 14px; color: #808080">Call</a> <a href="/tags/Class/" style="font-size: 14px; color: #808080">Class</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16.67px; color: #2b2b2b">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/generator/" style="font-size: 15.33px; color: #555">generator</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/面向对象/" style="font-size: 14px; color: #808080">面向对象</a>
     </div>
 </section>
 
@@ -437,7 +386,7 @@ generator函数- 中间可以停 走走停停
                         Css
                     </div>
                     <div class='badget'>
-                        2
+                        1
                     </div>
                 </a></li>
             
@@ -455,7 +404,7 @@ generator函数- 中间可以停 走走停停
                         JavaScript
                     </div>
                     <div class='badget'>
-                        12
+                        16
                     </div>
                 </a></li>
             
@@ -464,7 +413,7 @@ generator函数- 中间可以停 走走停停
                         Vue
                     </div>
                     <div class='badget'>
-                        3
+                        2
                     </div>
                 </a></li>
             

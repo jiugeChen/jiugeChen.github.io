@@ -12,17 +12,18 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: Calldate: 2018-07-08 17:27:42tags:   Callcategories: JavaScript   Call用法  调用函数  123456function dr() &amp;#123;   console.log(&quot;play&quot;);     console.log(this); //window     &amp;#125; dr.call() //play  C">
+  <meta name="description" content="Call用法  调用函数  123456function dr() &amp;#123;   console.log(&quot;play&quot;);     console.log(this); //window     &amp;#125; dr.call() //play  Call可以改变函数this的指向 12345678function dr() &amp;#123;   console.log(&quot;play&quot;);   con">
+<meta name="keywords" content="Call">
 <meta property="og:type" content="article">
-<meta property="og:title" content="’’Sun--(*^▽^*)">
-<meta property="og:url" content="http://jiugework.gitee.io/2019/07/27/js/Call/index.html">
+<meta property="og:title" content="Call">
+<meta property="og:url" content="http://jiugework.gitee.io/2019/07/28/js/Call/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="title: Calldate: 2018-07-08 17:27:42tags:   Callcategories: JavaScript   Call用法  调用函数  123456function dr() &amp;#123;   console.log(&quot;play&quot;);     console.log(this); //window     &amp;#125; dr.call() //play  C">
+<meta property="og:description" content="Call用法  调用函数  123456function dr() &amp;#123;   console.log(&quot;play&quot;);     console.log(this); //window     &amp;#125; dr.call() //play  Call可以改变函数this的指向 12345678function dr() &amp;#123;   console.log(&quot;play&quot;);   con">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-27T15:13:03.491Z">
+<meta property="og:updated_time" content="2019-07-28T01:28:50.385Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="’’Sun--(*^▽^*)">
-<meta name="twitter:description" content="title: Calldate: 2018-07-08 17:27:42tags:   Callcategories: JavaScript   Call用法  调用函数  123456function dr() &amp;#123;   console.log(&quot;play&quot;);     console.log(this); //window     &amp;#125; dr.call() //play  C">
+<meta name="twitter:title" content="Call">
+<meta name="twitter:description" content="Call用法  调用函数  123456function dr() &amp;#123;   console.log(&quot;play&quot;);     console.log(this); //window     &amp;#125; dr.call() //play  Call可以改变函数this的指向 12345678function dr() &amp;#123;   console.log(&quot;play&quot;);   con">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -220,22 +221,22 @@
         <article class="post reveal" itemscope itemprop="blogPost">
 	<section class='meta'>
 		<h2 class="title">
-			<a href="/2019/07/27/js/Call/">
-				
+			<a href="/2019/07/28/js/Call/">
+				Call
 			</a>
 		</h2>
 		<time>
-			07-27, 2019
+			07-28, 2019
 		</time>
 		
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;\ntitle: Calldate: 2018-07-08 17:27:42tags: \n\nCallcategories:\nJavaScript\n\n\nCall用法\n\n调用函数\n\n123456function dr() &amp;#123;   console.log(\&#34;play\&#34;);     console.log(this); //window     &amp;#125; dr.call() //play\n\nCall可以改变函数this的指向\n12345678function dr() &amp;#123;   console.log(\&#34;play\&#34;);   console.log(this); //指向o &amp;#125; let o=&amp;#123;   name:&#39;哈哈哈&#39; &amp;#125; dr.call(o)\n此时这个函数的this就指向了o这个对象\n123456789101112 function dr(x,y) &amp;#123;   console.log(\&#34;play\&#34;);   console.log(this); //指向o   console.log(x+y); &amp;#125; let o=&amp;#123;   name:&#39;哈哈哈&#39; &amp;#125; dr.call(o,1,2)// play// &amp;#123;name: \&#34;哈哈哈\&#34;&amp;#125;//  3\n\n\n继承\n继承属性\n\n1234567891011121314//父构造函数    function Father(name, age) &amp;#123;      this.name = name;      this.age = age;    &amp;#125;;    //子构造函数    function Son(name, age, sex) &amp;#123;      this.sex = sex      //把子的this传入到父      // this指向实例对象      Father.call(this, name, age)    &amp;#125;;    let zs = new Son(\&#34;张三\&#34;, 18, &#39;nan&#39;)    console.log(zs);\n\n继承方法\n1Son. prototype = Father.prototype; //这样直接赋值会有问题,如果修改了子原型对象,父原型对象也会跟着一起变化\n\n\n12345678910111213141516171819202122232425//父构造函数    function Father(name, age) &amp;#123;      this.name = name;      this.age = age;    &amp;#125;;    Father.prototype.money=function()&amp;#123;  console.log(\&#34;钱\&#34;)&amp;#125;;             //子构造函数    function Son(name, age, sex) &amp;#123;      this.sex = sex      Father.call(this, name, age)    &amp;#125;;    Son.prototype=new Father();      //如果利用对象的形式修改来原型对象，别忘了利用 constructor指回原来的对象    Son.prototype.constructor=Son    Son.prototype.play=function()&amp;#123;      console.log(\&#34;吃饭\&#34;);    &amp;#125;    let zs = new Son(\&#34;张三\&#34;, 18, &#39;nan&#39;);    zs.money();    zs.play();      console.log(zs);    console.log(Father);\n&#34;');
+  count('&#34;Call用法\n\n调用函数\n\n123456function dr() &amp;#123;   console.log(\&#34;play\&#34;);     console.log(this); //window     &amp;#125; dr.call() //play\n\nCall可以改变函数this的指向\n12345678function dr() &amp;#123;   console.log(\&#34;play\&#34;);   console.log(this); //指向o &amp;#125; let o=&amp;#123;   name:&#39;哈哈哈&#39; &amp;#125; dr.call(o)\n此时这个函数的this就指向了o这个对象\n123456789101112 function dr(x,y) &amp;#123;   console.log(\&#34;play\&#34;);   console.log(this); //指向o   console.log(x+y); &amp;#125; let o=&amp;#123;   name:&#39;哈哈哈&#39; &amp;#125; dr.call(o,1,2)// play// &amp;#123;name: \&#34;哈哈哈\&#34;&amp;#125;//  3\n\n\n继承\n继承属性\n\n1234567891011121314//父构造函数    function Father(name, age) &amp;#123;      this.name = name;      this.age = age;    &amp;#125;;    //子构造函数    function Son(name, age, sex) &amp;#123;      this.sex = sex      //把子的this传入到父      // this指向实例对象      Father.call(this, name, age)    &amp;#125;;    let zs = new Son(\&#34;张三\&#34;, 18, &#39;nan&#39;)    console.log(zs);\n\n继承方法\n1Son. prototype = Father.prototype; //这样直接赋值会有问题,如果修改了子原型对象,父原型对象也会跟着一起变化\n\n\n12345678910111213141516171819202122232425//父构造函数    function Father(name, age) &amp;#123;      this.name = name;      this.age = age;    &amp;#125;;    Father.prototype.money=function()&amp;#123;  console.log(\&#34;钱\&#34;)&amp;#125;;             //子构造函数    function Son(name, age, sex) &amp;#123;      this.sex = sex      Father.call(this, name, age)    &amp;#125;;    Son.prototype=new Father();      //如果利用对象的形式修改来原型对象，别忘了利用 constructor指回原来的对象    Son.prototype.constructor=Son    Son.prototype.play=function()&amp;#123;      console.log(\&#34;吃饭\&#34;);    &amp;#125;    let zs = new Son(\&#34;张三\&#34;, 18, &#39;nan&#39;);    zs.money();    zs.play();      console.log(zs);    console.log(Father);\n&#34;');
 </script>
 
 		
-<span id="/2019/07/27/js/Call/" class="leancloud_visitors" data-flag-title="">
+<span id="/2019/07/28/js/Call/" class="leancloud_visitors" data-flag-title="Call">
     <time>#<span class="leancloud-visitors-count"></span></time>
 </span>
 <script>AV.initialize("", "");</script>
@@ -249,6 +250,11 @@
 </script>
 
 		
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
 		
 	</section>
 
@@ -256,14 +262,7 @@
 
 	<section class="article typo">
 		<div class="article-entry" itemprop="articleBody">
-			<hr>
-<p>title: Call<br>date: 2018-07-08 17:27:42<br>tags: </p>
-<ul>
-<li>Call<br>categories:</li>
-<li>JavaScript</li>
-</ul>
-<hr>
-<h4 id="Call"><a href="#Call" class="headerlink" title="Call"></a>Call</h4><p><strong>用法</strong></p>
+			<h4 id="Call"><a href="#Call" class="headerlink" title="Call"></a>Call</h4><p><strong>用法</strong></p>
 <ol>
 <li>调用函数</li>
 </ol>
@@ -288,20 +287,27 @@
 
 		</div>
 		
+		<div class="article-tags tags">
+			
+			<a href="/tags/Call/">
+				Call</a>
+			
+		</div>
+		
 
 		
 		<div class="art-item-footer">
 			
 			<span class="art-item-left">
-				<a href="/2019/07/27/js/Class/" rel="prev" title="">
-					
+				<a href="/2019/07/28/js/面向对象/" rel="prev" title="面向对象">
+					面向对象
 				</a>
 			</span>
 			
 			
 			<span class="art-item-right">
-				<a href="/2019/07/27/js/面向对象/" rel="next" title="">
-					
+				<a href="/2019/07/22/Vue/样式/" rel="next" title="Vue样式绑定方式">
+					Vue样式绑定方式
 				</a>
 			</span>
 			
@@ -371,7 +377,7 @@
 <section class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #404040">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue/" style="font-size: 14px; color: #808080">Vue</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/games/" style="font-size: 14px; color: #808080">games</a> <a href="/tags/generator/" style="font-size: 14px; color: #808080">generator</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/青川/" style="font-size: 14px; color: #808080">青川</a>
+        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/Call/" style="font-size: 14px; color: #808080">Call</a> <a href="/tags/Class/" style="font-size: 14px; color: #808080">Class</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16.67px; color: #2b2b2b">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/generator/" style="font-size: 15.33px; color: #555">generator</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 14px; color: #808080">指令</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/模块化/" style="font-size: 14px; color: #808080">模块化</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/面向对象/" style="font-size: 14px; color: #808080">面向对象</a>
     </div>
 </section>
 
@@ -387,7 +393,7 @@
                         Css
                     </div>
                     <div class='badget'>
-                        2
+                        1
                     </div>
                 </a></li>
             
@@ -405,7 +411,7 @@
                         JavaScript
                     </div>
                     <div class='badget'>
-                        12
+                        16
                     </div>
                 </a></li>
             
@@ -414,7 +420,7 @@
                         Vue
                     </div>
                     <div class='badget'>
-                        3
+                        2
                     </div>
                 </a></li>
             

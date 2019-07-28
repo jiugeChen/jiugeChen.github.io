@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://jiugework.gitee.io/2019/07/27/js/Class/</loc>
-    <lastmod>2019-07-27</lastmod>
+    <loc>http://jiugework.gitee.io/2019/07/11/js/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2019-07-28</lastmod>
   </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/07/27/js/Call/</loc>
-    <lastmod>2019-07-27</lastmod>
+    <loc>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</loc>
+    <lastmod>2019-07-28</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2018/07/05/js/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/</loc>
+    <lastmod>2019-07-28</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2018/07/05/js/generator/</loc>
+    <lastmod>2019-07-28</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2019/07/28/js/Class/</loc>
+    <lastmod>2019-07-28</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2019/07/28/js/Call/</loc>
+    <lastmod>2019-07-28</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2019/07/28/js/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2019-07-28</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2018/07/05/js/Promise/</loc>
+    <lastmod>2019-07-28</lastmod>
   </url>  <url>
     <loc>http://jiugework.gitee.io/2018/07/27/js/%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/</loc>
     <lastmod>2019-07-27</lastmod>
@@ -19,17 +37,8 @@
     <loc>http://jiugework.gitee.io/2019/07/19/js/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-07-27</lastmod>
   </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/07/27/js/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2019-07-27</lastmod>
-  </url>  <url>
     <loc>http://jiugework.gitee.io/2018/07/05/js/number/</loc>
     <lastmod>2019-07-24</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/07/11/js/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2019-07-24</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/07/23/Vue/vue/</loc>
-    <lastmod>2019-07-23</lastmod>
   </url>  <url>
     <loc>http://jiugework.gitee.io/2019/07/22/Vue/%E6%A0%B7%E5%BC%8F/</loc>
     <lastmod>2019-07-22</lastmod>
@@ -43,12 +52,6 @@
     <loc>http://jiugework.gitee.io/2019/07/16/css/css1/</loc>
     <lastmod>2019-07-16</lastmod>
   </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/07/16/css/css1%20copy/</loc>
-    <lastmod>2019-07-16</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2018/07/05/js/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2019-07-11</lastmod>
-  </url>  <url>
     <loc>http://jiugework.gitee.io/2018/07/11/data/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/</loc>
     <lastmod>2019-07-11</lastmod>
   </url>  <url>
@@ -58,19 +61,7 @@
     <loc>http://jiugework.gitee.io/2018/07/05/js/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2019-07-11</lastmod>
   </url>  <url>
-    <loc>http://jiugework.gitee.io/2018/07/05/js/Promise/</loc>
-    <lastmod>2019-07-11</lastmod>
-  </url>  <url>
     <loc>http://jiugework.gitee.io/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
     <lastmod>2019-07-11</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2018/07/05/js/generator/</loc>
-    <lastmod>2019-07-11</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2018/12/05/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2019-07-11</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/07/05/st/</loc>
-    <lastmod>2019-07-10</lastmod>
   </url>
 </urlset>
