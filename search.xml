@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2019/07/30/w/"/>
+      <url>/2019/07/30/w/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Class类</title>
       <link href="/2019/07/28/js/Class/"/>
       <url>/2019/07/28/js/Class/</url>
@@ -208,9 +221,36 @@
     
     
     <entry>
+      <title>Vue组件</title>
+      <link href="/2019/07/08/Vue/%E7%BB%84%E4%BB%B6/"/>
+      <url>/2019/07/08/Vue/%E7%BB%84%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h3 id="定义vue组件"><a href="#定义vue组件" class="headerlink" title="定义vue组件"></a>定义vue组件</h3><p>什么是组件:组件的出现,就是为了拆分Vue实例的代码量的,能够让我们以不同的组件,来划分不同的功能模块,将来我们需要什么样的功能,就可以去调用对应的组件即可组件化和模块化的不同:</p><ul><li>模块化:是从代码逻辑的角度进行划分的;方便代码分层开发,保证每个功能模块的职能单一</li><li>组件化:是从U1界面的角度进行组件的重用</li></ul><p><strong>全局</strong></p><p>方式1：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">     &lt;!-- 驼峰通过 - 来连接--&gt;</span><br><span class="line">    &lt;my-comm&gt;<span class="xml"><span class="tag">&lt;/<span class="name">my-comm</span>&gt;</span></span></span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  Vue.component(<span class="string">'myComm'</span>, &#123;</span><br><span class="line">    template:<span class="string">`&lt;div&gt;这是一个组件&lt;/div&gt;`</span></span><br><span class="line">      <span class="comment">//一定要写个html标签包裹</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">   ...</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p>方式2：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;mycomm1&gt;<span class="xml"><span class="tag">&lt;/<span class="name">mycomm1</span>&gt;</span></span></span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">  &lt;template id="tmp1"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;h1&gt;外部组件&lt;/</span>h1&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  Vue.component('mycomm1', &#123;</span></span><br><span class="line"><span class="regexp">    template:'#tmp1'</span></span><br><span class="line"><span class="regexp">  &#125;)</span></span><br><span class="line"><span class="regexp">  let vm = new Vue(&#123;</span></span><br><span class="line"><span class="regexp">...</span></span><br><span class="line"><span class="regexp">  &#125;)</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure><p><strong>私有</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">components:&#123;</span><br><span class="line">      login:&#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;私有的&lt;/h1&gt;&apos;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;login&gt;<span class="xml"><span class="tag">&lt;/<span class="name">login</span>&gt;</span></span></span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">  &lt;template  id="tmp1"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;h1&gt;私有&lt;/</span>h1&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">  let vm = new Vue(&#123;</span></span><br><span class="line"><span class="regexp">    el: '#app',</span></span><br><span class="line"><span class="regexp">    data: &#123;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">    components:&#123;</span></span><br><span class="line"><span class="regexp">      login:&#123;</span></span><br><span class="line"><span class="regexp">        template:'#tmp1'</span></span><br><span class="line"><span class="regexp">      &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;)</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure><h3 id="组件中的methods与data"><a href="#组件中的methods与data" class="headerlink" title="组件中的methods与data"></a>组件中的methods与data</h3><ol><li>组件可以有自己的data数据</li><li>组件的data和实例的data有点不一样,实例中的data可以为一个对象,但是组件中的data必须是一个方法</li><li>组件中的data除了必须为一个方法之外,这个方法内部,还必须返回一个对象才行跟data一样 </li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- &lt;my-comm &gt;&lt;/my-comm&gt; --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mycomm1</span>&gt;</span><span class="tag">&lt;/<span class="name">mycomm1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">'myComm'</span>, &#123;</span><br><span class="line">   template: <span class="string">`&lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;`</span>,</span><br><span class="line">   data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> &#123;</span><br><span class="line">       msg: <span class="string">'ddd'</span></span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure><p>method</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">      &lt;my-comm&gt;<span class="xml"><span class="tag">&lt;/<span class="name">my-comm</span>&gt;</span></span></span><br><span class="line">      &lt;hr&gt;</span><br><span class="line">      &lt;my-comm&gt;<span class="xml"><span class="tag">&lt;/<span class="name">my-comm</span>&gt;</span></span></span><br><span class="line">      &lt;hr&gt;</span><br><span class="line">      &lt;my-comm&gt;<span class="xml"><span class="tag">&lt;/<span class="name">my-comm</span>&gt;</span></span></span><br><span class="line">      &lt;hr&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  &lt;template id="tmp1"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;h1&gt;外部组件:&#123;&#123;num&#125;&#125;&lt;/</span>h1&gt;</span><br><span class="line">      &lt;button @click=<span class="string">"add"</span>&gt;点击加<span class="number">1</span>&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  &lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">let</span> obj=&#123;</span><br><span class="line">    num: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">  Vue.component(<span class="string">'myComm'</span>, &#123;</span><br><span class="line">    template: <span class="string">'#tmp1'</span>,</span><br><span class="line">    data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// return obj</span></span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        num: <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">      add()&#123;</span><br><span class="line">        <span class="keyword">this</span>.num++</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      msg: <span class="string">'hahah '</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;<span class="regexp">/script</span></span><br></pre></td></tr></table></figure><h3 id="组件切换"><a href="#组件切换" class="headerlink" title="组件切换"></a>组件切换</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">     &lt;button @click=<span class="string">"temp='my-comm1'"</span>&gt;登陆&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">     &lt;button @click="temp='my-comm2'"&gt;注册&lt;/</span>button&gt;</span><br><span class="line"></span><br><span class="line">     &lt;transition enter-active-<span class="class"><span class="keyword">class</span></span>=<span class="string">"animated zoomIn"</span>  leave-active-<span class="class"><span class="keyword">class</span></span>=<span class="string">"animated zoomOut"</span> :duration=<span class="string">"&#123;</span></span><br><span class="line"><span class="string">      enter:200,leave:500</span></span><br><span class="line"><span class="string">    &#125;"</span>&gt;</span><br><span class="line">     &lt;component :is=<span class="string">"temp"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span></span><br><span class="line">     &lt;<span class="regexp">/transition&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;template id=<span class="string">"tmp1"</span>&gt;</span><br><span class="line">      &lt;h1&gt;登陆&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">  &lt;template id=<span class="string">"tmp2"</span>&gt;</span><br><span class="line">      &lt;h1&gt;注册&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  Vue.component('myComm1', &#123;</span></span><br><span class="line"><span class="regexp">    template: '#tmp1',</span></span><br><span class="line"><span class="regexp">  &#125;)</span></span><br><span class="line"><span class="regexp">  Vue.component('myComm2', &#123;</span></span><br><span class="line"><span class="regexp">    template: '#tmp2',</span></span><br><span class="line"><span class="regexp">  &#125;)</span></span><br><span class="line"><span class="regexp">  let vm = new Vue(&#123;</span></span><br><span class="line"><span class="regexp">    el: '#app',</span></span><br><span class="line"><span class="regexp">    data: &#123;</span></span><br><span class="line"><span class="regexp">      msg: 'hahah ',</span></span><br><span class="line"><span class="regexp">      temp:'my-comm1'</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">  &#125;)</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 组件化 </tag>
+            
+            <tag> Vue组件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模板</title>
-      <link href="/2019/07/05/js/1bbbbb/"/>
-      <url>/2019/07/05/js/1bbbbb/</url>
+      <link href="/2019/07/05/Vue/1bbbbb/"/>
+      <url>/2019/07/05/Vue/1bbbbb/</url>
       
         <content type="html"><![CDATA[<p>#模板</p>]]></content>
       
@@ -233,9 +273,65 @@
     
     
     <entry>
+      <title>判断JS数据类型的四种方法</title>
+      <link href="/2019/07/05/js/%E5%88%A4%E6%96%ADJS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+      <url>/2019/07/05/js/%E5%88%A4%E6%96%ADJS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据类型 </tag>
+            
+            <tag> 判断数据类型 </tag>
+            
+            <tag> 检测类型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自定义指令</title>
+      <link href="/2019/07/05/Vue/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
+      <url>/2019/07/05/Vue/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><ul><li>使用vue.dizective ()定义全局的指令 v-focus</li><li>参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 </li><li>但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 </li><li>参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-focus</span> <span class="attr">v-color</span>=<span class="string">"blue"</span> <span class="attr">v-bold</span> <span class="attr">v-fz</span>=<span class="string">"30"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'focus'</span>, &#123;</span></span><br><span class="line"></span><br><span class="line">    inserted(el) &#123;</span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'color'</span>, &#123;</span></span><br><span class="line">    bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(binding);</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(el.style.color = binding.value);</span></span><br><span class="line">    &#125;,</span><br><span class="line">    inserted(el) &#123;</span><br><span class="line"><span class="javascript"><span class="comment">//操作</span></span></span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    data: &#123;</span><br><span class="line"><span class="javascript">      blue: <span class="string">'blue'</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    directives: &#123;</span><br><span class="line"><span class="javascript">      <span class="string">'bold'</span>: &#123;</span></span><br><span class="line">        bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(binding, <span class="string">'私有的'</span>);</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(el.style.fontWeight = <span class="string">"bold"</span>);</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line"><span class="javascript">      <span class="string">'fz'</span>:<span class="function">(<span class="params">el,binding</span>)=&gt;</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//等同于把代码写到了 bind和update里面去</span></span></span><br><span class="line"><span class="javascript">el.style.fontSize=<span class="built_in">parseInt</span>(binding.value)+<span class="string">'px'</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 指令 </tag>
+            
+            <tag> 自定义 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模板</title>
-      <link href="/2019/07/05/js/1bbbbb%20(copy)/"/>
-      <url>/2019/07/05/js/1bbbbb%20(copy)/</url>
+      <link href="/2019/07/05/js/1bbbbb/"/>
+      <url>/2019/07/05/js/1bbbbb/</url>
       
         <content type="html"><![CDATA[<p>#模板</p>]]></content>
       
@@ -358,6 +454,33 @@
     
     
     <entry>
+      <title>模块化</title>
+      <link href="/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+      <url>/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul><li>模块-组件-元件</li><li>模块：</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  - 定义: model.js</span></span><br><span class="line">     define(<span class="function"><span class="keyword">function</span> (<span class="params">require,exports,module</span>) </span>&#123;</span><br><span class="line">    exports.a = <span class="number">12</span>;</span><br><span class="line">     exports.b=<span class="number">5</span>;</span><br><span class="line">&#125;);  </span><br><span class="line"></span><br><span class="line"><span class="comment">//   - 调用:  xx.html</span></span><br><span class="line">seajs.use([<span class="string">'xxxx.js'</span>,<span class="string">'xxx.js'</span>,...],<span class="function"><span class="keyword">function</span>(<span class="params">model1,model2,...</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ol><li>民间的–sea.js 、require.js</li></ol><ul><li>CMD、AMD规范</li><li><p>区别：</p><p>html-&gt;js   use</p><p>js-&gt;  js   require</p></li></ul><ol start="2"><li><p>node.js模块化</p><ol><li>没有define</li><li>exports、require、module</li><li>引用自定义模块 1) 放到node_modules里,   2)前面加上./</li></ol><ul><li>引入: let mod = require(‘./aaa.js’)</li><li>输出: exports.xx = xxx; module.exports={x,x,x,y}</li></ul></li><li><p>ES6模块化</p><ul><li>import</li><li>export</li></ul><ul><li>引入:impo mod from = ‘./xx.js’</li><li>输出:expor{x,x,x}</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ES6 </tag>
+            
+            <tag> 模块化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Promise</title>
       <link href="/2018/07/05/js/Promise/"/>
       <url>/2018/07/05/js/Promise/</url>
@@ -383,11 +506,11 @@
     
     
     <entry>
-      <title>模块化</title>
-      <link href="/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-      <url>/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
+      <title>变量let与常量const</title>
+      <link href="/2018/07/05/js/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/"/>
+      <url>/2018/07/05/js/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/</url>
       
-        <content type="html"><![CDATA[<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul><li>模块-组件-元件</li><li>模块：</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  - 定义: model.js</span></span><br><span class="line">     define(<span class="function"><span class="keyword">function</span> (<span class="params">require,exports,module</span>) </span>&#123;</span><br><span class="line">    exports.a = <span class="number">12</span>;</span><br><span class="line">     exports.b=<span class="number">5</span>;</span><br><span class="line">&#125;);  </span><br><span class="line"></span><br><span class="line"><span class="comment">//   - 调用:  xx.html</span></span><br><span class="line">seajs.use([<span class="string">'xxxx.js'</span>,<span class="string">'xxx.js'</span>,...],<span class="function"><span class="keyword">function</span>(<span class="params">model1,model2,...</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ol><li>民间的–sea.js 、require.js</li></ol><ul><li>CMD、AMD规范</li><li><p>区别：</p><p>html-&gt;js   use</p><p>js-&gt;  js   require</p></li></ul><ol start="2"><li><p>node.js模块化</p><ol><li>没有define</li><li>exports、require、module</li><li>引用自定义模块 1) 放到node_modules里,   2)前面加上./</li></ol><ul><li>引入: let mod = require(‘./aaa.js’)</li><li>输出: exports.xx = xxx; module.exports={x,x,x,y}</li></ul></li><li><p>ES6模块化</p><ul><li>import</li><li>export</li></ul><ul><li>引入:impo mod from = ‘./xx.js’</li><li>输出:expor{x,x,x}</li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="变量let与常量const"><a href="#变量let与常量const" class="headerlink" title="变量let与常量const"></a>变量let与常量const</h4><ul><li>ES5 var 问题<ul><li>可以重复声明</li><li>无法限制修改</li><li>没有块级作用域</li></ul></li><li>ES6 变量 let<ul><li>不能重复声明</li><li>可以重新定义</li><li>有块级作用域</li></ul></li><li>ES6 常量 const<ul><li>不能重复声明</li><li>不可以重新定义</li><li>有块级作用域</li></ul></li></ul>]]></content>
       
       
       <categories>
@@ -399,9 +522,32 @@
       
         <tags>
             
-            <tag> ES6 </tag>
+            <tag> 变量 </tag>
             
-            <tag> 模块化 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>generator</title>
+      <link href="/2018/07/05/js/generator/"/>
+      <url>/2018/07/05/js/generator/</url>
+      
+        <content type="html"><![CDATA[<h2 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h2><h3 id="generator-生成器"><a href="#generator-生成器" class="headerlink" title="generator-生成器"></a>generator-生成器</h3><ul><li>普通函数- 一路到底</li><li><p>generator函数- 中间可以停 走走停停</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> *<span class="title">show</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     alert(<span class="string">'a'</span>);</span><br><span class="line">     <span class="keyword">yield</span>;</span><br><span class="line">     alert(<span class="string">'b'</span>)</span><br><span class="line"> &#125;</span><br><span class="line"> show();</span><br><span class="line"> <span class="keyword">let</span> gentObj = show();</span><br><span class="line"> gentObj.next(); <span class="comment">//a</span></span><br><span class="line"> gentObj.next();<span class="comment">//b</span></span><br><span class="line"><span class="built_in">console</span>.log(gentObj)</span><br></pre></td></tr></table></figure></li><li><p>generator-yield是什么</p><ul><li>可以传参、可以返回</li><li>…..<br>本质：无感觉处理异步操作</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> generator </tag>
             
         </tags>
       
@@ -437,6 +583,31 @@
     
     
     <entry>
+      <title>Git常用操作</title>
+      <link href="/2018/07/05/GIt%E6%93%8D%E4%BD%9C/"/>
+      <url>/2018/07/05/GIt%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><code>git config --global user.name &quot;你的账号&quot;</code></p><p><code>git config --global user.email &quot;你的邮箱&quot;</code></p><p> 在文件中初始化Git（创建Git仓库）<code>git init</code></p><h3 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h3><ol><li>创建文件 <code>git touch a1.html</code> </li><li>文件提交到暂存区 <code>git add a1.html</code></li><li>文件提交描述 <code>git commit -m &#39;描述&#39;</code></li><li>查看文件状态 <code>git status</code></li><li>提交到仓库 <code>git push</code></li></ol><h3 id="Git克隆操作"><a href="#Git克隆操作" class="headerlink" title="Git克隆操作"></a>Git克隆操作</h3><p> <code>git clone 仓库地址</code></p><h3 id="新仓库添加本地文件"><a href="#新仓库添加本地文件" class="headerlink" title="新仓库添加本地文件"></a>新仓库添加本地文件</h3><ul><li>新建<b>码云/github</b>仓库</li><li>本地新建文件夹</li><li>新建的文件夹，点击鼠标右键，选择git bash here <code>git init</code></li><li>复制项目地址</li><li>然后<code>git remote add origin 地址</code></li><li>继续输入<code>git pull origin master</code> 命令，将码云上的仓库pull到本地文件夹</li><li>使用<code>git add -A  （. 表示所有的）或者 git add + 文件名</code>            // 将文件保存到缓存区</li><li>使用<code>git commit -m</code>‘新添加的文件内容描述’     //添加文件描述</li><li>使用<code>git push origin master</code> ，将本地仓库推送到远程仓库</li><li>ok了</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解构赋值</title>
       <link href="/2018/07/05/js/%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
       <url>/2018/07/05/js/%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
@@ -464,73 +635,23 @@
     
     
     <entry>
-      <title>generator</title>
-      <link href="/2018/07/05/js/generator/"/>
-      <url>/2018/07/05/js/generator/</url>
+      <title>Vue过滤器</title>
+      <link href="/2018/07/05/Vue/Vue%E8%BF%87%E6%BB%A4%E5%99%A8/"/>
+      <url>/2018/07/05/Vue/Vue%E8%BF%87%E6%BB%A4%E5%99%A8/</url>
       
-        <content type="html"><![CDATA[<h2 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h2><h3 id="generator-生成器"><a href="#generator-生成器" class="headerlink" title="generator-生成器"></a>generator-生成器</h3><ul><li>普通函数- 一路到底</li><li><p>generator函数- 中间可以停 走走停停</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> *<span class="title">show</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     alert(<span class="string">'a'</span>);</span><br><span class="line">     <span class="keyword">yield</span>;</span><br><span class="line">     alert(<span class="string">'b'</span>)</span><br><span class="line"> &#125;</span><br><span class="line"> show();</span><br><span class="line"> <span class="keyword">let</span> gentObj = show();</span><br><span class="line"> gentObj.next(); <span class="comment">//a</span></span><br><span class="line"> gentObj.next();<span class="comment">//b</span></span><br><span class="line"><span class="built_in">console</span>.log(gentObj)</span><br></pre></td></tr></table></figure></li><li><p>generator-yield是什么</p><ul><li>可以传参、可以返回</li><li>…..<br>本质：无感觉处理异步操作</li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">   &lt;div&gt;</span><br><span class="line">     &#123;&#123; message | formatTime(&apos;YMD&apos;)&#125;&#125;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line">   &lt;div&gt;</span><br><span class="line">     &#123;&#123; message | formatTime(&apos;YMDHMS&apos;)&#125;&#125;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line">   &lt;div&gt;</span><br><span class="line">     &#123;&#123; message | formatTime(&apos;HMS&apos;)&#125;&#125;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line">   &lt;div&gt;</span><br><span class="line">     &#123;&#123; message | formatTime(&apos;YM&apos;)&#125;&#125;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line"> &lt;script&gt;</span><br><span class="line">   //实现vue中的过滤器功能  先定义过滤器 在使用        value是过滤器前面的值，type是过滤器中定义的字段</span><br><span class="line">     //这个过滤器是全局的  局部是vm的实例下filters：&#123;xx</span><br><span class="line">     ：fn（x,y）&#123;&#125;&#125;</span><br><span class="line">   Vue.filter(&quot;formatTime&quot;, function (value, type) &#123;</span><br><span class="line">     var dataTime = &quot;&quot;;</span><br><span class="line">     var data = new Date();</span><br><span class="line">     data.setTime(value);</span><br><span class="line">     var year = data.getFullYear();</span><br><span class="line">     var month = data.getMonth() + 1</span><br><span class="line">     var day = data.getDate();</span><br><span class="line">     var hour = data.getHours();</span><br><span class="line">     var minute = data.getMinutes();</span><br><span class="line">     var second = data.getSeconds();</span><br><span class="line">     [year,month, day,  hour, minute,second,]=[year,month, day,  hour, minute,second].map(item=&gt;item&gt;10?item:&apos;0&apos;+item)</span><br><span class="line">     if (type == &quot;YMD&quot;) &#123;</span><br><span class="line">       dataTime = year + &quot;-&quot; + month + &quot;-&quot; + day;</span><br><span class="line">     &#125; else if (type == &quot;YMDHMS&quot;) &#123;</span><br><span class="line">       dataTime = year + &quot;-&quot; + month + &quot;-&quot; + day + &quot; &quot; + hour + &quot;:&quot; + minute + &quot;:&quot; + second;</span><br><span class="line">     &#125; else if (type == &quot;HMS&quot;) &#123;</span><br><span class="line">       dataTime = hour + &quot;:&quot; + minute + &quot;:&quot; + second;</span><br><span class="line">     &#125; else if (type == &quot;YM&quot;) &#123;</span><br><span class="line">       dataTime = year + &quot;-&quot; + month;</span><br><span class="line">     &#125;</span><br><span class="line">     return dataTime;//将格式化后的字符串输出到前端显示</span><br><span class="line">   &#125;);</span><br><span class="line">   var app = new Vue(&#123;</span><br><span class="line">     el: &apos;#app&apos;,</span><br><span class="line">     data: &#123;</span><br><span class="line">       message: &apos;1501068985877&apos;</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> JavaScript </category>
+          <category> Vue </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> generator </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Git常用操作</title>
-      <link href="/2018/07/05/GIt%E6%93%8D%E4%BD%9C/"/>
-      <url>/2018/07/05/GIt%E6%93%8D%E4%BD%9C/</url>
-      
-        <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><code>git config --global user.name &quot;你的账号&quot;</code></p><p><code>git config --global user.email &quot;你的邮箱&quot;</code></p><p> 在文件中初始化Git（创建Git仓库）<code>git init</code></p><h3 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h3><ol><li>创建文件 <code>git touch a1.html</code> </li><li>文件提交到暂存区 <code>git add a1.html</code></li><li>文件提交描述 <code>git commit -m &#39;描述&#39;</code></li><li>查看文件状态 <code>git status</code></li><li>提交到仓库 <code>git push</code></li></ol><h3 id="Git克隆操作"><a href="#Git克隆操作" class="headerlink" title="Git克隆操作"></a>Git克隆操作</h3><p> <code>git clone 仓库地址</code></p><h3 id="新仓库添加本地文件"><a href="#新仓库添加本地文件" class="headerlink" title="新仓库添加本地文件"></a>新仓库添加本地文件</h3><ul><li>新建<b>码云/github</b>仓库</li><li>本地新建文件夹</li><li>新建的文件夹，点击鼠标右键，选择git bash here <code>git init</code></li><li>复制项目地址</li><li>然后<code>git remote add origin 地址</code></li><li>继续输入<code>git pull origin master</code> 命令，将码云上的仓库pull到本地文件夹</li><li>使用<code>git add -A  （. 表示所有的）或者 git add + 文件名</code>            // 将文件保存到缓存区</li><li>使用<code>git commit -m</code>‘新添加的文件内容描述’     //添加文件描述</li><li>使用<code>git push origin master</code> ，将本地仓库推送到远程仓库</li><li>ok了</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>变量let与常量const</title>
-      <link href="/2018/07/05/js/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/"/>
-      <url>/2018/07/05/js/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/</url>
-      
-        <content type="html"><![CDATA[<h4 id="变量let与常量const"><a href="#变量let与常量const" class="headerlink" title="变量let与常量const"></a>变量let与常量const</h4><ul><li>ES5 var 问题<ul><li>可以重复声明</li><li>无法限制修改</li><li>没有块级作用域</li></ul></li><li>ES6 变量 let<ul><li>不能重复声明</li><li>可以重新定义</li><li>有块级作用域</li></ul></li><li>ES6 常量 const<ul><li>不能重复声明</li><li>不可以重新定义</li><li>有块级作用域</li></ul></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 变量 </tag>
+            <tag> 过滤器 </tag>
             
         </tags>
       
