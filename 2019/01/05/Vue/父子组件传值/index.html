@@ -12,17 +12,18 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &amp;#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize">
+  <meta name="description" content="父传子 组件中的所有pzops中的数据,都是通过父组件传递给子组件的  props中的数据,都是只读的,无法重新赋值  1234567891011121314151617181920212223&amp;lt;body&amp;gt;  &amp;lt;div id=&quot;app&quot;&amp;gt;    &amp;lt;son :parentdata=&apos;message&apos;&amp;gt;&amp;lt;/son&amp;gt;     &amp;lt;!-- parentd">
+<meta name="keywords" content="generator">
 <meta property="og:type" content="article">
-<meta property="og:title" content="’’Sun--(*^▽^*)">
-<meta property="og:url" content="http://jiugework.gitee.io/2019/07/30/w/index.html">
+<meta property="og:title" content="父子组件传值">
+<meta property="og:url" content="http://jiugework.gitee.io/2019/01/05/Vue/父子组件传值/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &amp;#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize">
+<meta property="og:description" content="父传子 组件中的所有pzops中的数据,都是通过父组件传递给子组件的  props中的数据,都是只读的,无法重新赋值  1234567891011121314151617181920212223&amp;lt;body&amp;gt;  &amp;lt;div id=&quot;app&quot;&amp;gt;    &amp;lt;son :parentdata=&apos;message&apos;&amp;gt;&amp;lt;/son&amp;gt;     &amp;lt;!-- parentd">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T09:52:17.001Z">
+<meta property="og:updated_time" content="2019-08-01T14:38:10.006Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="’’Sun--(*^▽^*)">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &amp;#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize">
+<meta name="twitter:title" content="父子组件传值">
+<meta name="twitter:description" content="父传子 组件中的所有pzops中的数据,都是通过父组件传递给子组件的  props中的数据,都是只读的,无法重新赋值  1234567891011121314151617181920212223&amp;lt;body&amp;gt;  &amp;lt;div id=&quot;app&quot;&amp;gt;    &amp;lt;son :parentdata=&apos;message&apos;&amp;gt;&amp;lt;/son&amp;gt;     &amp;lt;!-- parentd">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -220,22 +221,22 @@
         <article class="post reveal" itemscope itemprop="blogPost">
 	<section class='meta'>
 		<h2 class="title">
-			<a href="/2019/07/30/w/">
-				
+			<a href="/2019/01/05/Vue/父子组件传值/">
+				父子组件传值
 			</a>
 		</h2>
 		<time>
-			07-30, 2019
+			01-05, 2019
 		</time>
 		
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &amp;#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize    resizeEvt = \&#34;orientationchange\&#34; in window ? \&#34;orientationchange\&#34; : \&#34;resize\&#34;;  recalc = function() &amp;#123;    //clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框    clientWidth = docEl.clientWidth;    if (!clientWidth) return;    if (clientWidth &amp;gt; 1440) &amp;#123;      pageFontSize = 100 * (clientWidth / 1920);    &amp;#125; else if (clientWidth &amp;gt; 750) &amp;#123;      pageFontSize = 100 * (clientWidth / 1440);    &amp;#125; else &amp;#123;      pageFontSize = 100 * (clientWidth / 750);    &amp;#125;    docEl.style.fontSize = pageFontSize + \&#34;px\&#34;;  &amp;#125;;  recalc();  //判断是否支持监听事件 ，不支持则停止  if (!doc.addEventListener) return;  //注册翻转事件  win.addEventListener(resizeEvt, recalc, false);&amp;#125;)(document, window);\n&#34;');
+  count('&#34;父传子\n组件中的所有pzops中的数据,都是通过父组件传递给子组件的 \nprops中的数据,都是只读的,无法重新赋值\n\n1234567891011121314151617181920212223&amp;lt;body&amp;gt;  &amp;lt;div id=\&#34;app\&#34;&amp;gt;    &amp;lt;son :parentdata=&#39;message&#39;&amp;gt;&amp;lt;/son&amp;gt;     &amp;lt;!-- parentdata作为子组件的接收值，      message为父组件数组作为传给子组件的值    简单来讲 把父组件message的值传给子组件son，son通过 props[&#39;parentdata&#39;]接收    --&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;script&amp;gt;  let vm = new Vue(&amp;#123;    el: &#39;#app&#39;,    data: &amp;#123;      message: &#39;hahah &#39;,    &amp;#125;,    components:&amp;#123;      son:&amp;#123;        props:[&#39;parentdata&#39;],//只可读不可写        template:`&amp;lt;div&amp;gt;&amp;#123;&amp;#123;parentdata&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;`,      &amp;#125;    &amp;#125;  &amp;#125;)&amp;lt;/script&amp;gt;\n父组件传递方法给子组件\n父组件可以取到子组件的值\n1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&amp;lt;body&amp;gt;  &amp;lt;div id=\&#34;app\&#34;&amp;gt;  &amp;lt;temp1 @func=&#39;console&#39;&amp;gt;&amp;lt;/temp1&amp;gt;  &amp;lt;/div&amp;gt;  &amp;lt;template id=\&#34;temp1\&#34;&amp;gt;    &amp;lt;div&amp;gt;      这是子组件      &amp;lt;button @click=\&#34;dd(data)\&#34;&amp;gt;点击打印&amp;lt;/button&amp;gt;    &amp;lt;/div&amp;gt;  &amp;lt;/template&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;script&amp;gt;let temp1=&amp;#123;  template:&#39;#temp1&#39;,  data() &amp;#123;    return &amp;#123;      data:&amp;#123;        age:188888,        name:&#39;zz&#39;      &amp;#125;    &amp;#125;  &amp;#125;,  methods: &amp;#123;    dd(e)&amp;#123;      this.$emit(&#39;func&#39;,this.data)    &amp;#125;  &amp;#125;,&amp;#125;  let vm = new Vue(&amp;#123;    el: &#39;#app&#39;,    data: &amp;#123;          &amp;#125;,    methods: &amp;#123;    console(data)&amp;#123;      console.log(\&#34;打印了父组件的方法\&#34;+data.age);      this.obj=data;      console.log(this.obj);      console.log(vm);    &amp;#125;    &amp;#125;,    components:&amp;#123;      temp1,    &amp;#125;  &amp;#125;)&amp;lt;/script&amp;gt;\n\n\n&#34;');
 </script>
 
 		
-<span id="/2019/07/30/w/" class="leancloud_visitors" data-flag-title="">
+<span id="/2019/01/05/Vue/父子组件传值/" class="leancloud_visitors" data-flag-title="父子组件传值">
     <time>#<span class="leancloud-visitors-count"></span></time>
 </span>
 <script>AV.initialize("", "");</script>
@@ -249,6 +250,11 @@
 </script>
 
 		
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
 		
 	</section>
 
@@ -256,18 +262,40 @@
 
 	<section class="article typo">
 		<div class="article-entry" itemprop="articleBody">
-			<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+			<h3 id="父传子"><a href="#父传子" class="headerlink" title="父传子"></a>父传子</h3><ol>
+<li>组件中的所有pzops中的数据,都是通过父组件传递给子组件的 </li>
+<li>props中的数据,都是只读的,无法重新赋值</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;son :parentdata=<span class="string">'message'</span>&gt;&lt;/son&gt; </span><br><span class="line">    &lt;!-- parentdata作为子组件的接收值，</span><br><span class="line">      message为父组件数组作为传给子组件的值</span><br><span class="line">    简单来讲 把父组件message的值传给子组件son，son通过 props[<span class="string">'parentdata'</span>]接收</span><br><span class="line">    --&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      message: <span class="string">'hahah '</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    components:&#123;</span><br><span class="line">      son:&#123;</span><br><span class="line">        props:[<span class="string">'parentdata'</span>],<span class="comment">//只可读不可写</span></span><br><span class="line">        template:<span class="string">`&lt;div&gt;&#123;&#123;parentdata&#125;&#125;&lt;/div&gt;`</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="父组件传递方法给子组件"><a href="#父组件传递方法给子组件" class="headerlink" title="父组件传递方法给子组件"></a>父组件传递方法给子组件</h3><ul>
+<li><p>父组件可以取到子组件的值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">  &lt;temp1 @func=<span class="string">'console'</span>&gt;&lt;/temp1&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;template id="temp1"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      这是子组件</span></span><br><span class="line"><span class="regexp">      &lt;button @click="dd(data)"&gt;点击打印&lt;/</span>button&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">let temp1=&#123;</span></span><br><span class="line"><span class="regexp">  template:'#temp1',</span></span><br><span class="line"><span class="regexp">  data() &#123;</span></span><br><span class="line"><span class="regexp">    return &#123;</span></span><br><span class="line"><span class="regexp">      data:&#123;</span></span><br><span class="line"><span class="regexp">        age:188888,</span></span><br><span class="line"><span class="regexp">        name:'zz'</span></span><br><span class="line"><span class="regexp">      &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">  methods: &#123;</span></span><br><span class="line"><span class="regexp">    dd(e)&#123;</span></span><br><span class="line"><span class="regexp">      this.$emit('func',this.data)</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  let vm = new Vue(&#123;</span></span><br><span class="line"><span class="regexp">    el: '#app',</span></span><br><span class="line"><span class="regexp">    data: &#123;</span></span><br><span class="line"><span class="regexp">      </span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">    methods: &#123;</span></span><br><span class="line"><span class="regexp">    console(data)&#123;</span></span><br><span class="line"><span class="regexp">      console.log("打印了父组件的方法"+data.age);</span></span><br><span class="line"><span class="regexp">      this.obj=data;</span></span><br><span class="line"><span class="regexp">      console.log(this.obj);</span></span><br><span class="line"><span class="regexp">      console.log(vm);</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">    components:&#123;</span></span><br><span class="line"><span class="regexp">      temp1,</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;)</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
+		</div>
+		
+		<div class="article-tags tags">
+			
+			<a href="/tags/generator/">
+				generator</a>
+			
 		</div>
 		
 
 		
 		<div class="art-item-footer">
 			
+			<span class="art-item-left">
+				<a href="/2019/07/05/Vue/评论案例/" rel="prev" title="评论案例">
+					评论案例
+				</a>
+			</span>
+			
 			
 			<span class="art-item-right">
-				<a href="/2019/07/28/js/Call/" rel="next" title="Call">
-					Call
+				<a href="/2018/07/27/js/函数进阶/" rel="next" title="函数进阶">
+					函数进阶
 				</a>
 			</span>
 			
