@@ -20,10 +20,12 @@
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
 <meta property="og:description" content="创建对象的三中方式 利用new object()创建对象  1var obj1=new Object();  利用 对象字面量创建对象  1var obj1=&amp;#123;&amp;#125;  通过构造函数创建对象 12345678function Star(name,sex)&amp;#123;    this.name = name;    this.sex=sex;    this.sing=functio">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-28T01:27:37.856Z">
+<meta property="og:image" content="http://jiugework.gitee.io/assets/img/原型链.jpg">
+<meta property="og:updated_time" content="2019-08-06T08:59:10.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象">
 <meta name="twitter:description" content="创建对象的三中方式 利用new object()创建对象  1var obj1=new Object();  利用 对象字面量创建对象  1var obj1=&amp;#123;&amp;#125;  通过构造函数创建对象 12345678function Star(name,sex)&amp;#123;    this.name = name;    this.sex=sex;    this.sing=functio">
+<meta name="twitter:image" content="http://jiugework.gitee.io/assets/img/原型链.jpg">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -232,7 +234,7 @@
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;创建对象的三中方式\n利用new object()创建对象\n\n1var obj1=new Object();\n\n利用 对象字面量创建对象\n\n1var obj1=&amp;#123;&amp;#125;\n\n通过构造函数创建对象\n12345678function Star(name,sex)&amp;#123;    this.name = name;    this.sex=sex;    this.sing=function()&amp;#123;        console.log(\&#34;唱歌\&#34;)    &amp;#125;&amp;#125;var zxy= new Star(&#39;张学友&#39;,&#39;男&#39;);//实例化\nnew在执行会做四件事\n在内存创建一个空对象\n\n让this指向这个对象\n执行构造函数里面的代码，给这个新对象添加属性以及方法\n返回这个新对象 ）\n\n实例成员和静态成员\n实例成员就是构造函数内部通过this添加的成员，```sex```   sing12345- **实例成员**只能通过实例化的对象来访问```javascript         console.log(zxy.name)\n\n静态成员 在构造函数本身上添加的的成员就是静态成员\n\n例如\n\n1Star.age=18\n\n静态成员只能通过构造函数来访问\n  12console.log(Star.sex)//能访问console.log(zxy.sex)//不能访问\n\n\nprototype构造函数原型\n构造函数通过原型分配的函数是所有对象所共享的。JavaScript规定,每一个构造函数都有一个prototype属性,指向另一个对象。注意这个prototype就是一个对象,这个对象的所有属性和方法,都会被构造函数所拥有。我们可以把那些不变的方法,直接定义在prototype对象上,这样所有对象的实例就可以共享这些方法。\n\n123456789101112131415   function Star(name,sex)&amp;#123;       this.name = name;       this.sex=sex;      // this.sing=function()&amp;#123;        //   console.log(\&#34;唱歌\&#34;)       //&amp;#125;   &amp;#125;Star.prototype.sing=function()&amp;#123;         console.log(\&#34;唱歌\&#34;)      &amp;#125;   var zxy= new Star(&#39;张学友&#39;,&#39;男&#39;); var cj= new Star(&#39;cj&#39;,&#39;男&#39;);zxy.sing===cj.sing   //truezxy.sing() //唱歌\n\n原型是什么?\n 一个对象,我们也称为prototype为原型对象\n\n原型的作用是什么?\n  共享方法。\n\n\n一般情况下,我们的公共属性定义到构造函数里面,公共的方法我们放到原型对象身上\n对象原型proto对象都会有一个属性_proto_指向构造函数的prototype原型对象,之所以我们对象可以使用构造函数 prototype原型对象的属性和方法,就是因为对象有proto原型的存在。\n\nproto对象原型和 原型对象prototype是等价的*\n 1console.log(cj.__proto__===Star.prototype);//true\n\n\n方法的查找规则:\n首先先看ldh对象身上是否有sing方法,如果有就执行这个对象上的sing \n如果么有sing这个方法,因为有一proto的存在,就去构造函数原型对象prototype身上去查找 sing这个方法\nconstructor构造函数对象原型(proto )和构造函数( prototype)原型对象里面都有一个属性constructor属性, constructor我们称为构造函数，因为它指回构造函数本身。\n作用 \nconstructor主要用于记录该对象引用于哪个构造函数,它可以让原型对象重新指向原来的构造函数\n1234console.log(Star.prototype);console.log(ldh.proto_);console.log(star.prototype.constructor);console.log(ldh. proto_.constructor);\n如果我们修改了原来的原型对象,给原型对象赋值的是一个对象,则必须手动的利用constructor\n123456789star.prototype =&amp;#123;         constructor: star ,    sing: function()&amp;#123;        console. log(&#39; 我 歌&#39;);&amp;#125;,    movie: function() &amp;#123;        console.1og(&#39;我会演电影);                    &amp;#125; &amp;#125;\n原型链JavaScript的成员查找机制(规则)\n当访问一个对象的属性(包括方法)时,首先查找这个对象自身有没有该属性。\n如果没有就查找它的原型(也就是proto指向的prototype原型对象)。\n如果还没有就查找原型对象的原型(Object的原型对象)。\n依此类推一直找到Object为止(null )。\nproto对象原型的意义就在于为对象成员查找机制提供一个方向,或者说一条路线。\n\n给Array添加自定义方法12345Array.prototype.xx=()=&amp;gt;&amp;#123;    console.log(\&#34;xxxxxx\&#34;);  &amp;#125; list.xx();\n&#34;');
+  count('&#34;创建对象的三中方式\n利用new object()创建对象\n\n1var obj1=new Object();\n\n利用 对象字面量创建对象\n\n1var obj1=&amp;#123;&amp;#125;\n\n通过构造函数创建对象\n12345678function Star(name,sex)&amp;#123;    this.name = name;    this.sex=sex;    this.sing=function()&amp;#123;        console.log(\&#34;唱歌\&#34;)    &amp;#125;&amp;#125;var zxy= new Star(&#39;张学友&#39;,&#39;男&#39;);//实例化\nnew在执行会做四件事\n在内存创建一个空对象\n\n让this指向这个对象\n执行构造函数里面的代码，给这个新对象添加属性以及方法\n返回这个新对象 ）\n\n实例成员和静态成员\n实例成员就是构造函数内部通过this添加的成员，```sex```   sing12345- **实例成员**只能通过实例化的对象来访问```javascript         console.log(zxy.name)\n\n静态成员 在构造函数本身上添加的的成员就是静态成员\n\n例如\n\n1Star.age=18\n\n静态成员只能通过构造函数来访问\n  12console.log(Star.sex)//能访问console.log(zxy.sex)//不能访问\n\n\nprototype构造函数原型\n构造函数通过原型分配的函数是所有对象所共享的。JavaScript规定,每一个构造函数都有一个prototype属性,指向另一个对象。注意这个prototype就是一个对象,这个对象的所有属性和方法,都会被构造函数所拥有。我们可以把那些不变的方法,直接定义在prototype对象上,这样所有对象的实例就可以共享这些方法。\n\n123456789101112131415   function Star(name,sex)&amp;#123;       this.name = name;       this.sex=sex;      // this.sing=function()&amp;#123;        //   console.log(\&#34;唱歌\&#34;)       //&amp;#125;   &amp;#125;Star.prototype.sing=function()&amp;#123;         console.log(\&#34;唱歌\&#34;)      &amp;#125;   var zxy= new Star(&#39;张学友&#39;,&#39;男&#39;); var cj= new Star(&#39;cj&#39;,&#39;男&#39;);zxy.sing===cj.sing   //truezxy.sing() //唱歌\n\n原型是什么?\n 一个对象,我们也称为prototype为原型对象\n\n原型的作用是什么?\n  共享方法。\n\n\n一般情况下,我们的公共属性定义到构造函数里面,公共的方法我们放到原型对象身上\n对象原型proto对象都会有一个属性_proto_指向构造函数的prototype原型对象,之所以我们对象可以使用构造函数 prototype原型对象的属性和方法,就是因为对象有proto原型的存在。\n\nproto对象原型和 原型对象prototype是等价的*\n 1console.log(cj.__proto__===Star.prototype);//true\n\n\n方法的查找规则:\n首先先看ldh对象身上是否有sing方法,如果有就执行这个对象上的sing \n如果么有sing这个方法,因为有一proto的存在,就去构造函数原型对象prototype身上去查找 sing这个方法\nconstructor构造函数对象原型(proto )和构造函数( prototype)原型对象里面都有一个属性constructor属性, constructor我们称为构造函数，因为它指回构造函数本身。\n作用 \nconstructor主要用于记录该对象引用于哪个构造函数,它可以让原型对象重新指向原来的构造函数\n1234console.log(Star.prototype);console.log(ldh.proto_);console.log(star.prototype.constructor);console.log(ldh. proto_.constructor);\n如果我们修改了原来的原型对象,给原型对象赋值的是一个对象,则必须手动的利用constructor\n123456789star.prototype =&amp;#123;         constructor: star ,    sing: function()&amp;#123;        console. log(&#39; 我 歌&#39;);&amp;#125;,    movie: function() &amp;#123;        console.1og(&#39;我会演电影);                    &amp;#125; &amp;#125;\n原型链JavaScript的成员查找机制(规则)\n当访问一个对象的属性(包括方法)时,首先查找这个对象自身有没有该属性。\n如果没有就查找它的原型(也就是proto指向的prototype原型对象)。\n如果还没有就查找原型对象的原型(Object的原型对象)。\n依此类推一直找到Object为止(null )。\nproto对象原型的意义就在于为对象成员查找机制提供一个方向,或者说一条路线。\n\n\n给Array添加自定义方法12345Array.prototype.xx=()=&amp;gt;&amp;#123;    console.log(\&#34;xxxxxx\&#34;);  &amp;#125; list.xx();\n&#34;');
 </script>
 
 		
@@ -328,6 +330,7 @@
 <li>依此类推一直找到Object为止(<strong>null</strong> )。</li>
 <li>proto对象原型的意义就在于为对象成员查找机制提供一个方向,或者说一条路线。</li>
 </ol>
+<p><img src="/assets/img/原型链.jpg" alt></p>
 <h5 id="给Array添加自定义方法"><a href="#给Array添加自定义方法" class="headerlink" title="给Array添加自定义方法"></a>给Array添加自定义方法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.xx=<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"xxxxxx"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"> list.xx();</span><br></pre></td></tr></table></figure>
 
 		</div>
@@ -351,8 +354,8 @@
 			
 			
 			<span class="art-item-right">
-				<a href="/2019/07/28/js/Call/" rel="next" title="Call">
-					Call
+				<a href="/2019/07/22/Vue/样式/" rel="next" title="Vue样式绑定方式">
+					Vue样式绑定方式
 				</a>
 			</span>
 			
