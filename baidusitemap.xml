@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jiugework.gitee.io/2019/01/05/Vue/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/</loc>
+    <lastmod>2019-08-16</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2019/07/05/Vue/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2019-08-16</lastmod>
+  </url>  <url>
     <loc>http://jiugework.gitee.io/2018/07/05/GIt%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2019-08-16</lastmod>
   </url>  <url>
@@ -37,9 +43,6 @@
     <loc>http://jiugework.gitee.io/2019/07/05/Vue/%E8%AF%84%E8%AE%BA%E6%A1%88%E4%BE%8B/</loc>
     <lastmod>2019-08-02</lastmod>
   </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/01/05/Vue/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/</loc>
-    <lastmod>2019-08-01</lastmod>
-  </url>  <url>
     <loc>http://jiugework.gitee.io/2019/07/08/Vue/%E7%BB%84%E4%BB%B6/</loc>
     <lastmod>2019-07-31</lastmod>
   </url>  <url>
@@ -62,9 +65,6 @@
     <lastmod>2019-07-28</lastmod>
   </url>  <url>
     <loc>http://jiugework.gitee.io/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/</loc>
-    <lastmod>2019-07-28</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/07/05/Vue/%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2019-07-28</lastmod>
   </url>  <url>
     <loc>http://jiugework.gitee.io/2019/07/11/js/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
