@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>’’Sun--(*^▽^*)</title>
+  <meta name="description" content>
+  <meta name="keywords" content>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Node.js有什么特点优点 异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写 特别适用于I/O密集型应用 事件循环机制   单线程 - 一个人多干活  跨平台  缺点 回调函数嵌套太多、太深(俗称回调地狱) 单线程,处理不好CPU密集型任务    应用场景 Web服务API 服务器渲染页面,提升速度 后端的Web服务,例如跨域、服务器端的请求。">
+<meta name="keywords" content="Node特点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js">
+<meta property="og:url" content="http://jiugework.gitee.io/2019/07/05/node/Node.js介绍/index.html">
+<meta property="og:site_name" content="’’Sun--(*^▽^*)">
+<meta property="og:description" content="Node.js有什么特点优点 异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写 特别适用于I/O密集型应用 事件循环机制   单线程 - 一个人多干活  跨平台  缺点 回调函数嵌套太多、太深(俗称回调地狱) 单线程,处理不好CPU密集型任务    应用场景 Web服务API 服务器渲染页面,提升速度 后端的Web服务,例如跨域、服务器端的请求。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img.jiuge.site/imgbox/20190825/lFWIl0woIA6y.png?imageslim">
+<meta property="og:updated_time" content="2019-08-25T14:54:22.482Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js">
+<meta name="twitter:description" content="Node.js有什么特点优点 异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写 特别适用于I/O密集型应用 事件循环机制   单线程 - 一个人多干活  跨平台  缺点 回调函数嵌套太多、太深(俗称回调地狱) 单线程,处理不好CPU密集型任务    应用场景 Web服务API 服务器渲染页面,提升速度 后端的Web服务,例如跨域、服务器端的请求。">
+<meta name="twitter:image" content="https://img.jiuge.site/imgbox/20190825/lFWIl0woIA6y.png?imageslim">
+  <meta name="baidu-site-verification" content="RcgDKTGgGT">
+  <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134676129-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-134676129-1');
+  </script>
+  <script src="/js/console.js"></script>
+
+  <link href="//fonts.loli.net/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="//fonts.loli.net/css?family=Roboto+Mono" rel="stylesheet">
+
+  <script src="/js/font.js"></script>
+
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+
+  <link href="//cdn.bootcss.com/node-waves/0.7.6/waves.min.css" rel="stylesheet">
+  <script src="//cdn.bootcss.com/node-waves/0.7.6/waves.min.js"></script>
+
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
+
+  <script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+
+  <script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+  <link href="//cdn.bootcss.com/fancybox/3.5.6/jquery.fancybox.min.css" rel="stylesheet">
+  <script src="//cdn.bootcss.com/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+  
+  <link href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">
+  <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+
+  
+
+  
+
+  
+  <script src="//cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  
+
+  
+  <link href="//cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+  <script src="//cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+  
+
+  <script src="//cdn.bootcss.com/PreloadJS/1.0.1/preloadjs.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <script>
+    let ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+    let CONFIG = {
+      search_service: "hexo",
+      since: '10/16/2018 00:00:00',
+      mathjax_cdn: 'https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',
+      poem_api: 'https://sdk.jinrishici.com/v2/browser/jinrishici.js'
+    }
+  </script>
+
+  <script src="/js/image.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/since.js"></script>
+  <script src="/js/app.js"></script>
+  
+  <script src="/js/wordcount.js"></script>
+  
+  
+  <script src="/js/leancloud.js"></script>
+  
+  <script src="/js/tagcloud.js"></script>
+  <script src="/js/tagcanvas.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <script>NProgress.start();</script>
+  
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/'>
+				Sun
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+					<li>
+						<a class='flat-box nav-home' href='/'>
+							首页
+						</a>
+					</li>
+					
+					<li>
+						<a class='flat-box nav-archives' href='/archives/'>
+							记录
+						</a>
+					</li>
+					
+					<li>
+						<a class='flat-box nav-timeline' href='/timeline/'>
+							时间轴
+						</a>
+					</li>
+					
+					<li>
+						<a class='flat-box nav-gallery' href='/gallery/'>
+							画廊
+						</a>
+					</li>
+					
+					<li>
+						<a class='flat-box nav-about' href='/about/'>
+							关于
+						</a>
+					</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+			<div class="m_search">
+				<form name="searchform" class="form u-search-form">
+					<input type="text" class="input u-search-input" placeholder="Search" />
+					<i class="material-icons flat-box">search</i>
+				</form>
+			</div>
+			
+			<ul class='switcher h-list'>
+				
+				<li class='s-search'>
+					<a href='javascript:void(0)'><i class="material-icons flat-box">search</i></a>
+				</li>
+				
+				<li class='s-menu'>
+					<a href='javascript:void(0)'><i class="material-icons flat-box">menu</i></a>
+				</li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				’’Sun--(*^▽^*)
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-down'>
+					<a href='javascript:void(0)'><i class="material-icons flat-box">arrow_downward</i></a>
+				</li>
+				<li class='s-comment'>
+					<a href='javascript:void(0)'><i class="material-icons flat-box">comment</i></a>
+				</li>
+				<li class='s-top'>
+					<a href='javascript:void(0)'><i class="material-icons flat-box">arrow_upward</i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+		<a href="/" class="nav-home nav">
+			首页
+		</a>
+		
+		<a href="/archives/" class="nav-archives nav">
+			记录
+		</a>
+		
+		<a href="/timeline/" class="nav-timeline nav">
+			时间轴
+		</a>
+		
+		<a href="/gallery/" class="nav-gallery nav">
+			画廊
+		</a>
+		
+		<a href="/about/" class="nav-about nav">
+			关于
+		</a>
+		
+	</nav>
+</aside>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div id='l_pjax' class='l_main'>
+        <article class="post reveal" itemscope itemprop="blogPost">
+	<section class='meta'>
+		<h2 class="title">
+			<a href="/2019/07/05/node/Node.js介绍/">
+				Node.js
+			</a>
+		</h2>
+		<time>
+			07-05, 2019
+		</time>
+		
+<time>#<span id="wordcount"></span></time>
+<time>#<span id="min2read"></span></time>
+<script>
+  count('&#34;Node.js有什么特点优点\n异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写\n特别适用于I/O密集型应用\n事件循环机制 \n\n单线程 - 一个人多干活\n\n跨平台\n\n缺点\n回调函数嵌套太多、太深(俗称回调地狱)\n单线程,处理不好CPU密集型任务 \n\n\n应用场景\nWeb服务API\n服务器渲染页面,提升速度\n后端的Web服务,例如跨域、服务器端的请求。\n\n&#34;');
+</script>
+
+		
+<span id="/2019/07/05/node/Node.js介绍/" class="leancloud_visitors" data-flag-title="Node.js">
+    <time>#<span class="leancloud-visitors-count"></span></time>
+</span>
+<script>AV.initialize("", "");</script>
+<script>
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        if ($('.leancloud_visitors').length == 1) {
+            addCount(Counter);
+        }
+    });
+</script>
+
+		
+
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
+
+		
+	</section>
+
+	
+
+	<section class="article typo">
+		<div class="article-entry" itemprop="articleBody">
+			<h3 id="Node-js有什么特点"><a href="#Node-js有什么特点" class="headerlink" title="Node.js有什么特点"></a>Node.js有什么特点</h3><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
+<li><strong>异步非阻塞的I/O (I/O线程池)</strong> （文件/数据库）的读写</li>
+<li><strong>特别适用于I/O密集型应用</strong></li>
+<li><p><strong>事件循环机制</strong> </p>
+</li>
+<li><p><strong>单线程</strong> - 一个人多干活</p>
+</li>
+<li><strong>跨平台</strong></li>
+</ul>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
+<li>回调函数嵌套太多、太深(俗称回调地狱)</li>
+<li>单线程,处理不好<strong>CPU密集型任务</strong> </li>
+</ul>
+<p><img src="https://img.jiuge.site/imgbox/20190825/lFWIl0woIA6y.png?imageslim" alt="mark"></p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><ul>
+<li>Web服务API</li>
+<li>服务器渲染页面,提升速度</li>
+<li>后端的Web服务,例如跨域、服务器端的请求。</li>
+</ul>
+
+		</div>
+		
+		<div class="article-tags tags">
+			
+			<a href="/tags/Node特点/">
+				Node特点</a>
+			
+		</div>
+		
+
+		
+		<div class="art-item-footer">
+			
+			<span class="art-item-left">
+				<a href="/2019/07/05/Vue/ref/" rel="prev" title="ref传值与获取Dom">
+					ref传值与获取Dom
+				</a>
+			</span>
+			
+			
+			<span class="art-item-right">
+				<a href="/2019/07/05/移动端/REM/" rel="next" title="移动端适配Rem">
+					移动端适配Rem
+				</a>
+			</span>
+			
+		</div>
+		
+	</section>
+</article>
+
+
+
+    
+    <article class="post reveal" itemscope itemprop="blogPost">
+        <div id="gitalk-container"></div>
+        <script type="text/javascript">
+            var gitalk = new Gitalk({
+                clientID: 'c16c460c0dd45134c1ab',
+                clientSecret: 'f2261eedbfa7b0fce5bef9cc9dc48f7bfb82d977',
+                id: window.location.pathname,
+                repo: 'comment',
+                owner: 'jiugechen',
+                admin: 'jiugechen',
+                distractionFreeMode: false,
+                language: 'zh-CN'
+            })
+            gitalk.render('gitalk-container')
+        </script>
+    </article>
+    
+
+    
+
+    
+
+
+        
+      </div>
+      <aside class='l_side'>
+        
+<section class='m_widget about'>
+    
+    <img class='avatar waves-image' src='/assets/img/photo.jpg' />
+    
+    <div class='header'>
+        Chen jia
+    </div>
+    <div id='motto-div' class='content'>
+        <div class='desc'>
+            <span id='motto' style="white-space:pre-wrap;">快乐</span>
+        </div>
+    </div>
+</section>
+
+
+    <section class='m_widget poem'>
+        <div class='header'>诗词</div>
+        <div class='content'>
+            <div class='poem'>
+                <span id="jinrishici-sentence">正在加载今日诗词....</span>
+            </div>
+            <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        </div>
+    </section>
+
+
+
+
+<section class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/Call/" style="font-size: 14px; color: #808080">Call</a> <a href="/tags/Class/" style="font-size: 14px; color: #808080">Class</a> <a href="/tags/Cli/" style="font-size: 14px; color: #808080">Cli</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16.67px; color: #2b2b2b">JavaScript</a> <a href="/tags/Node特点/" style="font-size: 14px; color: #808080">Node特点</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/Router/" style="font-size: 15.33px; color: #555">Router</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/Vue组件/" style="font-size: 14px; color: #808080">Vue组件</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/export/" style="font-size: 14px; color: #808080">export</a> <a href="/tags/generator/" style="font-size: 18px; color: #000">generator</a> <a href="/tags/ref/" style="font-size: 14px; color: #808080">ref</a> <a href="/tags/watch/" style="font-size: 14px; color: #808080">watch</a> <a href="/tags/webpack/" style="font-size: 14px; color: #808080">webpack</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/判断数据类型/" style="font-size: 14px; color: #808080">判断数据类型</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/命名视图/" style="font-size: 14px; color: #808080">命名视图</a> <a href="/tags/子组件/" style="font-size: 14px; color: #808080">子组件</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 15.33px; color: #555">指令</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #808080">数据类型</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/检测类型/" style="font-size: 14px; color: #808080">检测类型</a> <a href="/tags/模块化/" style="font-size: 15.33px; color: #555">模块化</a> <a href="/tags/监听/" style="font-size: 14px; color: #808080">监听</a> <a href="/tags/移动端适配/" style="font-size: 15.33px; color: #555">移动端适配</a> <a href="/tags/组件/" style="font-size: 14px; color: #808080">组件</a> <a href="/tags/组件传值/" style="font-size: 14px; color: #808080">组件传值</a> <a href="/tags/组件化/" style="font-size: 14px; color: #808080">组件化</a> <a href="/tags/组件通讯/" style="font-size: 14px; color: #808080">组件通讯</a> <a href="/tags/自定义/" style="font-size: 14px; color: #808080">自定义</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/过滤器/" style="font-size: 14px; color: #808080">过滤器</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/面向对象/" style="font-size: 14px; color: #808080">面向对象</a>
+    </div>
+</section>
+
+
+<section class='m_widget categories'>
+    <div class='header'>分类</div>
+    <div class='content'>
+        
+        <ul class="entry">
+            
+            <li><a class="flat-box" href="/categories/Css/">
+                    <div class='name'>
+                        Css
+                    </div>
+                    <div class='badget'>
+                        1
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/Git/">
+                    <div class='name'>
+                        Git
+                    </div>
+                    <div class='badget'>
+                        1
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/JavaScript/">
+                    <div class='name'>
+                        JavaScript
+                    </div>
+                    <div class='badget'>
+                        18
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/Node/">
+                    <div class='name'>
+                        Node
+                    </div>
+                    <div class='badget'>
+                        4
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/Vue/">
+                    <div class='name'>
+                        Vue
+                    </div>
+                    <div class='badget'>
+                        13
+                    </div>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+</section>
+
+      </aside>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+  <div>
+    <p><span id="since"></span><span class="my-face"></span></p>
+  </div>
+  <div class="social-wrapper">
+    
+    
+    <a href="/assets/img/code.jpg" class="social wechat" target="_blank" rel="external">
+      <i class="fa fa-wechat %flat-box"></i>
+    </a>
+    
+    <a href="/atom.xml" class="social rss" target="_blank" rel="external">
+      <i class="fa fa-rss %flat-box"></i>
+    </a>
+    
+    
+  </div>
+</footer>
+
+  
+
+  
+  <canvas id='evanyou'></div>
+  <script src="/js/evanyou.js"></script>
+  
+
+  
+  <div id="aplayer-fixed"></div>
+  <script src="/js/aplayer.js"></script>
+  
+
+ 
+  
+  <script src="/js/pjax.js"></script>
+  <script>NProgress.done();</script>
+</body>
+
+</html>

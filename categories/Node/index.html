@@ -13,13 +13,12 @@
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://jiugework.gitee.io/about/index.html">
+<meta property="og:title" content="’’Sun--(*^▽^*)">
+<meta property="og:url" content="http://jiugework.gitee.io/categories/Node/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-11T08:35:59.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
+<meta name="twitter:title" content="’’Sun--(*^▽^*)">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -214,87 +213,217 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div id='l_pjax' class='l_main'>
-        
-<article class="post reveal" itemscope itemprop="blogPost">
-	<section class='meta'>
-		<h2 class="title">
-			<a href="/about/index.html">
-				关于我
-			</a>
-		</h2>
-		<time>
-			07-11, 2019
-		</time>
-		
-<time>#<span id="wordcount"></span></time>
-<time>#<span id="min2read"></span></time>
-<script>
-  count('&#34;&#34;');
-</script>
+        <section class="post-list">
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/10/05/node/Node函数/">
+        Node函数特点
+      </a>
+    </h2>
+    
+    <time>
+      10-05, 2019
+    </time>
+    
 
-		
-<span id="/about/index.html" class="leancloud_visitors" data-flag-title="关于我">
-    <time>#<span class="leancloud-visitors-count"></span></time>
-</span>
-<script>AV.initialize("", "");</script>
-<script>
-    $(function () {
-        var Counter = AV.Object.extend("Counter");
-        if ($('.leancloud_visitors').length == 1) {
-            addCount(Counter);
-        }
-    });
-</script>
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
 
-		
-		
-	</section>
+    
+  </section>
+  <section class="article typo">
+    
+    #模板
 
-	
+Node中任何一个模块(js文件)都被一个外层函数所包裹
 
-	<section class="article typo">
-		<div class="article-entry" itemprop="articleBody">
-			
-		</div>
-		
+function (exports, require, module, filename, dirname) {}
 
-		
-	</section>
+exports:用于暴露模块
+
+require:用于引入模块
+
+module:用于暴露模块
+
+filename: 当前文件所在的路径(绝对)
+
+dirname: 当前文件所在文件夹的路径(绝对) 
+
+
+  ...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/10/05/node/Node函数/">Read More</a>
+    </div> -->
+    
+  </section>
 </article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/node/Node.js介绍/">
+        Node.js
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
 
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    Node.js有什么特点优点
+异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写
+特别适用于I/O密集型应用
+事件循环机制 
+
+单线程 - 一个人多干活
+
+跨平台
+
+缺点
+回调函数嵌套太多、太深(俗称回调地狱)
+单线程,处理不好CPU密集型任务 
+
+
+应用场景
+Web服务API
+服务器渲染页面,提升速度
+后端的Web服务,例如跨域、服务器端的请求。
 
 
     
-    <article class="post reveal" itemscope itemprop="blogPost">
-        <div id="gitalk-container"></div>
-        <script type="text/javascript">
-            var gitalk = new Gitalk({
-                clientID: 'c16c460c0dd45134c1ab',
-                clientSecret: 'f2261eedbfa7b0fce5bef9cc9dc48f7bfb82d977',
-                id: window.location.pathname,
-                repo: 'comment',
-                owner: 'jiugechen',
-                admin: 'jiugechen',
-                distractionFreeMode: false,
-                language: 'zh-CN'
-            })
-            gitalk.render('gitalk-container')
-        </script>
-    </article>
+    <!-- <div class="readmore">
+      <a href="/2019/07/05/node/Node.js介绍/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Node特点/">
+        Node特点</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/node/模块化/">
+        export default和export
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
     
 
-    
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
 
     
+  </section>
+  <section class="article typo">
+    
+    ES6
+ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径
+在ES6中,使用export default和export向外露成员
 
+
+ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径
+在ES6中,使用export default和export向外露成员
+在一个模块中,可以同时使用export defau...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/05/node/模块化/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/模块化/">
+        模块化</a>
+      
+      <a href="/tags/export/">
+        export</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/node/模板/">
+        模板
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    #模板
+
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/05/node/模板/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/generator/">
+        generator</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+</section>
 
 
 
 <script>
-	window.subData = {
-		title: '关于我',
-		tools: true
-	}
+  window.subData = {
+    title: 'Home',
+    tools: true
+  }
 </script>
         
       </div>
@@ -331,7 +460,7 @@
 <section class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/Call/" style="font-size: 14px; color: #808080">Call</a> <a href="/tags/Class/" style="font-size: 14px; color: #808080">Class</a> <a href="/tags/Cli/" style="font-size: 14px; color: #808080">Cli</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16.67px; color: #2b2b2b">JavaScript</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/Router/" style="font-size: 15.33px; color: #555">Router</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/Vue组件/" style="font-size: 14px; color: #808080">Vue组件</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/export/" style="font-size: 14px; color: #808080">export</a> <a href="/tags/generator/" style="font-size: 16.67px; color: #2b2b2b">generator</a> <a href="/tags/ref/" style="font-size: 14px; color: #808080">ref</a> <a href="/tags/watch/" style="font-size: 14px; color: #808080">watch</a> <a href="/tags/webpack/" style="font-size: 14px; color: #808080">webpack</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/判断数据类型/" style="font-size: 14px; color: #808080">判断数据类型</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/命名视图/" style="font-size: 14px; color: #808080">命名视图</a> <a href="/tags/子组件/" style="font-size: 14px; color: #808080">子组件</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 15.33px; color: #555">指令</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #808080">数据类型</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/检测类型/" style="font-size: 14px; color: #808080">检测类型</a> <a href="/tags/模块化/" style="font-size: 15.33px; color: #555">模块化</a> <a href="/tags/监听/" style="font-size: 14px; color: #808080">监听</a> <a href="/tags/组件/" style="font-size: 14px; color: #808080">组件</a> <a href="/tags/组件传值/" style="font-size: 14px; color: #808080">组件传值</a> <a href="/tags/组件化/" style="font-size: 14px; color: #808080">组件化</a> <a href="/tags/组件通讯/" style="font-size: 14px; color: #808080">组件通讯</a> <a href="/tags/自定义/" style="font-size: 14px; color: #808080">自定义</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/过滤器/" style="font-size: 14px; color: #808080">过滤器</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/面向对象/" style="font-size: 14px; color: #808080">面向对象</a>
+        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/Call/" style="font-size: 14px; color: #808080">Call</a> <a href="/tags/Class/" style="font-size: 14px; color: #808080">Class</a> <a href="/tags/Cli/" style="font-size: 14px; color: #808080">Cli</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16.67px; color: #2b2b2b">JavaScript</a> <a href="/tags/Node特点/" style="font-size: 14px; color: #808080">Node特点</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/Router/" style="font-size: 15.33px; color: #555">Router</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/Vue组件/" style="font-size: 14px; color: #808080">Vue组件</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/export/" style="font-size: 14px; color: #808080">export</a> <a href="/tags/generator/" style="font-size: 18px; color: #000">generator</a> <a href="/tags/ref/" style="font-size: 14px; color: #808080">ref</a> <a href="/tags/watch/" style="font-size: 14px; color: #808080">watch</a> <a href="/tags/webpack/" style="font-size: 14px; color: #808080">webpack</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/判断数据类型/" style="font-size: 14px; color: #808080">判断数据类型</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/命名视图/" style="font-size: 14px; color: #808080">命名视图</a> <a href="/tags/子组件/" style="font-size: 14px; color: #808080">子组件</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/指令/" style="font-size: 15.33px; color: #555">指令</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #808080">数据类型</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/检测类型/" style="font-size: 14px; color: #808080">检测类型</a> <a href="/tags/模块化/" style="font-size: 15.33px; color: #555">模块化</a> <a href="/tags/监听/" style="font-size: 14px; color: #808080">监听</a> <a href="/tags/移动端适配/" style="font-size: 15.33px; color: #555">移动端适配</a> <a href="/tags/组件/" style="font-size: 14px; color: #808080">组件</a> <a href="/tags/组件传值/" style="font-size: 14px; color: #808080">组件传值</a> <a href="/tags/组件化/" style="font-size: 14px; color: #808080">组件化</a> <a href="/tags/组件通讯/" style="font-size: 14px; color: #808080">组件通讯</a> <a href="/tags/自定义/" style="font-size: 14px; color: #808080">自定义</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/过滤器/" style="font-size: 14px; color: #808080">过滤器</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/面向对象/" style="font-size: 14px; color: #808080">面向对象</a>
     </div>
 </section>
 
@@ -366,6 +495,15 @@
                     </div>
                     <div class='badget'>
                         18
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/Node/">
+                    <div class='name'>
+                        Node
+                    </div>
+                    <div class='badget'>
+                        4
                     </div>
                 </a></li>
             
