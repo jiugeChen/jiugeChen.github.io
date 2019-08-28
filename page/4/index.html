@@ -220,6 +220,57 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/07/11/data/数据交互/">
+        数据交互
+      </a>
+    </h2>
+    
+    <time>
+      07-11, 2018
+    </time>
+    
+    
+  </section>
+  <section class="article typo">
+    
+    http协议
+无状态
+连接过程：连接-接受-发送请求
+消息分成两部分，请求头&lt;=32K、请求体&lt;=2G
+
+form
+最重要
+
+
+action-提交到的位置
+method–GET/POST/PUT/DELETE/HEAD
+GET:  把数据放在url传输     数据量很小、缓存。获取东西
+POST: 把数据放在请求体里面  数据量大、不会缓存。发送东西，大量发送。
+PUT:发送东...
+    
+    <!-- <div class="readmore">
+      <a href="/2018/07/11/data/数据交互/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/请求数据/">
+        请求数据</a>
+      
+      <a href="/tags/ajax/">
+        ajax</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/07/08/js/对象/">
         ES5中新增的方法
       </a>
@@ -295,14 +346,66 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
       <a href="/tags/遍历/">
         遍历</a>
       
       <a href="/tags/循环/">
         循环</a>
+      
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/箭头函数/">
+        箭头函数
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    
+之前的函数是这样写的
+123function 名字()&#123;   //  code&#125;
+
+而ES6是↓
+
+箭头函数
+
+如果只有一个参数，()可以省略
+如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
+    
+    <!-- <div class="readmore">
+      <a href="/2018/07/05/js/箭头函数/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/ES6/">
+        ES6</a>
+      
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
       
     </div>
     
@@ -349,53 +452,6 @@ git config --global user.email &quot;你的邮箱&quot;
       
       <a href="/tags/Git/">
         Git</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/js/模块化/">
-        模块化
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    模块化
-模块-组件-元件
-模块：
-
-12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/05/js/模块化/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/ES6/">
-        ES6</a>
-      
-      <a href="/tags/模块化/">
-        模块化</a>
       
     </div>
     
@@ -468,8 +524,8 @@ ES6 常量 const
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/箭头函数/">
-        箭头函数
+      <a href="/2018/07/05/js/模块化/">
+        模块化
       </a>
     </h2>
     
@@ -486,19 +542,14 @@ ES6 常量 const
   </section>
   <section class="article typo">
     
-    
-之前的函数是这样写的
-123function 名字()&#123;   //  code&#125;
+    模块化
+模块-组件-元件
+模块：
 
-而ES6是↓
-
-箭头函数
-
-如果只有一个参数，()可以省略
-如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
+12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
     
     <!-- <div class="readmore">
-      <a href="/2018/07/05/js/箭头函数/">Read More</a>
+      <a href="/2018/07/05/js/模块化/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
@@ -506,51 +557,8 @@ ES6 常量 const
       <a href="/tags/ES6/">
         ES6</a>
       
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/js/generator/">
-        generator
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    generatorgenerator-生成器
-普通函数- 一路到底
-generator函数- 中间可以停 走走停停
-12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/05/js/generator/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/generator/">
-        generator</a>
+      <a href="/tags/模块化/">
+        模块化</a>
       
     </div>
     
@@ -614,8 +622,8 @@ Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/结构赋值/">
-        解构赋值
+      <a href="/2018/07/05/js/generator/">
+        generator
       </a>
     </h2>
     
@@ -632,22 +640,19 @@ Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
   </section>
   <section class="article typo">
     
-    结构赋值
-左右两边结构必须一样;
-右边必须是个东西;
-声明和赋值不能分开(必须在一句话里说完);12345678 // 数组let [aq,bq,cq]=[1,2,3]; console.log(aq);//1 console.log(bq);//2 console.log(cq);//3 // 对象 let &#123;w,z,y&#125; = &#123;w:12,z:66,y:15&...
+    generatorgenerator-生成器
+普通函数- 一路到底
+generator函数- 中间可以停 走走停停
+12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
     
     <!-- <div class="readmore">
-      <a href="/2018/07/05/js/结构赋值/">Read More</a>
+      <a href="/2018/07/05/js/generator/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/ES6/">
-        ES6</a>
-      
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
+      <a href="/tags/generator/">
+        generator</a>
       
     </div>
     
@@ -660,8 +665,8 @@ Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/Vue/命名视图/">
-        命名视图
+      <a href="/2018/07/05/Vue/Vue过滤器/">
+        Vue过滤器
       </a>
     </h2>
     
@@ -678,19 +683,16 @@ Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
   </section>
   <section class="article typo">
     
-    12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110...
+    1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&lt;div id=&quot;app&quot;&gt;   &lt;div&gt;     &#123;&#123; message | formatTime(&apos;YMD&apos;)&#125;&#125; ...
     
     <!-- <div class="readmore">
-      <a href="/2018/07/05/Vue/命名视图/">Read More</a>
+      <a href="/2018/07/05/Vue/Vue过滤器/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/命名视图/">
-        命名视图</a>
-      
-      <a href="/tags/Router/">
-        Router</a>
+      <a href="/tags/过滤器/">
+        过滤器</a>
       
     </div>
     
