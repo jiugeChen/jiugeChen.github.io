@@ -421,6 +421,46 @@ dirname: 当前文件所在文件夹的路径(绝对)
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2019/08/30/node/MongoDB/">
+        MongoDB
+      </a>
+    </h2>
+    
+    <time>
+      08-30, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/MongoDB/">MongoDB</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    MongoDB原生CRUD（增删改查）命令总结-C creat：
+db.集合名.insert(文档对象)
+db.集合名.insertOne(文档对象)
+db.集合名.insertMany([文档对象，文档对象])
+-R read：
+db.集合名.find(查询条件[,投影])
+    举例:db.students.find({age:18}),查找年龄为18的所有信息
+    举例:db.s...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/08/30/node/MongoDB/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2019/08/26/node/包管理工具/">
         包管理工具
       </a>
@@ -484,6 +524,53 @@ npm l...
     <!-- <div class="readmore">
       <a href="/2019/08/09/work/周报/">Read More</a>
     </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/28/js/Call/">
+        Call
+      </a>
+    </h2>
+    
+    <time>
+      07-28, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    Call用法
+
+调用函数
+
+123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
+
+Call可以改变函数this的指向
+12345678function dr() &#123;   console.log("play");   ...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/28/js/Call/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Call/">
+        Call</a>
+      
+    </div>
     
   </section>
 </article>
@@ -586,96 +673,6 @@ class本质还是function
 </article>
   </div>
   
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/28/js/Call/">
-        Call
-      </a>
-    </h2>
-    
-    <time>
-      07-28, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    Call用法
-
-调用函数
-
-123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
-
-Call可以改变函数this的指向
-12345678function dr() &#123;   console.log("play");   ...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/28/js/Call/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/Call/">
-        Call</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/22/Vue/样式/">
-        Vue样式绑定方式
-      </a>
-    </h2>
-    
-    <time>
-      07-22, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    第一种方式
-直接传递一个数组 这里的class需要用v-bind绑定
-
-12345678910111213141516171819&lt;style&gt;    .red &#123;      color: red;    &#125;    .thin &#123;      font-weight: 200;    &#125;    .italic &#123;      font...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/22/Vue/样式/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/Vue样式/">
-        Vue样式</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
 </section>
 
 
@@ -765,6 +762,15 @@ Call可以改变函数this的指向
                     </div>
                     <div class='badget'>
                         18
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/MongoDB/">
+                    <div class='name'>
+                        MongoDB
+                    </div>
+                    <div class='badget'>
+                        1
                     </div>
                 </a></li>
             
