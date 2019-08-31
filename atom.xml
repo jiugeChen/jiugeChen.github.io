@@ -180,6 +180,36 @@
   </entry>
   
   <entry>
+    <title>Class类</title>
+    <link href="http://jiugework.gitee.io/2019/07/28/js/Class/"/>
+    <id>http://jiugework.gitee.io/2019/07/28/js/Class/</id>
+    <published>2019-07-28T01:26:53.000Z</published>
+    <updated>2019-07-28T01:29:38.951Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>类的本质</strong></p><ol><li>class本质还是function</li><li>类的所有方法都定义在类的prototype属性上</li><li>类创建的实例,里面也有proto-指向类的prototype原型对象</li><li>所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。</li><li>所以ES6的类其实就是语法糖.</li><li>语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功能,但是一种写法更加清晰、方便那么这个方法就是语法糖</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;类的本质&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;class本质还是function&lt;/li&gt;
+&lt;li&gt;类的所有方法都定义在类的prototype属性上&lt;/li&gt;
+&lt;li&gt;类创建的实例,里面也有proto-指向类的prototype原型对象&lt;/li&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
+    
+    
+      <category term="Class" scheme="http://jiugework.gitee.io/tags/Class/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面向对象</title>
     <link href="http://jiugework.gitee.io/2019/07/28/js/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     <id>http://jiugework.gitee.io/2019/07/28/js/面向对象/</id>
@@ -233,36 +263,6 @@
     
     
       <category term="Call" scheme="http://jiugework.gitee.io/tags/Call/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Class类</title>
-    <link href="http://jiugework.gitee.io/2019/07/28/js/Class/"/>
-    <id>http://jiugework.gitee.io/2019/07/28/js/Class/</id>
-    <published>2019-07-28T01:26:53.000Z</published>
-    <updated>2019-07-28T01:29:38.951Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>类的本质</strong></p><ol><li>class本质还是function</li><li>类的所有方法都定义在类的prototype属性上</li><li>类创建的实例,里面也有proto-指向类的prototype原型对象</li><li>所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。</li><li>所以ES6的类其实就是语法糖.</li><li>语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功能,但是一种写法更加清晰、方便那么这个方法就是语法糖</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;类的本质&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;class本质还是function&lt;/li&gt;
-&lt;li&gt;类的所有方法都定义在类的prototype属性上&lt;/li&gt;
-&lt;li&gt;类创建的实例,里面也有proto-指向类的prototype原型对象&lt;/li&gt;
-&lt;
-      
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
-    
-    
-      <category term="Class" scheme="http://jiugework.gitee.io/tags/Class/"/>
     
   </entry>
   
@@ -434,89 +434,20 @@
   </entry>
   
   <entry>
-    <title>判断JS数据类型的四种方法</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/js/%E5%88%A4%E6%96%ADJS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/js/判断JS数据类型的四种方法/</id>
+    <title>模板</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/Vue/%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/Vue/模板/</id>
     <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-07-30T06:45:16.180Z</updated>
+    <updated>2019-08-16T07:40:02.787Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
-    
-    
-      <category term="数据类型" scheme="http://jiugework.gitee.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-      <category term="判断数据类型" scheme="http://jiugework.gitee.io/tags/%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-      <category term="检测类型" scheme="http://jiugework.gitee.io/tags/%E6%A3%80%E6%B5%8B%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>移动端适配Rem</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%A8%A1%E6%9D%BF%20/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/移动端/模板 /</id>
-    <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-08-26T01:59:54.403Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>#模板</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;移动端适配&quot;&gt;&lt;a href=&quot;#移动端适配&quot; class=&quot;headerlink&quot; title=&quot;移动端适配&quot;&gt;&lt;/a&gt;移动端适配&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
-      
-    
-    </summary>
-    
-    
-      <category term="移动端适配" scheme="http://jiugework.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>移动端适配Rem</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/REM/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/移动端/REM/</id>
-    <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-08-26T01:59:34.467Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;移动端适配&quot;&gt;&lt;a href=&quot;#移动端适配&quot; class=&quot;headerlink&quot; title=&quot;移动端适配&quot;&gt;&lt;/a&gt;移动端适配&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
-      
-    
-    </summary>
-    
-    
-      <category term="移动端适配" scheme="http://jiugework.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自定义指令</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/Vue/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/Vue/自定义指令/</id>
-    <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-07-30T14:00:10.646Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><ul><li>使用vue.dizective ()定义全局的指令 v-focus</li><li>参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 </li><li>但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 </li><li>参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-focus</span> <span class="attr">v-color</span>=<span class="string">"blue"</span> <span class="attr">v-bold</span> <span class="attr">v-fz</span>=<span class="string">"30"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'focus'</span>, &#123;</span></span><br><span class="line"></span><br><span class="line">    inserted(el) &#123;</span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'color'</span>, &#123;</span></span><br><span class="line">    bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(binding);</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(el.style.color = binding.value);</span></span><br><span class="line">    &#125;,</span><br><span class="line">    inserted(el) &#123;</span><br><span class="line"><span class="javascript"><span class="comment">//操作</span></span></span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    data: &#123;</span><br><span class="line"><span class="javascript">      blue: <span class="string">'blue'</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    directives: &#123;</span><br><span class="line"><span class="javascript">      <span class="string">'bold'</span>: &#123;</span></span><br><span class="line">        bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(binding, <span class="string">'私有的'</span>);</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(el.style.fontWeight = <span class="string">"bold"</span>);</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line"><span class="javascript">      <span class="string">'fz'</span>:<span class="function">(<span class="params">el,binding</span>)=&gt;</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//等同于把代码写到了 bind和update里面去</span></span></span><br><span class="line"><span class="javascript">el.style.fontSize=<span class="built_in">parseInt</span>(binding.value)+<span class="string">'px'</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;自定义指令&quot;&gt;&lt;a href=&quot;#自定义指令&quot; class=&quot;headerlink&quot; title=&quot;自定义指令&quot;&gt;&lt;/a&gt;自定义指令&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;使用vue.dizective ()定义全局的指令 v-focus&lt;/li&gt;
-&lt;li&gt;参数1 :指令的名
+        &lt;p&gt;#模板&lt;/p&gt;
+
       
     
     </summary>
@@ -524,9 +455,85 @@
       <category term="Vue" scheme="http://jiugework.gitee.io/categories/Vue/"/>
     
     
-      <category term="指令" scheme="http://jiugework.gitee.io/tags/%E6%8C%87%E4%BB%A4/"/>
+  </entry>
+  
+  <entry>
+    <title>模板</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/js/1bbbbb/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</id>
+    <published>2019-07-05T10:57:42.000Z</published>
+    <updated>2019-07-28T01:46:26.346Z</updated>
     
-      <category term="自定义" scheme="http://jiugework.gitee.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+    <content type="html"><![CDATA[<p>#模板</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#模板&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
+    
+    
+      <category term="generator" scheme="http://jiugework.gitee.io/tags/generator/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>export default和export</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/node/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/node/模块化/</id>
+    <published>2019-07-05T10:57:42.000Z</published>
+    <updated>2019-08-26T01:57:01.319Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><blockquote><p>ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径</p><p>在ES6中,使用export default和export向外露成员</p></blockquote><ul><li>ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径</li><li>在ES6中,使用<code>export default</code>和<code>export</code>向外露成员</li><li>在一个模块中,可以同时使用export default和export向外暴露成员</li></ul><p><strong>export default</strong></p><p>在一个模块中, <code>export detault</code>只允许向外暴露1次</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  name:<span class="string">'dsd'</span>,</span><br><span class="line">  sd:<span class="string">'s'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> m1  <span class="keyword">from</span> <span class="string">'./aa.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(m1);</span><br><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure><p><strong>export</strong>  </p><p>使用<code>export</code>向外暴露的成员只能通过<code>{}</code>来接收这种形式叫做 <strong>按需导出</strong></p><p><code>export</code>可以暴露多个成员，同时,如果某些成员,我们在import的时候,不需要,则可以不在<code>{}</code>定义</p><p>注意:使用<code>export</code>导出的成员,必须严格按照导出时候的名称,来使用 {} 按需接收</p><p>使用<code>export</code> 导出的成员,<strong>如果就想换个名称来接收</strong>,可以使用<code>as</code>来起名</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  name:<span class="string">'dsd'</span>,</span><br><span class="line">  sd:<span class="string">'s'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> b =&#123;</span><br><span class="line">  <span class="string">'zzzzzzz'</span>:<span class="number">12</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> b1 =&#123;</span><br><span class="line">  <span class="string">'zzzzzzz'</span>:<span class="number">12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> m1,&#123;b,b1 <span class="keyword">as</span> bs&#125;  <span class="keyword">from</span> <span class="string">'./aa.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(m1);</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br><span class="line"><span class="built_in">console</span>.log(bs);</span><br><span class="line"><span class="comment">//&#123;name: "dsd", sd: "s"&#125;</span></span><br><span class="line"><span class="comment">//&#123;zzzzzzz: 12&#125;</span></span><br><span class="line"><span class="comment">//&#123;zzzzzzz: 12&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="Node" scheme="http://jiugework.gitee.io/categories/Node/"/>
+    
+    
+      <category term="模块化" scheme="http://jiugework.gitee.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+      <category term="export" scheme="http://jiugework.gitee.io/tags/export/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cli</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/Vue/cli/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/Vue/cli/</id>
+    <published>2019-07-05T10:57:42.000Z</published>
+    <updated>2019-08-04T03:05:02.160Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p>创建项目</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue create my-project</span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line">vue ui</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://jiugework.gitee.io/categories/Vue/"/>
+    
+    
+      <category term="Cli" scheme="http://jiugework.gitee.io/tags/Cli/"/>
     
   </entry>
   
