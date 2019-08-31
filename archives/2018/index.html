@@ -422,8 +422,8 @@ valu...
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/generator/">
-        generator
+      <a href="/2018/07/05/js/箭头函数/">
+        箭头函数
       </a>
     </h2>
     
@@ -440,59 +440,28 @@ valu...
   </section>
   <section class="article typo">
     
-    generatorgenerator-生成器
-普通函数- 一路到底
-generator函数- 中间可以停 走走停停
-12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
+    
+之前的函数是这样写的
+123function 名字()&#123;   //  code&#125;
+
+而ES6是↓
+
+箭头函数
+
+如果只有一个参数，()可以省略
+如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
     
     <!-- <div class="readmore">
-      <a href="/2018/07/05/js/generator/">Read More</a>
+      <a href="/2018/07/05/js/箭头函数/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/generator/">
-        generator</a>
+      <a href="/tags/ES6/">
+        ES6</a>
       
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/Vue/Vue过滤器/">
-        Vue过滤器
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&lt;div id=&quot;app&quot;&gt;   &lt;div&gt;     &#123;&#123; message | formatTime(&apos;YMD&apos;)&#125;&#125; ...
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/05/Vue/Vue过滤器/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/过滤器/">
-        过滤器</a>
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
       
     </div>
     
@@ -598,58 +567,6 @@ generator函数- 中间可以停 走走停停
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/箭头函数/">
-        箭头函数
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    
-之前的函数是这样写的
-123function 名字()&#123;   //  code&#125;
-
-而ES6是↓
-
-箭头函数
-
-如果只有一个参数，()可以省略
-如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
-    
-    <!-- <div class="readmore">
-      <a href="/2018/07/05/js/箭头函数/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/ES6/">
-        ES6</a>
-      
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
       <a href="/2018/07/05/GIt操作/">
         Git常用操作
       </a>
@@ -684,6 +601,100 @@ git config --global user.email &quot;你的邮箱&quot;
       
       <a href="/tags/Git/">
         Git</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/Promise/">
+        Promise
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    
+异步: 操作直接没啥关系,同时进行多个操作，代码复杂。
+同步: 同时只能做一件事 代码简单。
+本质：等待异步操作结束
+当状态改变的时候—调用之前挂起的then队列
+then的时候直接执行对应的函数，并且参数给人家。
+
+
+
+Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
+一个
+123456789101112131415161718192021...
+    
+    <!-- <div class="readmore">
+      <a href="/2018/07/05/js/Promise/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/ES6/">
+        ES6</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/Vue/命名视图/">
+        命名视图
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Vue/">Vue</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110...
+    
+    <!-- <div class="readmore">
+      <a href="/2018/07/05/Vue/命名视图/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/命名视图/">
+        命名视图</a>
+      
+      <a href="/tags/Router/">
+        Router</a>
       
     </div>
     

@@ -180,6 +180,36 @@
   </entry>
   
   <entry>
+    <title>Class类</title>
+    <link href="http://jiugework.gitee.io/2019/07/28/js/Class/"/>
+    <id>http://jiugework.gitee.io/2019/07/28/js/Class/</id>
+    <published>2019-07-28T01:26:53.000Z</published>
+    <updated>2019-07-28T01:29:38.951Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>类的本质</strong></p><ol><li>class本质还是function</li><li>类的所有方法都定义在类的prototype属性上</li><li>类创建的实例,里面也有proto-指向类的prototype原型对象</li><li>所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。</li><li>所以ES6的类其实就是语法糖.</li><li>语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功能,但是一种写法更加清晰、方便那么这个方法就是语法糖</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;类的本质&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;class本质还是function&lt;/li&gt;
+&lt;li&gt;类的所有方法都定义在类的prototype属性上&lt;/li&gt;
+&lt;li&gt;类创建的实例,里面也有proto-指向类的prototype原型对象&lt;/li&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
+    
+    
+      <category term="Class" scheme="http://jiugework.gitee.io/tags/Class/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Call</title>
     <link href="http://jiugework.gitee.io/2019/07/28/js/Call/"/>
     <id>http://jiugework.gitee.io/2019/07/28/js/Call/</id>
@@ -233,36 +263,6 @@
     
     
       <category term="面向对象" scheme="http://jiugework.gitee.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Class类</title>
-    <link href="http://jiugework.gitee.io/2019/07/28/js/Class/"/>
-    <id>http://jiugework.gitee.io/2019/07/28/js/Class/</id>
-    <published>2019-07-28T01:26:53.000Z</published>
-    <updated>2019-07-28T01:29:38.951Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>类的本质</strong></p><ol><li>class本质还是function</li><li>类的所有方法都定义在类的prototype属性上</li><li>类创建的实例,里面也有proto-指向类的prototype原型对象</li><li>所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。</li><li>所以ES6的类其实就是语法糖.</li><li>语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功能,但是一种写法更加清晰、方便那么这个方法就是语法糖</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;类的本质&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;class本质还是function&lt;/li&gt;
-&lt;li&gt;类的所有方法都定义在类的prototype属性上&lt;/li&gt;
-&lt;li&gt;类创建的实例,里面也有proto-指向类的prototype原型对象&lt;/li&gt;
-&lt;
-      
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
-    
-    
-      <category term="Class" scheme="http://jiugework.gitee.io/tags/Class/"/>
     
   </entry>
   
@@ -434,27 +434,51 @@
   </entry>
   
   <entry>
-    <title>Cli</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/Vue/cli/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/Vue/cli/</id>
+    <title>模板</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/js/1bbbbb/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</id>
     <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-08-04T03:05:02.160Z</updated>
+    <updated>2019-07-28T01:46:26.346Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p>创建项目</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue create my-project</span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line">vue ui</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>#模板</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cla
+        &lt;p&gt;#模板&lt;/p&gt;
+
       
     
     </summary>
     
-      <category term="Vue" scheme="http://jiugework.gitee.io/categories/Vue/"/>
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="Cli" scheme="http://jiugework.gitee.io/tags/Cli/"/>
+      <category term="generator" scheme="http://jiugework.gitee.io/tags/generator/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端适配Rem</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/REM/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/移动端/REM/</id>
+    <published>2019-07-05T10:57:42.000Z</published>
+    <updated>2019-08-26T01:59:34.467Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;移动端适配&quot;&gt;&lt;a href=&quot;#移动端适配&quot; class=&quot;headerlink&quot; title=&quot;移动端适配&quot;&gt;&lt;/a&gt;移动端适配&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+    
+      <category term="移动端适配" scheme="http://jiugework.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/"/>
     
   </entry>
   
@@ -513,28 +537,6 @@
       <category term="指令" scheme="http://jiugework.gitee.io/tags/%E6%8C%87%E4%BB%A4/"/>
     
       <category term="自定义" scheme="http://jiugework.gitee.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>判断JS数据类型的四种方法</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/js/%E5%88%A4%E6%96%ADJS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/js/判断JS数据类型的四种方法/</id>
-    <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-07-30T06:45:16.180Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
-    
-    
-      <category term="数据类型" scheme="http://jiugework.gitee.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-      <category term="判断数据类型" scheme="http://jiugework.gitee.io/tags/%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-      <category term="检测类型" scheme="http://jiugework.gitee.io/tags/%E6%A3%80%E6%B5%8B%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
