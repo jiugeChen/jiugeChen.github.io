@@ -507,49 +507,8 @@ indexOf判断是否包含并且返回...
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/js/1bbbbb/">
-        模板
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    #模板
-
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/js/1bbbbb/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/generator/">
-        generator</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/Vue/cli/">
-        Cli
+      <a href="/2019/07/05/Vue/监听/">
+        监听
       </a>
     </h2>
     
@@ -566,19 +525,69 @@ indexOf判断是否包含并且返回...
   </section>
   <section class="article typo">
     
-    安装1npm install -g @vue/cli
-创建项目
-123vue create my-project# ORvue ui
-
+    监听文本框数据改变通过@keyup监听键盘
+1234567891011121314151617181920212223&lt;body&gt;  &lt;div id=&quot;app&quot;&gt;    &lt;input v-model=&quot;one&quot; @keyup=&quot;getAll&quot;&gt;    &lt;input v-model=&quot...
     
     <!-- <div class="readmore">
-      <a href="/2019/07/05/Vue/cli/">Read More</a>
+      <a href="/2019/07/05/Vue/监听/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/Cli/">
-        Cli</a>
+      <a href="/tags/监听/">
+        监听</a>
+      
+      <a href="/tags/watch/">
+        watch</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/Vue/自定义指令/">
+        自定义指令
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Vue/">Vue</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    自定义指令
+使用vue.dizective ()定义全局的指令 v-focus
+参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 
+但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 
+参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作
+
+1234567891011121314151617181920212223...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/05/Vue/自定义指令/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/指令/">
+        指令</a>
+      
+      <a href="/tags/自定义/">
+        自定义</a>
       
     </div>
     
