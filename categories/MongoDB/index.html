@@ -238,15 +238,17 @@
   </section>
   <section class="article typo">
     
-     -Create
+    Create
 模型对象.create(文档对象，回调函数)
 模型对象.create(文档对象)
- -Read
+Read
 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组
+
 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null
- -Update
+Update
 模型对象.updateOne(查询条件,要更新的内容[,配置对象])
-模型对象.updateMany(查...
+
+模型对象.updateMany(查询条件,...
     
     <!-- <div class="readmore">
       <a href="/2019/08/31/node/mongoose的CRUD/">Read More</a>
@@ -280,13 +282,17 @@
   <section class="article typo">
     
     MongoDB原生CRUD（增删改查）命令总结-C creat：
+
 db.集合名.insert(文档对象)
 db.集合名.insertOne(文档对象)
 db.集合名.insertMany([文档对象，文档对象])
+
 -R read：
+
 db.集合名.find(查询条件[,投影])
-    举例:db.students.find({age:18}),查找年龄为18的所有信息
-    举例:db.s...
+
+举例:db.students.find({age:18}),查找年龄为18的所有信息
+举例:db.stude...
     
     <!-- <div class="readmore">
       <a href="/2019/08/30/node/MongoDB/">Read More</a>

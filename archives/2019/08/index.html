@@ -239,15 +239,17 @@
   </section>
   <section class="article typo">
     
-     -Create
+    Create
 模型对象.create(文档对象，回调函数)
 模型对象.create(文档对象)
- -Read
+Read
 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组
+
 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null
- -Update
+Update
 模型对象.updateOne(查询条件,要更新的内容[,配置对象])
-模型对象.updateMany(查...
+
+模型对象.updateMany(查询条件,...
     
     <!-- <div class="readmore">
       <a href="/2019/08/31/node/mongoose的CRUD/">Read More</a>
@@ -283,8 +285,9 @@
     GET请求与POST请求前言
 HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST
 
-GET1. 含义：从指定的资源获取数据（一种“索取”的感觉）。
-2. 什...
+GET
+含义：从指定的资源获取数据（一种“索取”的感觉）。
+什么时候使用...
     
     <!-- <div class="readmore">
       <a href="/2019/08/31/node/GET请求与POST请求/">Read More</a>
@@ -328,13 +331,17 @@ GET1. 含义：从指定的资源获取数据（一种“索取”的感觉）�
   <section class="article typo">
     
     MongoDB原生CRUD（增删改查）命令总结-C creat：
+
 db.集合名.insert(文档对象)
 db.集合名.insertOne(文档对象)
 db.集合名.insertMany([文档对象，文档对象])
+
 -R read：
+
 db.集合名.find(查询条件[,投影])
-    举例:db.students.find({age:18}),查找年龄为18的所有信息
-    举例:db.s...
+
+举例:db.students.find({age:18}),查找年龄为18的所有信息
+举例:db.stude...
     
     <!-- <div class="readmore">
       <a href="/2019/08/30/node/MongoDB/">Read More</a>

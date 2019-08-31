@@ -12,20 +12,18 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GET请求与POST请求前言 HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST  GET1. 含义：从指定的资源获取数据（一种“索取”的感觉）。 2. 什么时候">
+  <meta name="description" content="GET请求与POST请求前言 HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST  GET 含义：从指定的资源获取数据（一种“索取”的感觉）。 什么时候使用GET">
 <meta name="keywords" content="GET,POST">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GET请求与POST请求">
 <meta property="og:url" content="http://jiugework.gitee.io/2019/08/31/node/GET请求与POST请求/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="GET请求与POST请求前言 HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST  GET1. 含义：从指定的资源获取数据（一种“索取”的感觉）。 2. 什么时候">
+<meta property="og:description" content="GET请求与POST请求前言 HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST  GET 含义：从指定的资源获取数据（一种“索取”的感觉）。 什么时候使用GET">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.jiuge.site/imgbox/20190831/RDV6MlMfYWfB.png?imageslim">
-<meta property="og:updated_time" content="2019-08-31T14:31:12.850Z">
+<meta property="og:updated_time" content="2019-08-31T15:42:41.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GET请求与POST请求">
-<meta name="twitter:description" content="GET请求与POST请求前言 HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST  GET1. 含义：从指定的资源获取数据（一种“索取”的感觉）。 2. 什么时候">
-<meta name="twitter:image" content="https://img.jiuge.site/imgbox/20190831/RDV6MlMfYWfB.png?imageslim">
+<meta name="twitter:description" content="GET请求与POST请求前言 HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST  GET 含义：从指定的资源获取数据（一种“索取”的感觉）。 什么时候使用GET">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -234,7 +232,7 @@
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;GET请求与POST请求前言\nHTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST\n\nGET1. 含义：从指定的资源获取数据（一种“索取”的感觉）。\n2. 什么时候使用GET请求较为合适？\n    (1)单纯获取数据的时。\n    (2)请求中不包含敏感数据时。\nPOST1.含义：向指定的资源提交要被处理的数据（一种“交差”的感觉）。\n2.什么时候使用POST请求较为合适？\n    (1)传送相对敏感数据时。\n    (2)请求的结果有持续性的副作用，例如：传递的数据要作为数据源写入数据库时。\n备注：使用了POST不代表的绝对的安全。\n常见的GET请求：1.浏览器地址栏输入网址时（浏览器请求网页时时GET请求，且不可更改）\n2.可以请求外部资源的html标签，例如：&amp;lt;img&amp;gt; &amp;lt;a&amp;gt; &amp;lt;link&amp;gt; &amp;lt;script&amp;gt;\n3.发送Ajax时明确指出了使用GET请求\n4.form表单提交时没有指明方式，默认使用GET\n常见的POST请求：1.发送Ajax时明确指出了使用POST方式\n2.使用第三方发送Ajax请求库时明确指出用POST时\n3.form表单提交时明确指出使用POST方式\n二者的区别\n&#34;');
+  count('&#34;GET请求与POST请求前言\nHTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST\n\nGET\n含义：从指定的资源获取数据（一种“索取”的感觉）。\n什么时候使用GET请求较为合适？\n单纯获取数据的时。\n请求中不包含敏感数据时。\n\n\n\nPOST\n含义：向指定的资源提交要被处理的数据（一种“交差”的感觉）。\n什么时候使用POST请求较为合适？\n传送相对敏感数据时。\n请求的结果有持续性的副作用，例如：传递的数据要作为数据源写入数据库时。备注：使用了POST不代表的绝对的安全。\n\n\n\n常见的GET请求：\n浏览器地址栏输入网址时（浏览器请求网页时时GET请求，且不可更改）\n可以请求外部资源的html标签，例如：   \n发送Ajax时明确指出了使用GET请求\nform表单提交时没有指明方式，默认使用GET\n\n常见的POST请求：\n发送Ajax时明确指出了使用POST方式\n使用第三方发送Ajax请求库时明确指出用POST时\nform表单提交时明确指出使用POST方式\n\n二者的区别\n&#34;');
 </script>
 
 		
@@ -267,24 +265,35 @@
 			<h2 id="GET请求与POST请求"><a href="#GET请求与POST请求" class="headerlink" title="GET请求与POST请求"></a>GET请求与POST请求</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
 <p>HTTP请求，最初设定了八种方法（也称为“动作”）。这八种方法本质上没有任何区别。只是让请求，更加有语义而已。<br>八种方法分别为：OPTIONS、HEAD、GET、POST、PUT、DELETE、TRACE、CONNECT<br>这八种方法最终经过“岁月沉淀”后，常用的只有两种，即：GET和POST</p>
 </blockquote>
-<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><pre><code>1. 含义：从指定的资源获取数据（一种“索取”的感觉）。
-2. 什么时候使用GET请求较为合适？
-    (1)单纯获取数据的时。
-    (2)请求中不包含敏感数据时。
-</code></pre><h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><pre><code>1.含义：向指定的资源提交要被处理的数据（一种“交差”的感觉）。
-2.什么时候使用POST请求较为合适？
-    (1)传送相对敏感数据时。
-    (2)请求的结果有持续性的副作用，例如：传递的数据要作为数据源写入数据库时。
-备注：使用了POST不代表的绝对的安全。
-</code></pre><h3 id="常见的GET请求："><a href="#常见的GET请求：" class="headerlink" title="常见的GET请求："></a>常见的GET请求：</h3><pre><code>1.浏览器地址栏输入网址时（浏览器请求网页时时GET请求，且不可更改）
-2.可以请求外部资源的html标签，例如：&lt;img&gt; &lt;a&gt; &lt;link&gt; &lt;script&gt;
-3.发送Ajax时明确指出了使用GET请求
-4.form表单提交时没有指明方式，默认使用GET
-</code></pre><h3 id="常见的POST请求："><a href="#常见的POST请求：" class="headerlink" title="常见的POST请求："></a>常见的POST请求：</h3><pre><code>1.发送Ajax时明确指出了使用POST方式
-2.使用第三方发送Ajax请求库时明确指出用POST时
-3.form表单提交时明确指出使用POST方式
-</code></pre><h3 id="二者的区别"><a href="#二者的区别" class="headerlink" title="二者的区别"></a>二者的区别</h3><p><img src="https://img.jiuge.site/imgbox/20190831/RDV6MlMfYWfB.png?imageslim" alt="mark"></p>
-
+<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><ul>
+<li>含义：从指定的资源获取数据（一种“索取”的感觉）。</li>
+<li>什么时候使用GET请求较为合适？<ul>
+<li>单纯获取数据的时。</li>
+<li>请求中不包含敏感数据时。</li>
+</ul>
+</li>
+</ul>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><ul>
+<li>含义：向指定的资源提交要被处理的数据（一种“交差”的感觉）。</li>
+<li>什么时候使用POST请求较为合适？<ul>
+<li>传送相对敏感数据时。</li>
+<li>请求的结果有持续性的副作用，例如：传递的数据要作为数据源写入数据库时。<br>备注：使用了POST不代表的绝对的安全。</li>
+</ul>
+</li>
+</ul>
+<h3 id="常见的GET请求："><a href="#常见的GET请求：" class="headerlink" title="常见的GET请求："></a>常见的GET请求：</h3><ul>
+<li>浏览器地址栏输入网址时（浏览器请求网页时时GET请求，且不可更改）</li>
+<li>可以请求外部资源的html标签，例如：<img> <a> <link> <script></li>
+<li>发送Ajax时明确指出了使用GET请求</li>
+<li>form表单提交时没有指明方式，默认使用GET</li>
+</ul>
+<h3 id="常见的POST请求："><a href="#常见的POST请求：" class="headerlink" title="常见的POST请求："></a>常见的POST请求：</h3><ul>
+<li>发送Ajax时明确指出了使用POST方式</li>
+<li>使用第三方发送Ajax请求库时明确指出用POST时</li>
+<li>form表单提交时明确指出使用POST方式</li>
+</ul>
+<h3 id="二者的区别"><a href="#二者的区别" class="headerlink" title="二者的区别"></a>二者的区别</h3><p><img src="https://img.jiuge.site/imgbox/20190831/RDV6MlMfYWfB.png?imageslim" alt="mark"></p>
+</script></a></li></ul>
 		</div>
 		
 		<div class="article-tags tags">

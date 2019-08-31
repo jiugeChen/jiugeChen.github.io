@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MongoDB原生CRUD（增删改查）命令总结-C creat： db.集合名.insert(文档对象) db.集合名.insertOne(文档对象) db.集合名.insertMany([文档对象，文档对象]) -R read： db.集合名.find(查询条件[,投影])     举例:db.students.find({age:18}),查找年龄为18的所有信息     举例:db.stud">
+  <meta name="description" content="MongoDB原生CRUD（增删改查）命令总结-C creat：  db.集合名.insert(文档对象) db.集合名.insertOne(文档对象) db.集合名.insertMany([文档对象，文档对象])  -R read：  db.集合名.find(查询条件[,投影])  举例:db.students.find({age:18}),查找年龄为18的所有信息 举例:db.students">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB">
 <meta property="og:url" content="http://jiugework.gitee.io/2019/08/30/node/MongoDB/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="MongoDB原生CRUD（增删改查）命令总结-C creat： db.集合名.insert(文档对象) db.集合名.insertOne(文档对象) db.集合名.insertMany([文档对象，文档对象]) -R read： db.集合名.find(查询条件[,投影])     举例:db.students.find({age:18}),查找年龄为18的所有信息     举例:db.stud">
+<meta property="og:description" content="MongoDB原生CRUD（增删改查）命令总结-C creat：  db.集合名.insert(文档对象) db.集合名.insertOne(文档对象) db.集合名.insertMany([文档对象，文档对象])  -R read：  db.集合名.find(查询条件[,投影])  举例:db.students.find({age:18}),查找年龄为18的所有信息 举例:db.students">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-30T01:29:28.100Z">
+<meta property="og:updated_time" content="2019-08-31T15:45:18.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB">
-<meta name="twitter:description" content="MongoDB原生CRUD（增删改查）命令总结-C creat： db.集合名.insert(文档对象) db.集合名.insertOne(文档对象) db.集合名.insertMany([文档对象，文档对象]) -R read： db.集合名.find(查询条件[,投影])     举例:db.students.find({age:18}),查找年龄为18的所有信息     举例:db.stud">
+<meta name="twitter:description" content="MongoDB原生CRUD（增删改查）命令总结-C creat：  db.集合名.insert(文档对象) db.集合名.insertOne(文档对象) db.集合名.insertMany([文档对象，文档对象])  -R read：  db.集合名.find(查询条件[,投影])  举例:db.students.find({age:18}),查找年龄为18的所有信息 举例:db.students">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -231,7 +231,7 @@
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;MongoDB原生CRUD（增删改查）命令总结-C creat：\ndb.集合名.insert(文档对象)\ndb.集合名.insertOne(文档对象)\ndb.集合名.insertMany([文档对象，文档对象])\n-R read：\ndb.集合名.find(查询条件[,投影])\n    举例:db.students.find({age:18}),查找年龄为18的所有信息\n    举例:db.students.find({age:18,name:&amp;apos;jack&amp;apos;}),查找年龄为18且名字为jack的学生\n\n常用操作符：\n    1. &amp;lt; , &amp;lt;= , &amp;gt; , &amp;gt;= , !==   对应为： $lt $lte $gt $gte $ne\n        举例：db.集合名.find({age:{$gte:20}}),年龄是大于等于20的\n    2.逻辑或：使用$in 或 $or\n        查找年龄为18或20的学生\n        举例：db.students.find({age:{$in:[18,20]}})\n        举例：db.students.find({$or:[{age:18},{age:20}]})\n    3.逻辑非：$nin\n    4.正则匹配：\n        举例：db.students.find({name:/^T/})\n    5.$where能写函数：\n        db.students.find({$where:function(){\n            return this.name === &amp;apos;zhangsan&amp;apos; &amp;amp;&amp;amp; this.age === 18\n        }})\n\n投影：过滤掉不想要的数据，只保留想要展示的数据\n    举例：db.students.find({},{_id:0,name:0}),过滤掉id和name\n    举例：db.students.find({},{age:1}),只保留age\n\n补充：db.集合名.findOne(查询条件[,投影])，默认只要找到一个\n-U update：\ndb.集合名.update(查询条件,要更新的内容[,配置对象])\n\n//如下会将更新内容替换掉整个文档对象，但_id不受影响\n    举例：db.students.update({name:&amp;apos;zhangsan&amp;apos;},{age:19})\n\n//使用$set修改指定内容，其他数据不变，不过只能匹配一个zhangsan\n    举例：db.students.update({name:&amp;apos;zhangsan&amp;apos;},{$set:{age:19}})\n\n//修改多个文档对象，匹配多个zhangsan,把所有zhangsan的年龄都替换为19\n    举例：db.students.update({name:&amp;apos;zhangsan&amp;apos;},{$set:{age:19}},{multi:true})\n\n 补充：db.集合名.updateOne(查询条件,要更新的内容[,配置对象])\n       db.集合名.updateMany(查询条件,要更新的内容[,配置对象])\n-D delete\ndb.集合名.remove(查询条件)\n    //删除所有年龄小于等于19的学生\n    举例：db.students.remove({age:{$lte:19}})\n&#34;');
+  count('&#34;MongoDB原生CRUD（增删改查）命令总结-C creat：\n\ndb.集合名.insert(文档对象)\ndb.集合名.insertOne(文档对象)\ndb.集合名.insertMany([文档对象，文档对象])\n\n-R read：\n\ndb.集合名.find(查询条件[,投影])\n\n举例:db.students.find({age:18}),查找年龄为18的所有信息\n举例:db.students.find({age:18,name:’jack’}),查找年龄为18且名字为jack的学生\n常用操作符：\n\n&amp;lt; , &amp;lt;= , &amp;gt; , &amp;gt;= , !==   对应为： $lt $lte $gt $gte $ne 举例：db.集合名.find({age:{$gte:20}}),年龄是大于等于20的\n逻辑或：使用$in 或 $or  查找年龄为18或20的学生  举例：db.students.find({age:{$in:[18,20]}})  举例：db.students.find({$or:[{age:18},{age:20}]})\n逻辑非：$nin\n正则匹配：  举例：db.students.find({name:/^T/})\n$where能写函数：  db.students.find({$where:function(){return this.name === &amp;apos;zhangsan&amp;apos; &amp;amp;&amp;amp; this.age === 18\n  }})\n\n投影：过滤掉不想要的数据，只保留想要展示的数据 举例：db.students.find({},{_id:0,name:0}),过滤掉id和name 举例：db.students.find({},{age:1}),只保留age\n补充：db.集合名.findOne(查询条件[,投影])，默认只要找到一个\n\n\n\n\n-U update：\n\ndb.集合名.update(查询条件,要更新的内容[,配置对象])\n  //如下会将更新内容替换掉整个文档对象，但_id不受影响\n举例：db.students.update({name:&amp;apos;zhangsan&amp;apos;},{age:19})\n  //使用$set修改指定内容，其他数据不变，不过只能匹配一个zhangsan\n举例：db.students.update({name:&amp;apos;zhangsan&amp;apos;},{$set:{age:19}})\n  //修改多个文档对象，匹配多个zhangsan,把所有zhangsan的年龄都替换为19\n举例：db.students.update({name:&amp;apos;zhangsan&amp;apos;},{$set:{age:19}},{multi:true})\n   补充：db.集合名.updateOne(查询条件,要更新的内容[,配置对象])\ndb.集合名.updateMany(查询条件,要更新的内容[,配置对象])\n\n\n-D delete\n\ndb.集合名.remove(查询条件)//删除所有年龄小于等于19的学生\n举例：db.students.remove({age:{$lte:19}})\n\n\n&#34;');
 </script>
 
 		
@@ -262,53 +262,52 @@
 	<section class="article typo">
 		<div class="article-entry" itemprop="articleBody">
 			<h2 id="MongoDB原生CRUD（增删改查）命令总结"><a href="#MongoDB原生CRUD（增删改查）命令总结" class="headerlink" title="MongoDB原生CRUD（增删改查）命令总结"></a>MongoDB原生CRUD（增删改查）命令总结</h2><p>-C creat：</p>
-<pre><code>db.集合名.insert(文档对象)
-db.集合名.insertOne(文档对象)
-db.集合名.insertMany([文档对象，文档对象])
-</code></pre><p>-R read：</p>
-<pre><code>db.集合名.find(查询条件[,投影])
-    举例:db.students.find({age:18}),查找年龄为18的所有信息
-    举例:db.students.find({age:18,name:&apos;jack&apos;}),查找年龄为18且名字为jack的学生
+<ul>
+<li>db.集合名.insert(文档对象)</li>
+<li>db.集合名.insertOne(文档对象)</li>
+<li>db.集合名.insertMany([文档对象，文档对象])</li>
+</ul>
+<p>-R read：</p>
+<ul>
+<li><p>db.集合名.find(查询条件[,投影])</p>
+<ul>
+<li>举例:db.students.find({age:18}),查找年龄为18的所有信息</li>
+<li><p>举例:db.students.find({age:18,name:’jack’}),查找年龄为18且名字为jack的学生</p>
+<p>常用操作符：</p>
+<ul>
+<li>&lt; , &lt;= , &gt; , &gt;= , !==   对应为： $lt $lte $gt $gte $ne<br> 举例：db.集合名.find({age:{$gte:20}}),年龄是大于等于20的</li>
+<li>逻辑或：使用$in 或 $or<br>  查找年龄为18或20的学生<br>  举例：db.students.find({age:{$in:[18,20]}})<br>  举例：db.students.find({$or:[{age:18},{age:20}]})</li>
+<li>逻辑非：$nin</li>
+<li>正则匹配：<br>  举例：db.students.find({name:/^T/})</li>
+<li>$where能写函数：<br>  db.students.find({$where:function(){<pre><code>return this.name === &apos;zhangsan&apos; &amp;&amp; this.age === 18
+</code></pre>  }})</li>
+</ul>
+<p>投影：过滤掉不想要的数据，只保留想要展示的数据<br> 举例：db.students.find({},{_id:0,name:0}),过滤掉id和name<br> 举例：db.students.find({},{age:1}),只保留age</p>
+<p>补充：db.集合名.findOne(查询条件[,投影])，默认只要找到一个</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>-U update：</p>
+<ul>
+<li><p>db.集合名.update(查询条件,要更新的内容[,配置对象])</p>
+<p>  //如下会将更新内容替换掉整个文档对象，但_id不受影响</p>
+<pre><code>举例：db.students.update({name:&apos;zhangsan&apos;},{age:19})
+</code></pre><p>  //使用$set修改指定内容，其他数据不变，不过只能匹配一个zhangsan</p>
+<pre><code>举例：db.students.update({name:&apos;zhangsan&apos;},{$set:{age:19}})
+</code></pre><p>  //修改多个文档对象，匹配多个zhangsan,把所有zhangsan的年龄都替换为19</p>
+<pre><code>举例：db.students.update({name:&apos;zhangsan&apos;},{$set:{age:19}},{multi:true})
+</code></pre><p>   补充：db.集合名.updateOne(查询条件,要更新的内容[,配置对象])</p>
+<pre><code>db.集合名.updateMany(查询条件,要更新的内容[,配置对象])
+</code></pre></li>
+</ul>
+<p>-D delete</p>
+<ul>
+<li>db.集合名.remove(查询条件)<pre><code>//删除所有年龄小于等于19的学生
+举例：db.students.remove({age:{$lte:19}})
+</code></pre></li>
+</ul>
 
-常用操作符：
-    1. &lt; , &lt;= , &gt; , &gt;= , !==   对应为： $lt $lte $gt $gte $ne
-        举例：db.集合名.find({age:{$gte:20}}),年龄是大于等于20的
-    2.逻辑或：使用$in 或 $or
-        查找年龄为18或20的学生
-        举例：db.students.find({age:{$in:[18,20]}})
-        举例：db.students.find({$or:[{age:18},{age:20}]})
-    3.逻辑非：$nin
-    4.正则匹配：
-        举例：db.students.find({name:/^T/})
-    5.$where能写函数：
-        db.students.find({$where:function(){
-            return this.name === &apos;zhangsan&apos; &amp;&amp; this.age === 18
-        }})
-
-投影：过滤掉不想要的数据，只保留想要展示的数据
-    举例：db.students.find({},{_id:0,name:0}),过滤掉id和name
-    举例：db.students.find({},{age:1}),只保留age
-
-补充：db.集合名.findOne(查询条件[,投影])，默认只要找到一个
-</code></pre><p>-U update：</p>
-<pre><code>db.集合名.update(查询条件,要更新的内容[,配置对象])
-
-//如下会将更新内容替换掉整个文档对象，但_id不受影响
-    举例：db.students.update({name:&apos;zhangsan&apos;},{age:19})
-
-//使用$set修改指定内容，其他数据不变，不过只能匹配一个zhangsan
-    举例：db.students.update({name:&apos;zhangsan&apos;},{$set:{age:19}})
-
-//修改多个文档对象，匹配多个zhangsan,把所有zhangsan的年龄都替换为19
-    举例：db.students.update({name:&apos;zhangsan&apos;},{$set:{age:19}},{multi:true})
-
- 补充：db.集合名.updateOne(查询条件,要更新的内容[,配置对象])
-       db.集合名.updateMany(查询条件,要更新的内容[,配置对象])
-</code></pre><p>-D delete</p>
-<pre><code>db.集合名.remove(查询条件)
-    //删除所有年龄小于等于19的学生
-    举例：db.students.remove({age:{$lte:19}})
-</code></pre>
 		</div>
 		
 

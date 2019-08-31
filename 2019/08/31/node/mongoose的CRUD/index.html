@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="-Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象)  -Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null  -Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象]) 模型对象.updateMany(查询条件">
+  <meta name="description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象) Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组  模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象])  模型对象.updateMany(查询条件,要更新">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongoose的增删改查">
 <meta property="og:url" content="http://jiugework.gitee.io/2019/08/31/node/mongoose的CRUD/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="-Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象)  -Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null  -Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象]) 模型对象.updateMany(查询条件">
+<meta property="og:description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象) Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组  模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象])  模型对象.updateMany(查询条件,要更新">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-31T14:37:23.224Z">
+<meta property="og:updated_time" content="2019-08-31T15:46:59.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoose的增删改查">
-<meta name="twitter:description" content="-Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象)  -Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null  -Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象]) 模型对象.updateMany(查询条件">
+<meta name="twitter:description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象) Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组  模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象])  模型对象.updateMany(查询条件,要更新">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -231,7 +231,7 @@
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34; -Create\n模型对象.create(文档对象，回调函数)\n模型对象.create(文档对象)\n -Read\n模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组\n模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null\n -Update\n模型对象.updateOne(查询条件,要更新的内容[,配置对象])\n模型对象.updateMany(查询条件,要更新的内容[,配置对象])\n备注：存在update方法，但是即将废弃，查询条件匹配到多个时，依然只修改一个，强烈建议用updateOne或updateMany\n -Delete\n模型对象.deleteOne(查询条件)\n模型对象.deleteMany(查询条件)\n备注：没有delete方法，会报错！\n备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象\n&#34;');
+  count('&#34;Create\n模型对象.create(文档对象，回调函数)\n模型对象.create(文档对象)\nRead\n模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组\n\n模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null\nUpdate\n模型对象.updateOne(查询条件,要更新的内容[,配置对象])\n\n模型对象.updateMany(查询条件,要更新的内容[,配置对象]) 备注：存在update方法，但是即将废弃，查询条件匹配到多个时，依然只修改一个，强烈建议用updateOne或updateMany\nDelete\n模型对象.deleteOne(查询条件)\n\n模型对象.deleteMany(查询条件)  备注：没有delete方法，会报错！\n\n备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象\n&#34;');
 </script>
 
 		
@@ -261,21 +261,23 @@
 
 	<section class="article typo">
 		<div class="article-entry" itemprop="articleBody">
-			<p> -Create</p>
-<pre><code>模型对象.create(文档对象，回调函数)
-模型对象.create(文档对象)
-</code></pre><p> -Read</p>
-<pre><code>模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组
-模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null
-</code></pre><p> -Update</p>
-<pre><code>模型对象.updateOne(查询条件,要更新的内容[,配置对象])
-模型对象.updateMany(查询条件,要更新的内容[,配置对象])
-备注：存在update方法，但是即将废弃，查询条件匹配到多个时，依然只修改一个，强烈建议用updateOne或updateMany
-</code></pre><p> -Delete</p>
-<pre><code>模型对象.deleteOne(查询条件)
-模型对象.deleteMany(查询条件)
-备注：没有delete方法，会报错！
-</code></pre><p>备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象</p>
+			<h4 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h4><ul>
+<li>模型对象.create(文档对象，回调函数)</li>
+<li><p>模型对象.create(文档对象)</p>
+<h4 id="Read"><a href="#Read" class="headerlink" title="Read"></a>Read</h4></li>
+<li><p>模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组</p>
+</li>
+<li><p>模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null</p>
+<h4 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h4></li>
+<li><p>模型对象.updateOne(查询条件,要更新的内容[,配置对象])</p>
+</li>
+<li><p>模型对象.updateMany(查询条件,要更新的内容[,配置对象])<br> 备注：存在update方法，但是即将废弃，查询条件匹配到多个时，依然只修改一个，强烈建议用updateOne或updateMany</p>
+<h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h4></li>
+<li><p>模型对象.deleteOne(查询条件)</p>
+</li>
+<li>模型对象.deleteMany(查询条件)<br>  备注：没有delete方法，会报错！</li>
+</ul>
+<p>备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象</p>
 
 		</div>
 		
