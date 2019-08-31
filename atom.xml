@@ -180,35 +180,6 @@
   </entry>
   
   <entry>
-    <title>Call</title>
-    <link href="http://jiugework.gitee.io/2019/07/28/js/Call/"/>
-    <id>http://jiugework.gitee.io/2019/07/28/js/Call/</id>
-    <published>2019-07-28T01:26:53.000Z</published>
-    <updated>2019-07-28T01:28:50.385Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Call"><a href="#Call" class="headerlink" title="Call"></a>Call</h4><p><strong>用法</strong></p><ol><li>调用函数</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dr</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"play"</span>);</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//window</span></span><br><span class="line">    </span><br><span class="line"> &#125;</span><br><span class="line"> dr.call() <span class="comment">//play</span></span><br></pre></td></tr></table></figure><ol start="2"><li><p>Call可以改变函数this的指向</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dr</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"play"</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//指向o</span></span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">let</span> o=&#123;</span><br><span class="line">   name:<span class="string">'哈哈哈'</span></span><br><span class="line"> &#125;</span><br><span class="line"> dr.call(o)</span><br></pre></td></tr></table></figure><p>此时这个函数的this就指向了o这个对象</p><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">dr</span>(<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"play"</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//指向o</span></span><br><span class="line">   <span class="built_in">console</span>.log(x+y);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">let</span> o=&#123;</span><br><span class="line">   name:<span class="string">'哈哈哈'</span></span><br><span class="line"> &#125;</span><br><span class="line"> dr.call(o,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment">// play</span></span><br><span class="line"><span class="comment">// &#123;name: "哈哈哈"&#125;</span></span><br><span class="line"><span class="comment">//  3</span></span><br></pre></td></tr></table></figure></code></pre></li></ol><h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ul><li>继承属性</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.name = name;</span><br><span class="line">      <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">//子构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">name, age, sex</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.sex = sex</span><br><span class="line">      <span class="comment">//把子的this传入到父</span></span><br><span class="line">      <span class="comment">// this指向实例对象</span></span><br><span class="line">      Father.call(<span class="keyword">this</span>, name, age)</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">let</span> zs = <span class="keyword">new</span> Son(<span class="string">"张三"</span>, <span class="number">18</span>, <span class="string">'nan'</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(zs);</span><br></pre></td></tr></table></figure><ul><li><p>继承方法</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Son. prototype = Father.prototype; <span class="comment">//这样直接赋值会有问题,如果修改了子原型对象,父原型对象也会跟着一起变化</span></span><br></pre></td></tr></table></figure></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.name = name;</span><br><span class="line">      <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;;</span><br><span class="line">    Father.prototype.money=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  <span class="built_in">console</span>.log(<span class="string">"钱"</span>)&#125;;</span><br><span class="line">     </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//子构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">name, age, sex</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.sex = sex</span><br><span class="line">      Father.call(<span class="keyword">this</span>, name, age)</span><br><span class="line">    &#125;;</span><br><span class="line">    Son.prototype=<span class="keyword">new</span> Father();  </span><br><span class="line">    <span class="comment">//如果利用对象的形式修改来原型对象，别忘了利用 constructor指回原来的对象</span></span><br><span class="line">    Son.prototype.constructor=Son</span><br><span class="line">    Son.prototype.play=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"吃饭"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> zs = <span class="keyword">new</span> Son(<span class="string">"张三"</span>, <span class="number">18</span>, <span class="string">'nan'</span>);</span><br><span class="line">    zs.money();</span><br><span class="line">    zs.play();</span><br><span class="line">  </span><br><span class="line">    <span class="built_in">console</span>.log(zs);</span><br><span class="line">    <span class="built_in">console</span>.log(Father);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Call&quot;&gt;&lt;a href=&quot;#Call&quot; class=&quot;headerlink&quot; title=&quot;Call&quot;&gt;&lt;/a&gt;Call&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;用法&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;调用函数&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class
-      
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
-    
-    
-      <category term="Call" scheme="http://jiugework.gitee.io/tags/Call/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Class类</title>
     <link href="http://jiugework.gitee.io/2019/07/28/js/Class/"/>
     <id>http://jiugework.gitee.io/2019/07/28/js/Class/</id>
@@ -235,6 +206,35 @@
     
     
       <category term="Class" scheme="http://jiugework.gitee.io/tags/Class/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Call</title>
+    <link href="http://jiugework.gitee.io/2019/07/28/js/Call/"/>
+    <id>http://jiugework.gitee.io/2019/07/28/js/Call/</id>
+    <published>2019-07-28T01:26:53.000Z</published>
+    <updated>2019-07-28T01:28:50.385Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Call"><a href="#Call" class="headerlink" title="Call"></a>Call</h4><p><strong>用法</strong></p><ol><li>调用函数</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dr</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"play"</span>);</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//window</span></span><br><span class="line">    </span><br><span class="line"> &#125;</span><br><span class="line"> dr.call() <span class="comment">//play</span></span><br></pre></td></tr></table></figure><ol start="2"><li><p>Call可以改变函数this的指向</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dr</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"play"</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//指向o</span></span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">let</span> o=&#123;</span><br><span class="line">   name:<span class="string">'哈哈哈'</span></span><br><span class="line"> &#125;</span><br><span class="line"> dr.call(o)</span><br></pre></td></tr></table></figure><p>此时这个函数的this就指向了o这个对象</p><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">dr</span>(<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"play"</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//指向o</span></span><br><span class="line">   <span class="built_in">console</span>.log(x+y);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">let</span> o=&#123;</span><br><span class="line">   name:<span class="string">'哈哈哈'</span></span><br><span class="line"> &#125;</span><br><span class="line"> dr.call(o,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment">// play</span></span><br><span class="line"><span class="comment">// &#123;name: "哈哈哈"&#125;</span></span><br><span class="line"><span class="comment">//  3</span></span><br></pre></td></tr></table></figure></code></pre></li></ol><h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ul><li>继承属性</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.name = name;</span><br><span class="line">      <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">//子构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">name, age, sex</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.sex = sex</span><br><span class="line">      <span class="comment">//把子的this传入到父</span></span><br><span class="line">      <span class="comment">// this指向实例对象</span></span><br><span class="line">      Father.call(<span class="keyword">this</span>, name, age)</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">let</span> zs = <span class="keyword">new</span> Son(<span class="string">"张三"</span>, <span class="number">18</span>, <span class="string">'nan'</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(zs);</span><br></pre></td></tr></table></figure><ul><li><p>继承方法</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Son. prototype = Father.prototype; <span class="comment">//这样直接赋值会有问题,如果修改了子原型对象,父原型对象也会跟着一起变化</span></span><br></pre></td></tr></table></figure></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.name = name;</span><br><span class="line">      <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;;</span><br><span class="line">    Father.prototype.money=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  <span class="built_in">console</span>.log(<span class="string">"钱"</span>)&#125;;</span><br><span class="line">     </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//子构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">name, age, sex</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.sex = sex</span><br><span class="line">      Father.call(<span class="keyword">this</span>, name, age)</span><br><span class="line">    &#125;;</span><br><span class="line">    Son.prototype=<span class="keyword">new</span> Father();  </span><br><span class="line">    <span class="comment">//如果利用对象的形式修改来原型对象，别忘了利用 constructor指回原来的对象</span></span><br><span class="line">    Son.prototype.constructor=Son</span><br><span class="line">    Son.prototype.play=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"吃饭"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> zs = <span class="keyword">new</span> Son(<span class="string">"张三"</span>, <span class="number">18</span>, <span class="string">'nan'</span>);</span><br><span class="line">    zs.money();</span><br><span class="line">    zs.play();</span><br><span class="line">  </span><br><span class="line">    <span class="built_in">console</span>.log(zs);</span><br><span class="line">    <span class="built_in">console</span>.log(Father);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Call&quot;&gt;&lt;a href=&quot;#Call&quot; class=&quot;headerlink&quot; title=&quot;Call&quot;&gt;&lt;/a&gt;Call&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;用法&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;调用函数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://jiugework.gitee.io/categories/JavaScript/"/>
+    
+    
+      <category term="Call" scheme="http://jiugework.gitee.io/tags/Call/"/>
     
   </entry>
   
@@ -434,58 +434,9 @@
   </entry>
   
   <entry>
-    <title>webpack</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/Webpack/模板/</id>
-    <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-08-03T14:05:20.046Z</updated>
-    
-    <content type="html"><![CDATA[<p>#模板</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#模板&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="webpack" scheme="http://jiugework.gitee.io/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/node/Node.js%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/node/Node.js介绍/</id>
-    <published>2019-07-05T10:57:42.000Z</published>
-    <updated>2019-08-25T14:54:22.482Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Node-js有什么特点"><a href="#Node-js有什么特点" class="headerlink" title="Node.js有什么特点"></a>Node.js有什么特点</h3><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul><li><strong>异步非阻塞的I/O (I/O线程池)</strong> （文件/数据库）的读写</li><li><strong>特别适用于I/O密集型应用</strong></li><li><p><strong>事件循环机制</strong> </p></li><li><p><strong>单线程</strong> - 一个人多干活</p></li><li><strong>跨平台</strong></li></ul><h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul><li>回调函数嵌套太多、太深(俗称回调地狱)</li><li>单线程,处理不好<strong>CPU密集型任务</strong> </li></ul><p><img src="https://img.jiuge.site/imgbox/20190825/lFWIl0woIA6y.png?imageslim" alt="mark"></p><h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><ul><li>Web服务API</li><li>服务器渲染页面,提升速度</li><li>后端的Web服务,例如跨域、服务器端的请求。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;Node-js有什么特点&quot;&gt;&lt;a href=&quot;#Node-js有什么特点&quot; class=&quot;headerlink&quot; title=&quot;Node.js有什么特点&quot;&gt;&lt;/a&gt;Node.js有什么特点&lt;/h3&gt;&lt;h4 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;
-      
-    
-    </summary>
-    
-      <category term="Node" scheme="http://jiugework.gitee.io/categories/Node/"/>
-    
-    
-      <category term="Node特点" scheme="http://jiugework.gitee.io/tags/Node%E7%89%B9%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
     <title>模板</title>
-    <link href="http://jiugework.gitee.io/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/"/>
-    <id>http://jiugework.gitee.io/2019/07/05/Webpack/模板 - 副本/</id>
+    <link href="http://jiugework.gitee.io/2019/07/05/js/1bbbbb/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</id>
     <published>2019-07-05T10:57:42.000Z</published>
     <updated>2019-07-28T01:46:26.346Z</updated>
     
@@ -505,6 +456,60 @@
     
     
       <category term="generator" scheme="http://jiugework.gitee.io/tags/generator/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ref传值与获取Dom</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/Vue/ref/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/Vue/ref/</id>
+    <published>2019-07-05T10:57:42.000Z</published>
+    <updated>2019-08-03T03:09:43.904Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ref寻找dom元素"><a href="#ref寻找dom元素" class="headerlink" title="ref寻找dom元素"></a>ref寻找dom元素</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"getElement"</span> <span class="attr">ref</span>=<span class="string">"zz"</span> &gt;</span>获取元素<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"getElement"</span> <span class="attr">ref</span>=<span class="string">"zz1"</span> &gt;</span>获取元素<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line">      &#125;,</span><br><span class="line">      created()&#123;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        getElement()&#123;</span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(<span class="keyword">this</span>.$refs.zz.innerText);</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="利用ref获取子组件方法以及数据"><a href="#利用ref获取子组件方法以及数据" class="headerlink" title="利用ref获取子组件方法以及数据"></a>利用ref获取子组件方法以及数据</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"getElement"</span> <span class="attr">ref</span>=<span class="string">"zz"</span> &gt;</span>获取子组件方法和data<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">login</span> <span class="attr">ref</span>=<span class="string">"son"</span> &gt;</span><span class="tag">&lt;/<span class="name">login</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> login = &#123;</span></span><br><span class="line">      data() &#123;</span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">          msg:<span class="string">'x么恶魔'</span></span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        show()&#123;</span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(<span class="string">"调用了"</span>)</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line"><span class="xml">      template:'<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span>'</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        dd:<span class="string">'我是父组件的值'</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">      created()&#123;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        getElement()&#123;</span><br><span class="line"><span class="javascript">          <span class="comment">// console.log(this.$refs.zz.innerText);</span></span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(<span class="keyword">this</span>.$refs.son.msg=<span class="keyword">this</span>.dd);<span class="comment">//修改值</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">this</span>.$refs.son.show();</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      components:&#123;</span><br><span class="line">        login</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;ref寻找dom元素&quot;&gt;&lt;a href=&quot;#ref寻找dom元素&quot; class=&quot;headerlink&quot; title=&quot;ref寻找dom元素&quot;&gt;&lt;/a&gt;ref寻找dom元素&lt;/h3&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://jiugework.gitee.io/categories/Vue/"/>
+    
+    
+      <category term="ref" scheme="http://jiugework.gitee.io/tags/ref/"/>
+    
+      <category term="组件通讯" scheme="http://jiugework.gitee.io/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF/"/>
+    
+      <category term="子组件" scheme="http://jiugework.gitee.io/tags/%E5%AD%90%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cli</title>
+    <link href="http://jiugework.gitee.io/2019/07/05/Vue/cli/"/>
+    <id>http://jiugework.gitee.io/2019/07/05/Vue/cli/</id>
+    <published>2019-07-05T10:57:42.000Z</published>
+    <updated>2019-08-04T03:05:02.160Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p>创建项目</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue create my-project</span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line">vue ui</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://jiugework.gitee.io/categories/Vue/"/>
+    
+    
+      <category term="Cli" scheme="http://jiugework.gitee.io/tags/Cli/"/>
     
   </entry>
   
