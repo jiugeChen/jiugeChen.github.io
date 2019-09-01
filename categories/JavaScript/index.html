@@ -220,8 +220,8 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/28/js/面向对象/">
-        面向对象
+      <a href="/2019/07/28/js/Call/">
+        Call
       </a>
     </h2>
     
@@ -238,26 +238,23 @@
   </section>
   <section class="article typo">
     
-    创建对象的三中方式
-利用new object()创建对象
+    Call用法
 
-1var obj1=new Object();
+调用函数
 
-利用 对象字面量创建对象
+123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
 
-1var obj1=&#123;&#125;
-
-通过构造函数创建对象
-12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
+Call可以改变函数this的指向
+12345678function dr() &#123;   console.log("play");   ...
     
     <!-- <div class="readmore">
-      <a href="/2019/07/28/js/面向对象/">Read More</a>
+      <a href="/2019/07/28/js/Call/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/面向对象/">
-        面向对象</a>
+      <a href="/tags/Call/">
+        Call</a>
       
     </div>
     
@@ -317,8 +314,8 @@ class本质还是function
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/28/js/Call/">
-        Call
+      <a href="/2019/07/28/js/面向对象/">
+        面向对象
       </a>
     </h2>
     
@@ -335,23 +332,26 @@ class本质还是function
   </section>
   <section class="article typo">
     
-    Call用法
+    创建对象的三中方式
+利用new object()创建对象
 
-调用函数
+1var obj1=new Object();
 
-123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
+利用 对象字面量创建对象
 
-Call可以改变函数this的指向
-12345678function dr() &#123;   console.log("play");   ...
+1var obj1=&#123;&#125;
+
+通过构造函数创建对象
+12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
     
     <!-- <div class="readmore">
-      <a href="/2019/07/28/js/Call/">Read More</a>
+      <a href="/2019/07/28/js/面向对象/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/Call/">
-        Call</a>
+      <a href="/tags/面向对象/">
+        面向对象</a>
       
     </div>
     
@@ -646,8 +646,8 @@ new Function（’par1’,’par2’…’par..‘,’函数体’）
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/08/js/遍历方法/">
-        数据遍历
+      <a href="/2018/07/08/js/对象/">
+        ES5中新增的方法
       </a>
     </h2>
     
@@ -665,22 +665,23 @@ new Function（’par1’,’par2’…’par..‘,’函数体’）
   <section class="article typo">
     
     
-map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及格","不及格","及格","及格","及格","不及格"];// 1.使arr中数字乘以2，输出结果let arr = [12, 5, 8];let result = arr.map(item =&gt; item * 2)console.log(result);//(...
+对象方法Object.defineProperty（）定义对象中新属性或修改原有的属性。
+Object.defineProperty（obj,prop,des）
+
+obj:必需。目标对象
+prop :必需。需定义或修改的属性的名
+descriptor :必需。目标属性所拥有的特性
+Object.defineProperty()第三个参数descriptor说明:以对象形式(}书写
+valu...
     
     <!-- <div class="readmore">
-      <a href="/2018/07/08/js/遍历方法/">Read More</a>
+      <a href="/2018/07/08/js/对象/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
-      <a href="/tags/遍历/">
-        遍历</a>
-      
-      <a href="/tags/循环/">
-        循环</a>
+      <a href="/tags/ES5新增方法/">
+        ES5新增方法</a>
       
     </div>
     
@@ -768,6 +769,15 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
                     </div>
                     <div class='badget'>
                         1
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/HTTP/">
+                    <div class='name'>
+                        HTTP
+                    </div>
+                    <div class='badget'>
+                        6
                     </div>
                 </a></li>
             

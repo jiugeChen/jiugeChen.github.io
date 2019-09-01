@@ -220,6 +220,277 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2019/08/25/node/Node函数/">
+        Node函数特点
+      </a>
+    </h2>
+    
+    <time>
+      08-25, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    #模板
+
+Node中任何一个模块(js文件)都被一个外层函数所包裹
+
+function (exports, require, module, filename, dirname) {}
+
+exports:用于暴露模块
+
+require:用于引入模块
+
+module:用于暴露模块
+
+filename: 当前文件所在的路径(绝对)
+
+dirname: 当前文件所在文件夹的路径(绝对) 
+
+
+  ...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/08/25/node/Node函数/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/08/25/node/模板/">
+        模板
+      </a>
+    </h2>
+    
+    <time>
+      08-25, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    
+    
+    <!-- <div class="readmore">
+      <a href="/2019/08/25/node/模板/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/generator/">
+        generator</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <time>
+      08-09, 2019
+    </time>
+    
+    
+  </section>
+  <section class="article typo">
+    
+    周报2019-08-19—-2019-08-23教师端
+性别选择问题渲染
+校区选择,判断一个校区时候直接进入。
+配置修改小程序后台配置老师帮appid,上传到体验版
+修改课程详情接口教务端
+个人中心资料页面，资料修改头像上传
+校区切换
+获取消息
+首页页面修改
+
+
+2019年8月26教务端
+课程详情页面。获取详情内容
+课堂播报tab静态页面，课堂播报接口。
+课堂播报详情、点赞、评论功能。
+课程...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/08/09/work/周报/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/28/js/Call/">
+        Call
+      </a>
+    </h2>
+    
+    <time>
+      07-28, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    Call用法
+
+调用函数
+
+123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
+
+Call可以改变函数this的指向
+12345678function dr() &#123;   console.log("play");   ...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/28/js/Call/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Call/">
+        Call</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/28/js/面向对象/">
+        面向对象
+      </a>
+    </h2>
+    
+    <time>
+      07-28, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    创建对象的三中方式
+利用new object()创建对象
+
+1var obj1=new Object();
+
+利用 对象字面量创建对象
+
+1var obj1=&#123;&#125;
+
+通过构造函数创建对象
+12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/28/js/面向对象/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/面向对象/">
+        面向对象</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/28/js/Class/">
+        Class类
+      </a>
+    </h2>
+    
+    <time>
+      07-28, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    类的本质
+
+class本质还是function
+类的所有方法都定义在类的prototype属性上
+类创建的实例,里面也有proto-指向类的prototype原型对象
+所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。
+所以ES6的类其实就是语法糖.
+语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/28/js/Class/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Class/">
+        Class</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2019/07/22/Vue/样式/">
         Vue样式绑定方式
       </a>
@@ -401,275 +672,6 @@ in后面可以放 数组，对象数组，对象，数字
 </article>
   </div>
   
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/11/js/字符串常用操作/">
-        字符串常用操作
-      </a>
-    </h2>
-    
-    <time>
-      07-11, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    判断开头结尾
-startsWidth判断以什么开头  
-endsWidth判断以什么结尾 
-1let str='https://www.4399.com'; //   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值 endsWidth同理
-
-
-判断包含
-includes判断是够包含某个字符串 返回bool值
-indexOf判断是否包含并且返回...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/11/js/字符串常用操作/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/String/">
-        String</a>
-      
-      <a href="/tags/字符串/">
-        字符串</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/08/Vue/组件/">
-        Vue组件
-      </a>
-    </h2>
-    
-    <time>
-      07-08, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    定义vue组件什么是组件:组件的出现,就是为了拆分Vue实例的代码量的,能够让我们以不同的组件,来划分不同的功能模块,将来我们需要什么样的功能,就可以去调用对应的组件即可组件化和模块化的不同:
-
-模块化:是从代码逻辑的角度进行划分的;方便代码分层开发,保证每个功能模块的职能单一
-组件化:是从U1界面的角度进行组件的重用
-
-全局
-方式1：
-1234567891011121314151617&l...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/08/Vue/组件/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/组件化/">
-        组件化</a>
-      
-      <a href="/tags/Vue组件/">
-        Vue组件</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/Vue/模板/">
-        模板
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    #模板
-
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/Vue/模板/">Read More</a>
-    </div> -->
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/js/1bbbbb/">
-        模板
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    #模板
-
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/js/1bbbbb/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/generator/">
-        generator</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/node/模块化/">
-        export default和export
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Node/">Node</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    ES6
-ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径
-在ES6中,使用export default和export向外露成员
-
-
-ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径
-在ES6中,使用export default和export向外露成员
-在一个模块中,可以同时使用export defau...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/node/模块化/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/模块化/">
-        模块化</a>
-      
-      <a href="/tags/export/">
-        export</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/Vue/cli/">
-        Cli
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    安装1npm install -g @vue/cli
-创建项目
-123vue create my-project# ORvue ui
-
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/Vue/cli/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/Cli/">
-        Cli</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
 </section>
 
 
@@ -754,6 +756,15 @@ ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表�
                     </div>
                     <div class='badget'>
                         1
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/HTTP/">
+                    <div class='name'>
+                        HTTP
+                    </div>
+                    <div class='badget'>
+                        6
                     </div>
                 </a></li>
             

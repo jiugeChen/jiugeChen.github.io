@@ -220,103 +220,13 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Vue/监听/">
-        监听
+      <a href="/2019/07/11/js/字符串常用操作/">
+        字符串常用操作
       </a>
     </h2>
     
     <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    监听文本框数据改变通过@keyup监听键盘
-1234567891011121314151617181920212223&lt;body&gt;  &lt;div id=&quot;app&quot;&gt;    &lt;input v-model=&quot;one&quot; @keyup=&quot;getAll&quot;&gt;    &lt;input v-model=&quot...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/Vue/监听/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/监听/">
-        监听</a>
-      
-      <a href="/tags/watch/">
-        watch</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/Vue/ref/">
-        ref传值与获取Dom
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    ref寻找dom元素1234567891011121314151617181920&lt;body&gt;  &lt;div id="app"&gt;&lt;button @click="getElement" ref="zz" &gt;获取元素&lt;/button&gt;&lt;button @click="getElement" ref="zz1" &gt;获取元素&lt;/butto...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/Vue/ref/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/ref/">
-        ref</a>
-      
-      <a href="/tags/组件通讯/">
-        组件通讯</a>
-      
-      <a href="/tags/子组件/">
-        子组件</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">
-        判断JS数据类型的四种方法
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
+      07-11, 2019
     </time>
     
 
@@ -328,22 +238,27 @@
   </section>
   <section class="article typo">
     
-    
+    判断开头结尾
+startsWidth判断以什么开头  
+endsWidth判断以什么结尾 
+1let str='https://www.4399.com'; //   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值 endsWidth同理
+
+
+判断包含
+includes判断是够包含某个字符串 返回bool值
+indexOf判断是否包含并且返回...
     
     <!-- <div class="readmore">
-      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">Read More</a>
+      <a href="/2019/07/11/js/字符串常用操作/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/数据类型/">
-        数据类型</a>
+      <a href="/tags/String/">
+        String</a>
       
-      <a href="/tags/判断数据类型/">
-        判断数据类型</a>
-      
-      <a href="/tags/检测类型/">
-        检测类型</a>
+      <a href="/tags/字符串/">
+        字符串</a>
       
     </div>
     
@@ -356,88 +271,44 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/移动端/REM/">
-        移动端适配Rem
+      <a href="/2019/07/08/Vue/组件/">
+        Vue组件
       </a>
     </h2>
     
     <time>
-      07-05, 2019
-    </time>
-    
-    
-  </section>
-  <section class="article typo">
-    
-    移动端适配12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/05/移动端/REM/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/移动端适配/">
-        移动端适配</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/node/Node.js介绍/">
-        Node.js
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
+      07-08, 2019
     </time>
     
 
 <div class='categories'>
-    <a href="/categories/Node/">Node</a>
+    <a href="/categories/Vue/">Vue</a>
 </div>
 
     
   </section>
   <section class="article typo">
     
-    Node.js有什么特点优点
-异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写
-特别适用于I/O密集型应用
-事件循环机制 
+    定义vue组件什么是组件:组件的出现,就是为了拆分Vue实例的代码量的,能够让我们以不同的组件,来划分不同的功能模块,将来我们需要什么样的功能,就可以去调用对应的组件即可组件化和模块化的不同:
 
-单线程 - 一个人多干活
+模块化:是从代码逻辑的角度进行划分的;方便代码分层开发,保证每个功能模块的职能单一
+组件化:是从U1界面的角度进行组件的重用
 
-跨平台
-
-缺点
-回调函数嵌套太多、太深(俗称回调地狱)
-单线程,处理不好CPU密集型任务 
-
-
-应用场景
-Web服务API
-服务器渲染页面,提升速度
-后端的Web服务,例如跨域、服务器端的请求。
-
-
+全局
+方式1：
+1234567891011121314151617&l...
     
     <!-- <div class="readmore">
-      <a href="/2019/07/05/node/Node.js介绍/">Read More</a>
+      <a href="/2019/07/08/Vue/组件/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/Node特点/">
-        Node特点</a>
+      <a href="/tags/组件化/">
+        组件化</a>
+      
+      <a href="/tags/Vue组件/">
+        Vue组件</a>
       
     </div>
     
@@ -485,8 +356,8 @@ Web服务API
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Vue/自定义指令/">
-        自定义指令
+      <a href="/2019/07/05/js/1bbbbb/">
+        模板
       </a>
     </h2>
     
@@ -496,32 +367,24 @@ Web服务API
     
 
 <div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
+    <a href="/categories/JavaScript/">JavaScript</a>
 </div>
 
     
   </section>
   <section class="article typo">
     
-    自定义指令
-使用vue.dizective ()定义全局的指令 v-focus
-参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 
-但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 
-参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作
+    #模板
 
-1234567891011121314151617181920212223...
     
     <!-- <div class="readmore">
-      <a href="/2019/07/05/Vue/自定义指令/">Read More</a>
+      <a href="/2019/07/05/js/1bbbbb/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/指令/">
-        指令</a>
-      
-      <a href="/tags/自定义/">
-        自定义</a>
+      <a href="/tags/generator/">
+        generator</a>
       
     </div>
     
@@ -534,8 +397,8 @@ Web服务API
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Vue/路由/">
-        Vue-Router
+      <a href="/2019/07/05/Webpack/模板/">
+        webpack
       </a>
     </h2>
     
@@ -543,28 +406,56 @@ Web服务API
       07-05, 2019
     </time>
     
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
     
   </section>
   <section class="article typo">
     
-    路由
-后端路由:对于普通的网站,所有的超链接都是URL地址,所有的URL地址都对应服务器上对应的资源;
-前端路由:对于单页面应用程序来说,主要通过URL中的hash(#号)来实现不同页面之间的切换,同时, hash有一个特点: HTTP请求中不会包含hash相关的内容;所以,单页面程序中的页面跳转主要用hash实现
-在单页面应用程序中,这种通过hash改变来切换页面的方式,称作前端路由(区别...
+    #模板
+
     
     <!-- <div class="readmore">
-      <a href="/2019/07/05/Vue/路由/">Read More</a>
+      <a href="/2019/07/05/Webpack/模板/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/Router/">
-        Router</a>
+      <a href="/tags/webpack/">
+        webpack</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/移动端/REM/">
+        移动端适配Rem
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+    
+  </section>
+  <section class="article typo">
+    
+    移动端适配12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/05/移动端/REM/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/移动端适配/">
+        移动端适配</a>
       
     </div>
     
@@ -618,8 +509,8 @@ Web服务API
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Webpack/模板/">
-        webpack
+      <a href="/2019/07/05/Vue/cli/">
+        Cli
       </a>
     </h2>
     
@@ -627,6 +518,54 @@ Web服务API
       07-05, 2019
     </time>
     
+
+<div class='categories'>
+    <a href="/categories/Vue/">Vue</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    安装1npm install -g @vue/cli
+创建项目
+123vue create my-project# ORvue ui
+
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/05/Vue/cli/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Cli/">
+        Cli</a>
+      
+    </div>
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/Vue/模板/">
+        模板
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Vue/">Vue</a>
+</div>
+
     
   </section>
   <section class="article typo">
@@ -635,13 +574,52 @@ Web服务API
 
     
     <!-- <div class="readmore">
-      <a href="/2019/07/05/Webpack/模板/">Read More</a>
+      <a href="/2019/07/05/Vue/模板/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">
+        判断JS数据类型的四种方法
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    
+    
+    <!-- <div class="readmore">
+      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">Read More</a>
     </div> -->
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/webpack/">
-        webpack</a>
+      <a href="/tags/数据类型/">
+        数据类型</a>
+      
+      <a href="/tags/判断数据类型/">
+        判断数据类型</a>
+      
+      <a href="/tags/检测类型/">
+        检测类型</a>
       
     </div>
     
@@ -733,6 +711,15 @@ Web服务API
                     </div>
                     <div class='badget'>
                         1
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/HTTP/">
+                    <div class='name'>
+                        HTTP
+                    </div>
+                    <div class='badget'>
+                        6
                     </div>
                 </a></li>
             

@@ -12,17 +12,13 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#模板  Node中任何一个模块(js文件)都被一个外层函数所包裹  function (exports, require, module, filename, dirname) {}  exports:用于暴露模块  require:用于引入模块  module:用于暴露模块  filename: 当前文件所在的路径(绝对)  dirname: 当前文件所在文件夹的路径(绝对)      为什么">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Node函数特点">
-<meta property="og:url" content="http://jiugework.gitee.io/2019/10/05/node/Node函数/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="’’Sun--(*^▽^*)">
+<meta property="og:url" content="http://jiugework.gitee.io/page/6/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="#模板  Node中任何一个模块(js文件)都被一个外层函数所包裹  function (exports, require, module, filename, dirname) {}  exports:用于暴露模块  require:用于引入模块  module:用于暴露模块  filename: 当前文件所在的路径(绝对)  dirname: 当前文件所在文件夹的路径(绝对)      为什么">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-25T15:08:51.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node函数特点">
-<meta name="twitter:description" content="#模板  Node中任何一个模块(js文件)都被一个外层函数所包裹  function (exports, require, module, filename, dirname) {}  exports:用于暴露模块  require:用于引入模块  module:用于暴露模块  filename: 当前文件所在的路径(绝对)  dirname: 当前文件所在文件夹的路径(绝对)      为什么">
+<meta name="twitter:title" content="’’Sun--(*^▽^*)">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -217,115 +213,117 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div id='l_pjax' class='l_main'>
-        <article class="post reveal" itemscope itemprop="blogPost">
-	<section class='meta'>
-		<h2 class="title">
-			<a href="/2019/10/05/node/Node函数/">
-				Node函数特点
-			</a>
-		</h2>
-		<time>
-			10-05, 2019
-		</time>
-		
-<time>#<span id="wordcount"></span></time>
-<time>#<span id="min2read"></span></time>
-<script>
-  count('&#34;#模板\n\nNode中任何一个模块(js文件)都被一个外层函数所包裹\n\nfunction (exports, require, module, filename, dirname) {}\n\nexports:用于暴露模块\n\nrequire:用于引入模块\n\nmodule:用于暴露模块\n\nfilename: 当前文件所在的路径(绝对)\n\ndirname: 当前文件所在文件夹的路径(绝对) \n\n\n  为什么要有这个外层函数(这个外层函数有什么作用?) \n   1,隐藏内部实现。\n   2.支持CommonJs的模块化T Node函数\n&#34;');
-</script>
-
-		
-<span id="/2019/10/05/node/Node函数/" class="leancloud_visitors" data-flag-title="Node函数特点">
-    <time>#<span class="leancloud-visitors-count"></span></time>
-</span>
-<script>AV.initialize("", "");</script>
-<script>
-    $(function () {
-        var Counter = AV.Object.extend("Counter");
-        if ($('.leancloud_visitors').length == 1) {
-            addCount(Counter);
-        }
-    });
-</script>
-
-		
+        <section class="post-list">
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/Vue/命名视图/">
+        命名视图
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
 
 <div class='categories'>
-    <a href="/categories/Node/">Node</a>
+    <a href="/categories/Vue/">Vue</a>
 </div>
 
-		
-	</section>
-
-	
-
-	<section class="article typo">
-		<div class="article-entry" itemprop="articleBody">
-			<p>#模板</p>
-<ul>
-<li><p>Node中任何一个模块(js文件)都被一个外层函数所包裹</p>
-</li>
-<li><p><code>function (exports, require, module, filename, dirname)</code> {}</p>
-</li>
-<li><p><strong>exports</strong>:用于暴露模块</p>
-</li>
-<li><p><strong>require</strong>:用于引入模块</p>
-</li>
-<li><p><strong>module</strong>:用于暴露模块</p>
-</li>
-<li><p><strong>filename</strong>: 当前文件所在的路径(绝对)</p>
-</li>
-<li><p><strong>dirname</strong>: 当前文件所在文件夹的路径(绝对) </p>
-</li>
-</ul>
-<p>  为什么要有这个外层函数(这个外层函数有什么作用?) </p>
-<p>   1,隐藏内部实现。</p>
-<p>   2.支持CommonJs的模块化T Node函数</p>
-
-		</div>
-		
-
-		
-		<div class="art-item-footer">
-			
-			
-			<span class="art-item-right">
-				<a href="/2019/08/31/node/mongoose的CRUD/" rel="next" title="mongoose的增删改查">
-					mongoose的增删改查
-				</a>
-			</span>
-			
-		</div>
-		
-	</section>
+    
+  </section>
+  <section class="article typo">
+    
+    12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110...
+    
+    <!-- <div class="readmore">
+      <a href="/2018/07/05/Vue/命名视图/">Read More</a>
+    </div> -->
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/命名视图/">
+        命名视图</a>
+      
+      <a href="/tags/Router/">
+        Router</a>
+      
+    </div>
+    
+  </section>
 </article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/number/">
+        Number
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
 
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    保留2位小数
+四舍五入
+12var num =2.446242342;num = num.toFixed(2);  // 输出结果为 2.45
+
+不四舍五入
+1Math.floor(15.7784514000 * 100) / 100   // 输出结果为 15.77
 
 
     
-    <article class="post reveal" itemscope itemprop="blogPost">
-        <div id="gitalk-container"></div>
-        <script type="text/javascript">
-            var gitalk = new Gitalk({
-                clientID: 'c16c460c0dd45134c1ab',
-                clientSecret: 'f2261eedbfa7b0fce5bef9cc9dc48f7bfb82d977',
-                id: window.location.pathname,
-                repo: 'comment',
-                owner: 'jiugechen',
-                admin: 'jiugechen',
-                distractionFreeMode: false,
-                language: 'zh-CN'
-            })
-            gitalk.render('gitalk-container')
-        </script>
-    </article>
+    <!-- <div class="readmore">
+      <a href="/2018/07/05/js/number/">Read More</a>
+    </div> -->
     
-
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Number/">
+        Number</a>
+      
+    </div>
     
+  </section>
+</article>
+  </div>
+  
+</section>
 
-    
+
+<nav id="page-nav">
+  
+  <a class="prev" rel="prev" href="/page/5/">
+    <span class="text">Prev</span>
+  </a>
+  
+  
+</nav>
 
 
+<script>
+  window.subData = {
+    title: 'Home',
+    tools: true
+  }
+</script>
         
       </div>
       <aside class='l_side'>
@@ -387,6 +385,15 @@
                     </div>
                     <div class='badget'>
                         1
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/HTTP/">
+                    <div class='name'>
+                        HTTP
+                    </div>
+                    <div class='badget'>
+                        6
                     </div>
                 </a></li>
             

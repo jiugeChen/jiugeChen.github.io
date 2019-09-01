@@ -221,45 +221,207 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/10/05/node/Node函数/">
-        Node函数特点
+      <a href="/2019/09/01/http/http经典面试题/">
+        http面试题
       </a>
     </h2>
     
     <time>
-      10-05, 2019
+      09-01, 2019
     </time>
     
 
 <div class='categories'>
-    <a href="/categories/Node/">Node</a>
+    <a href="/categories/HTTP/">HTTP</a>
 </div>
 
     
   </section>
   <section class="article typo">
     
-    #模板
-
-Node中任何一个模块(js文件)都被一个外层函数所包裹
-
-function (exports, require, module, filename, dirname) {}
-
-exports:用于暴露模块
-
-require:用于引入模块
-
-module:用于暴露模块
-
-filename: 当前文件所在的路径(绝对)
-
-dirname: 当前文件所在文件夹的路径(绝对) 
-
-
-  ...
+    问题：从用户输入URl按下回车，一直到用户能看到界面，期间经历了什么？
+ 一、DNS解析（缓存）：     1.找浏览器DNS缓存解析域名     2.找本机DNS缓存：ipconfig/displaydns &gt; C:/dns.txt     3.找路由器DNS缓存     4.找运营商DNS缓存（百分之80的DNS查找，到这一步就结束）     5.递归查询，（最不愿意看到的事，查询...
     
     <!-- <div class="readmore">
-      <a href="/2019/10/05/node/Node函数/">Read More</a>
+      <a href="/2019/09/01/http/http经典面试题/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/09/01/http/http状态码/">
+        Http状态码
+      </a>
+    </h2>
+    
+    <time>
+      09-01, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/HTTP/">HTTP</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    Http状态码（服务器给客户端的东西）作用：
+告诉客户端，当前服务器处理请求的结果
+
+http状态码的分类
+1xx : 服务器已经收到了本次请求，但是还需要进一步的处理才可以。
+2xx : 服务器已经收到了本次请求，且已经分析、处理等……..最终处理完毕！
+3xx : 服务器已经接收到了请求，还需要其他的资源，或者重定向到其他位置，甚至交给其他服务器处理。
+4xx ：一般指请求的参数或者地址...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/09/01/http/http状态码/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/09/01/http/响应报文/">
+        响应报文
+      </a>
+    </h2>
+    
+    <time>
+      09-01, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/HTTP/">HTTP</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    分析响应报文（给浏览器看的）1234567HTTP/1.1 200 OKX-Powered-By: ExpressContent-Type: text/html; charset=utf-8Content-Length: 27ETag: W/"1b-q8c2w67PUz7P4t0CNbDw9xqw6bo"Date: Tue, 23 Jul 2019 06:20:18 GMTConnectio...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/09/01/http/响应报文/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/09/01/http/POST请求报文/">
+        POST请求报文
+      </a>
+    </h2>
+    
+    <time>
+      09-01, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/HTTP/">HTTP</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    分析POST请求报文(给服务器看的)1234567891011121314151617POST http://localhost:3000/demo HTTP/1.1Host: localhost:3000Connection: keep-aliveContent-Length: 16Cache-Control: max-age=0Origin: http://localhost:63342...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/09/01/http/POST请求报文/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/09/01/http/GET请求报文/">
+        GET请求报文
+      </a>
+    </h2>
+    
+    <time>
+      09-01, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/HTTP/">HTTP</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    分析GET请求报文(给服务器看的)1234567891011GET http://localhost:3000/meishi HTTP/1.1Host: localhost:3000Connection: keep-aliveUpgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Ap...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/09/01/http/GET请求报文/">Read More</a>
+    </div> -->
+    
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/09/01/http/http协议/">
+        Http协议
+      </a>
+    </h2>
+    
+    <time>
+      09-01, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/HTTP/">HTTP</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    
+    http协议是什么？
+是什么：超文本传输协议（属于应用层协议）
+特点：无状态，现在cookie解决了无状态的问题（早期网页开发时，用cookie解决，现在是cookie和session配合使用）
+作用：规定了服务器和客户端传递信息的规则（统称为报文，分为：请求报文、响应报文。）
+版本：
+http 1.0 （老版本） ———-  不支持长连接
+http 1.1 （主流版本）———  优点：支持...
+    
+    <!-- <div class="readmore">
+      <a href="/2019/09/01/http/http协议/">Read More</a>
     </div> -->
     
   </section>
@@ -436,227 +598,6 @@ npm l...
 </article>
   </div>
   
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/08/25/node/模板/">
-        模板
-      </a>
-    </h2>
-    
-    <time>
-      08-25, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Node/">Node</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    
-    
-    <!-- <div class="readmore">
-      <a href="/2019/08/25/node/模板/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/generator/">
-        generator</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <time>
-      08-09, 2019
-    </time>
-    
-    
-  </section>
-  <section class="article typo">
-    
-    周报2019-08-19—-2019-08-23教师端
-性别选择问题渲染
-校区选择,判断一个校区时候直接进入。
-配置修改小程序后台配置老师帮appid,上传到体验版
-修改课程详情接口教务端
-个人中心资料页面，资料修改头像上传
-校区切换
-获取消息
-首页页面修改
-
-
-2019年8月26教务端
-课程详情页面。获取详情内容
-课堂播报tab静态页面，课堂播报接口。
-课堂播报详情、点赞、评论功能。
-课程...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/08/09/work/周报/">Read More</a>
-    </div> -->
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/28/js/Class/">
-        Class类
-      </a>
-    </h2>
-    
-    <time>
-      07-28, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    类的本质
-
-class本质还是function
-类的所有方法都定义在类的prototype属性上
-类创建的实例,里面也有proto-指向类的prototype原型对象
-所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。
-所以ES6的类其实就是语法糖.
-语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/28/js/Class/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/Class/">
-        Class</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/28/js/面向对象/">
-        面向对象
-      </a>
-    </h2>
-    
-    <time>
-      07-28, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    创建对象的三中方式
-利用new object()创建对象
-
-1var obj1=new Object();
-
-利用 对象字面量创建对象
-
-1var obj1=&#123;&#125;
-
-通过构造函数创建对象
-12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/28/js/面向对象/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/面向对象/">
-        面向对象</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/28/js/Call/">
-        Call
-      </a>
-    </h2>
-    
-    <time>
-      07-28, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    
-    Call用法
-
-调用函数
-
-123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
-
-Call可以改变函数this的指向
-12345678function dr() &#123;   console.log("play");   ...
-    
-    <!-- <div class="readmore">
-      <a href="/2019/07/28/js/Call/">Read More</a>
-    </div> -->
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/Call/">
-        Call</a>
-      
-    </div>
-    
-  </section>
-</article>
-  </div>
-  
 </section>
 
 
@@ -738,6 +679,15 @@ Call可以改变函数this的指向
                     </div>
                     <div class='badget'>
                         1
+                    </div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/HTTP/">
+                    <div class='name'>
+                        HTTP
+                    </div>
+                    <div class='badget'>
+                        6
                     </div>
                 </a></li>
             
