@@ -484,17 +484,23 @@
     
     
     <entry>
-      <title>移动端适配Rem</title>
-      <link href="/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%A8%A1%E6%9D%BF%20/"/>
-      <url>/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%A8%A1%E6%9D%BF%20/</url>
+      <title>模板</title>
+      <link href="/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/"/>
+      <url>/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/</url>
       
-        <content type="html"><![CDATA[<h3 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>#模板</p>]]></content>
       
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> 移动端适配 </tag>
+            <tag> generator </tag>
             
         </tags>
       
@@ -528,6 +534,25 @@
     
     
     <entry>
+      <title>模板</title>
+      <link href="/2019/07/05/Vue/%E6%A8%A1%E6%9D%BF/"/>
+      <url>/2019/07/05/Vue/%E6%A8%A1%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<p>#模板</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>webpack</title>
       <link href="/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF/"/>
       <url>/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF/</url>
@@ -548,8 +573,8 @@
     
     <entry>
       <title>移动端适配Rem</title>
-      <link href="/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/REM/"/>
-      <url>/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/REM/</url>
+      <link href="/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%A8%A1%E6%9D%BF%20/"/>
+      <url>/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%A8%A1%E6%9D%BF%20/</url>
       
         <content type="html"><![CDATA[<h3 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>]]></content>
       
@@ -560,75 +585,6 @@
             <tag> 移动端适配 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>模板</title>
-      <link href="/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/"/>
-      <url>/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/</url>
-      
-        <content type="html"><![CDATA[<p>#模板</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> generator </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Cli</title>
-      <link href="/2019/07/05/Vue/cli/"/>
-      <url>/2019/07/05/Vue/cli/</url>
-      
-        <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p>创建项目</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue create my-project</span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line">vue ui</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Cli </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>模板</title>
-      <link href="/2019/07/05/Vue/%E6%A8%A1%E6%9D%BF/"/>
-      <url>/2019/07/05/Vue/%E6%A8%A1%E6%9D%BF/</url>
-      
-        <content type="html"><![CDATA[<p>#模板</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -664,11 +620,57 @@
     
     
     <entry>
-      <title>export default和export</title>
-      <link href="/2019/07/05/node/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-      <url>/2019/07/05/node/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
+      <title>移动端适配Rem</title>
+      <link href="/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/REM/"/>
+      <url>/2019/07/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF/REM/</url>
       
-        <content type="html"><![CDATA[<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><blockquote><p>ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径</p><p>在ES6中,使用export default和export向外露成员</p></blockquote><ul><li>ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径</li><li>在ES6中,使用<code>export default</code>和<code>export</code>向外露成员</li><li>在一个模块中,可以同时使用export default和export向外暴露成员</li></ul><p><strong>export default</strong></p><p>在一个模块中, <code>export detault</code>只允许向外暴露1次</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  name:<span class="string">'dsd'</span>,</span><br><span class="line">  sd:<span class="string">'s'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> m1  <span class="keyword">from</span> <span class="string">'./aa.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(m1);</span><br><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure><p><strong>export</strong>  </p><p>使用<code>export</code>向外暴露的成员只能通过<code>{}</code>来接收这种形式叫做 <strong>按需导出</strong></p><p><code>export</code>可以暴露多个成员，同时,如果某些成员,我们在import的时候,不需要,则可以不在<code>{}</code>定义</p><p>注意:使用<code>export</code>导出的成员,必须严格按照导出时候的名称,来使用 {} 按需接收</p><p>使用<code>export</code> 导出的成员,<strong>如果就想换个名称来接收</strong>,可以使用<code>as</code>来起名</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  name:<span class="string">'dsd'</span>,</span><br><span class="line">  sd:<span class="string">'s'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> b =&#123;</span><br><span class="line">  <span class="string">'zzzzzzz'</span>:<span class="number">12</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> b1 =&#123;</span><br><span class="line">  <span class="string">'zzzzzzz'</span>:<span class="number">12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> m1,&#123;b,b1 <span class="keyword">as</span> bs&#125;  <span class="keyword">from</span> <span class="string">'./aa.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(m1);</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br><span class="line"><span class="built_in">console</span>.log(bs);</span><br><span class="line"><span class="comment">//&#123;name: "dsd", sd: "s"&#125;</span></span><br><span class="line"><span class="comment">//&#123;zzzzzzz: 12&#125;</span></span><br><span class="line"><span class="comment">//&#123;zzzzzzz: 12&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h3 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pageFontSize;</span><br><span class="line"><span class="keyword">var</span> clientWidth;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize</span></span><br><span class="line">    resizeEvt = <span class="string">"orientationchange"</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">"orientationchange"</span> : <span class="string">"resize"</span>;</span><br><span class="line">  recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框</span></span><br><span class="line">    clientWidth = docEl.clientWidth;</span><br><span class="line">    <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (clientWidth &gt; <span class="number">1440</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1920</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (clientWidth &gt; <span class="number">750</span>) &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">1440</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      pageFontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    docEl.style.fontSize = pageFontSize + <span class="string">"px"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="comment">//判断是否支持监听事件 ，不支持则停止</span></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//注册翻转事件</span></span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 移动端适配 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>监听</title>
+      <link href="/2019/07/05/Vue/%E7%9B%91%E5%90%AC/"/>
+      <url>/2019/07/05/Vue/%E7%9B%91%E5%90%AC/</url>
+      
+        <content type="html"><![CDATA[<h3 id="监听文本框数据改变"><a href="#监听文本框数据改变" class="headerlink" title="监听文本框数据改变"></a>监听文本框数据改变</h3><p>通过<code>@keyup</code>监听键盘</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;input v-model=&quot;one&quot; @keyup=&quot;getAll&quot;&gt;</span><br><span class="line">    &lt;input v-model=&quot;two&quot; @keyup=&quot;getAll&quot;&gt;</span><br><span class="line">    &lt;input v-model=&quot;all&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">      el: &apos;#app&apos;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        one: &apos;&apos;,</span><br><span class="line">        two: &apos;&apos;,</span><br><span class="line">        all: &apos;&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        getAll() &#123;</span><br><span class="line">          this.all = this.one + &apos;-&apos; + this.two</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure><h3 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"one"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"two"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        one: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        two: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        all: <span class="string">''</span>,</span></span><br><span class="line">      &#125;,</span><br><span class="line">      watch: &#123;</span><br><span class="line"><span class="javascript">        one: <span class="function"><span class="keyword">function</span> (<span class="params">newVal,oldVal</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(oldVal);</span></span><br><span class="line"><span class="javascript">          <span class="keyword">this</span>.all = newVal + <span class="string">'-'</span> + <span class="keyword">this</span>.two</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">       </span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><p>监视路由</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">       <span class="string">'$route.path'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(newVal + <span class="string">'------'</span> + oldVal);</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,</span><br></pre></td></tr></table></figure><h3 id="computed计算属性"><a href="#computed计算属性" class="headerlink" title="computed计算属性"></a>computed计算属性</h3><ul><li>计算属性,在引用的时候,一定不要加()去调用,直接把它当作普通属性去使用就好了;</li><li>只要计算属性,这个function内部,所用到的<strong>任何data中的数据</strong>发送了变化,就会立即重新计算这个计算属性的值</li><li>计算属性的求值结果,会被<strong>缓存</strong>起来,方便下次直接使用;如果计算属性方法中,所以来的任何数据,都没有发生过变化,则,不会重新对计算属性求值</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"one"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"two"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"me"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        one: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        two: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        me:<span class="string">''</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">      computed: &#123;</span><br><span class="line"><span class="javascript">        all: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(<span class="keyword">this</span>.me);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span>  <span class="keyword">this</span>.one+<span class="string">'-'</span>+<span class="keyword">this</span>.two</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><p><strong>对比</strong></p><ol><li>computed属性的结果会被缓存,除非依赖的响应式属性变化才会重新计算。主要当作属性来使用;</li><li>methods方法表示一个具体的操,,主要书写业务逻辑;</li><li>watch一个对象,键是需要观察的表达式,值是对应回调函数。主要用来监听某些特定数据的变化,从而进行某些具体的业务逻辑操作;可以看作是computed和methods的结合体;</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 监听 </tag>
+            
+            <tag> watch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Node.js</title>
+      <link href="/2019/07/05/node/Node.js%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2019/07/05/node/Node.js%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Node-js有什么特点"><a href="#Node-js有什么特点" class="headerlink" title="Node.js有什么特点"></a>Node.js有什么特点</h3><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul><li><strong>异步非阻塞的I/O (I/O线程池)</strong> （文件/数据库）的读写</li><li><strong>特别适用于I/O密集型应用</strong></li><li><p><strong>事件循环机制</strong> </p></li><li><p><strong>单线程</strong> - 一个人多干活</p></li><li><strong>跨平台</strong></li></ul><h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul><li>回调函数嵌套太多、太深(俗称回调地狱)</li><li>单线程,处理不好<strong>CPU密集型任务</strong> </li></ul><p><img src="https://img.jiuge.site/imgbox/20190825/lFWIl0woIA6y.png?imageslim" alt="mark"></p><h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><ul><li>Web服务API</li><li>服务器渲染页面,提升速度</li><li>后端的Web服务,例如跨域、服务器端的请求。</li></ul>]]></content>
       
       
       <categories>
@@ -680,9 +682,7 @@
       
         <tags>
             
-            <tag> 模块化 </tag>
-            
-            <tag> export </tag>
+            <tag> Node特点 </tag>
             
         </tags>
       
@@ -708,6 +708,58 @@
         <tags>
             
             <tag> Router </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cli</title>
+      <link href="/2019/07/05/Vue/cli/"/>
+      <url>/2019/07/05/Vue/cli/</url>
+      
+        <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p>创建项目</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue create my-project</span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line">vue ui</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cli </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自定义指令</title>
+      <link href="/2019/07/05/Vue/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
+      <url>/2019/07/05/Vue/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><ul><li>使用vue.dizective ()定义全局的指令 v-focus</li><li>参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 </li><li>但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 </li><li>参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-focus</span> <span class="attr">v-color</span>=<span class="string">"blue"</span> <span class="attr">v-bold</span> <span class="attr">v-fz</span>=<span class="string">"30"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'focus'</span>, &#123;</span></span><br><span class="line"></span><br><span class="line">    inserted(el) &#123;</span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'color'</span>, &#123;</span></span><br><span class="line">    bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(binding);</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(el.style.color = binding.value);</span></span><br><span class="line">    &#125;,</span><br><span class="line">    inserted(el) &#123;</span><br><span class="line"><span class="javascript"><span class="comment">//操作</span></span></span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    data: &#123;</span><br><span class="line"><span class="javascript">      blue: <span class="string">'blue'</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    directives: &#123;</span><br><span class="line"><span class="javascript">      <span class="string">'bold'</span>: &#123;</span></span><br><span class="line">        bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(binding, <span class="string">'私有的'</span>);</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(el.style.fontWeight = <span class="string">"bold"</span>);</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line"><span class="javascript">      <span class="string">'fz'</span>:<span class="function">(<span class="params">el,binding</span>)=&gt;</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//等同于把代码写到了 bind和update里面去</span></span></span><br><span class="line"><span class="javascript">el.style.fontSize=<span class="built_in">parseInt</span>(binding.value)+<span class="string">'px'</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 指令 </tag>
+            
+            <tag> 自定义 </tag>
             
         </tags>
       
@@ -745,38 +797,11 @@
     
     
     <entry>
-      <title>自定义指令</title>
-      <link href="/2019/07/05/Vue/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
-      <url>/2019/07/05/Vue/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</url>
+      <title>export default和export</title>
+      <link href="/2019/07/05/node/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+      <url>/2019/07/05/node/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
       
-        <content type="html"><![CDATA[<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><ul><li>使用vue.dizective ()定义全局的指令 v-focus</li><li>参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 </li><li>但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 </li><li>参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-focus</span> <span class="attr">v-color</span>=<span class="string">"blue"</span> <span class="attr">v-bold</span> <span class="attr">v-fz</span>=<span class="string">"30"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'focus'</span>, &#123;</span></span><br><span class="line"></span><br><span class="line">    inserted(el) &#123;</span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">  Vue.directive(<span class="string">'color'</span>, &#123;</span></span><br><span class="line">    bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(binding);</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(el.style.color = binding.value);</span></span><br><span class="line">    &#125;,</span><br><span class="line">    inserted(el) &#123;</span><br><span class="line"><span class="javascript"><span class="comment">//操作</span></span></span><br><span class="line">      el.focus();</span><br><span class="line">    &#125;,</span><br><span class="line">    updated() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    data: &#123;</span><br><span class="line"><span class="javascript">      blue: <span class="string">'blue'</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    directives: &#123;</span><br><span class="line"><span class="javascript">      <span class="string">'bold'</span>: &#123;</span></span><br><span class="line">        bind(el, binding) &#123;</span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(binding, <span class="string">'私有的'</span>);</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(el.style.fontWeight = <span class="string">"bold"</span>);</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line"><span class="javascript">      <span class="string">'fz'</span>:<span class="function">(<span class="params">el,binding</span>)=&gt;</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//等同于把代码写到了 bind和update里面去</span></span></span><br><span class="line"><span class="javascript">el.style.fontSize=<span class="built_in">parseInt</span>(binding.value)+<span class="string">'px'</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 指令 </tag>
-            
-            <tag> 自定义 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Node.js</title>
-      <link href="/2019/07/05/node/Node.js%E4%BB%8B%E7%BB%8D/"/>
-      <url>/2019/07/05/node/Node.js%E4%BB%8B%E7%BB%8D/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Node-js有什么特点"><a href="#Node-js有什么特点" class="headerlink" title="Node.js有什么特点"></a>Node.js有什么特点</h3><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul><li><strong>异步非阻塞的I/O (I/O线程池)</strong> （文件/数据库）的读写</li><li><strong>特别适用于I/O密集型应用</strong></li><li><p><strong>事件循环机制</strong> </p></li><li><p><strong>单线程</strong> - 一个人多干活</p></li><li><strong>跨平台</strong></li></ul><h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul><li>回调函数嵌套太多、太深(俗称回调地狱)</li><li>单线程,处理不好<strong>CPU密集型任务</strong> </li></ul><p><img src="https://img.jiuge.site/imgbox/20190825/lFWIl0woIA6y.png?imageslim" alt="mark"></p><h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><ul><li>Web服务API</li><li>服务器渲染页面,提升速度</li><li>后端的Web服务,例如跨域、服务器端的请求。</li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><blockquote><p>ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径</p><p>在ES6中,使用export default和export向外露成员</p></blockquote><ul><li>ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表示路径</li><li>在ES6中,使用<code>export default</code>和<code>export</code>向外露成员</li><li>在一个模块中,可以同时使用export default和export向外暴露成员</li></ul><p><strong>export default</strong></p><p>在一个模块中, <code>export detault</code>只允许向外暴露1次</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  name:<span class="string">'dsd'</span>,</span><br><span class="line">  sd:<span class="string">'s'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> m1  <span class="keyword">from</span> <span class="string">'./aa.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(m1);</span><br><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure><p><strong>export</strong>  </p><p>使用<code>export</code>向外暴露的成员只能通过<code>{}</code>来接收这种形式叫做 <strong>按需导出</strong></p><p><code>export</code>可以暴露多个成员，同时,如果某些成员,我们在import的时候,不需要,则可以不在<code>{}</code>定义</p><p>注意:使用<code>export</code>导出的成员,必须严格按照导出时候的名称,来使用 {} 按需接收</p><p>使用<code>export</code> 导出的成员,<strong>如果就想换个名称来接收</strong>,可以使用<code>as</code>来起名</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  name:<span class="string">'dsd'</span>,</span><br><span class="line">  sd:<span class="string">'s'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> b =&#123;</span><br><span class="line">  <span class="string">'zzzzzzz'</span>:<span class="number">12</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> b1 =&#123;</span><br><span class="line">  <span class="string">'zzzzzzz'</span>:<span class="number">12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> m1,&#123;b,b1 <span class="keyword">as</span> bs&#125;  <span class="keyword">from</span> <span class="string">'./aa.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(m1);</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br><span class="line"><span class="built_in">console</span>.log(bs);</span><br><span class="line"><span class="comment">//&#123;name: "dsd", sd: "s"&#125;</span></span><br><span class="line"><span class="comment">//&#123;zzzzzzz: 12&#125;</span></span><br><span class="line"><span class="comment">//&#123;zzzzzzz: 12&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -788,34 +813,9 @@
       
         <tags>
             
-            <tag> Node特点 </tag>
+            <tag> 模块化 </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>监听</title>
-      <link href="/2019/07/05/Vue/%E7%9B%91%E5%90%AC/"/>
-      <url>/2019/07/05/Vue/%E7%9B%91%E5%90%AC/</url>
-      
-        <content type="html"><![CDATA[<h3 id="监听文本框数据改变"><a href="#监听文本框数据改变" class="headerlink" title="监听文本框数据改变"></a>监听文本框数据改变</h3><p>通过<code>@keyup</code>监听键盘</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;input v-model=&quot;one&quot; @keyup=&quot;getAll&quot;&gt;</span><br><span class="line">    &lt;input v-model=&quot;two&quot; @keyup=&quot;getAll&quot;&gt;</span><br><span class="line">    &lt;input v-model=&quot;all&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">      el: &apos;#app&apos;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        one: &apos;&apos;,</span><br><span class="line">        two: &apos;&apos;,</span><br><span class="line">        all: &apos;&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        getAll() &#123;</span><br><span class="line">          this.all = this.one + &apos;-&apos; + this.two</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure><h3 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"one"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"two"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        one: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        two: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        all: <span class="string">''</span>,</span></span><br><span class="line">      &#125;,</span><br><span class="line">      watch: &#123;</span><br><span class="line"><span class="javascript">        one: <span class="function"><span class="keyword">function</span> (<span class="params">newVal,oldVal</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(oldVal);</span></span><br><span class="line"><span class="javascript">          <span class="keyword">this</span>.all = newVal + <span class="string">'-'</span> + <span class="keyword">this</span>.two</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">       </span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><p>监视路由</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">       <span class="string">'$route.path'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(newVal + <span class="string">'------'</span> + oldVal);</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,</span><br></pre></td></tr></table></figure><h3 id="computed计算属性"><a href="#computed计算属性" class="headerlink" title="computed计算属性"></a>computed计算属性</h3><ul><li>计算属性,在引用的时候,一定不要加()去调用,直接把它当作普通属性去使用就好了;</li><li>只要计算属性,这个function内部,所用到的<strong>任何data中的数据</strong>发送了变化,就会立即重新计算这个计算属性的值</li><li>计算属性的求值结果,会被<strong>缓存</strong>起来,方便下次直接使用;如果计算属性方法中,所以来的任何数据,都没有发生过变化,则,不会重新对计算属性求值</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"one"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"two"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"me"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        one: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        two: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">        me:<span class="string">''</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">      computed: &#123;</span><br><span class="line"><span class="javascript">        all: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(<span class="keyword">this</span>.me);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span>  <span class="keyword">this</span>.one+<span class="string">'-'</span>+<span class="keyword">this</span>.two</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><p><strong>对比</strong></p><ol><li>computed属性的结果会被缓存,除非依赖的响应式属性变化才会重新计算。主要当作属性来使用;</li><li>methods方法表示一个具体的操,,主要书写业务逻辑;</li><li>watch一个对象,键是需要观察的表达式,值是对应回调函数。主要用来监听某些特定数据的变化,从而进行某些具体的业务逻辑操作;可以看作是computed和methods的结合体;</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 监听 </tag>
-            
-            <tag> watch </tag>
+            <tag> export </tag>
             
         </tags>
       
@@ -920,6 +920,31 @@
     
     
     <entry>
+      <title>ES5中新增的方法</title>
+      <link href="/2018/07/08/js/%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2018/07/08/js/%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<a id="more"></a><h4 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a>对象方法</h4><p><strong>Object.defineProperty（）</strong>定义对象中新属性或修改原有的属性。</p><p><code>Object.defineProperty（obj,prop,des）</code></p><ul><li>obj:必需。目标对象</li><li>prop :必需。需定义或修改的属性的名</li><li>descriptor :必需。目标属性所拥有的特性<ul><li>Object.defineProperty()第三个参数descriptor说明:以对象形式(}书写</li><li>value:设置属性的值默认为undefinedwritable:值是否可以重写truel false默认为false</li><li>enumerable:目标属性是否可以被枚举。true | false默认为false</li><li>configurable:目标属性是否可以被删除或是否可以再次修改特性true | false默认为false</li></ul></li></ul><p><strong>Object.keys()</strong>用于获取对象自身所有的属性</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj=&#123;</span><br><span class="line">    name:<span class="string">'小米'</span>,</span><br><span class="line">    age:<span class="number">9</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">Object</span>.keys(obj));<span class="comment">//["name", "age"]</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ES5新增方法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据遍历</title>
       <link href="/2018/07/08/js/%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/"/>
       <url>/2018/07/08/js/%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/</url>
@@ -941,31 +966,6 @@
             <tag> 遍历 </tag>
             
             <tag> 循环 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ES5中新增的方法</title>
-      <link href="/2018/07/08/js/%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2018/07/08/js/%E5%AF%B9%E8%B1%A1/</url>
-      
-        <content type="html"><![CDATA[<a id="more"></a><h4 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a>对象方法</h4><p><strong>Object.defineProperty（）</strong>定义对象中新属性或修改原有的属性。</p><p><code>Object.defineProperty（obj,prop,des）</code></p><ul><li>obj:必需。目标对象</li><li>prop :必需。需定义或修改的属性的名</li><li>descriptor :必需。目标属性所拥有的特性<ul><li>Object.defineProperty()第三个参数descriptor说明:以对象形式(}书写</li><li>value:设置属性的值默认为undefinedwritable:值是否可以重写truel false默认为false</li><li>enumerable:目标属性是否可以被枚举。true | false默认为false</li><li>configurable:目标属性是否可以被删除或是否可以再次修改特性true | false默认为false</li></ul></li></ul><p><strong>Object.keys()</strong>用于获取对象自身所有的属性</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj=&#123;</span><br><span class="line">    name:<span class="string">'小米'</span>,</span><br><span class="line">    age:<span class="number">9</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">Object</span>.keys(obj));<span class="comment">//["name", "age"]</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ES5新增方法 </tag>
             
         </tags>
       
@@ -1001,23 +1001,25 @@
     
     
     <entry>
-      <title>Git常用操作</title>
-      <link href="/2018/07/05/GIt%E6%93%8D%E4%BD%9C/"/>
-      <url>/2018/07/05/GIt%E6%93%8D%E4%BD%9C/</url>
+      <title>模块化</title>
+      <link href="/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+      <url>/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
       
-        <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><code>git config --global user.name &quot;你的账号&quot;</code></p><p><code>git config --global user.email &quot;你的邮箱&quot;</code></p><p> 在文件中初始化Git（创建Git仓库）<code>git init</code></p><h3 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h3><ol><li>创建文件 <code>git touch a1.html</code> </li><li>文件提交到暂存区 <code>git add a1.html</code></li><li>文件提交描述 <code>git commit -m &#39;描述&#39;</code></li><li>查看文件状态 <code>git status</code></li><li>提交到仓库 <code>git push</code></li></ol><h3 id="Git克隆操作"><a href="#Git克隆操作" class="headerlink" title="Git克隆操作"></a>Git克隆操作</h3><p> <code>git clone 仓库地址</code></p><h3 id="新仓库添加本地文件"><a href="#新仓库添加本地文件" class="headerlink" title="新仓库添加本地文件"></a>新仓库添加本地文件</h3><ul><li>新建<b>码云/github</b>仓库</li><li>本地新建文件夹</li><li>新建的文件夹，点击鼠标右键，选择git bash here <code>git init</code></li><li>复制项目地址</li><li>然后<code>git remote add origin 地址</code></li><li>继续输入<code>git pull origin master</code> 命令，将码云上的仓库pull到本地文件夹</li><li>使用<code>git add -A  （. 表示所有的）或者 git add + 文件名</code>            // 将文件保存到缓存区</li><li>使用<code>git commit -m</code>‘新添加的文件内容描述’     //添加文件描述</li><li>使用<code>git push origin master</code> ，将本地仓库推送到远程仓库</li><li>ok了</li></ul><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><ul><li><p>找到<code>gitee/github</code>分支-新建分支或者<code>git checkout -b 新分支名</code></p></li><li><p>本地<code>git pull</code>拉取最新代码</p></li><li><p>查看分支<code>git branch</code></p></li><li><p>切换本地分支<code>git checkout 分支名</code></p></li><li><p>切换分支<code>git checkout 分支名字</code></p></li><li><p>合并线上分支到master </p><ol><li>切换到master <code>git checkout master</code></li><li>合并<code>git merge origin/分支名</code></li></ol></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul><li>模块-组件-元件</li><li>模块：</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  - 定义: model.js</span></span><br><span class="line">     define(<span class="function"><span class="keyword">function</span> (<span class="params">require,exports,module</span>) </span>&#123;</span><br><span class="line">    exports.a = <span class="number">12</span>;</span><br><span class="line">     exports.b=<span class="number">5</span>;</span><br><span class="line">&#125;);  </span><br><span class="line"></span><br><span class="line"><span class="comment">//   - 调用:  xx.html</span></span><br><span class="line">seajs.use([<span class="string">'xxxx.js'</span>,<span class="string">'xxx.js'</span>,...],<span class="function"><span class="keyword">function</span>(<span class="params">model1,model2,...</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ol><li>民间的–sea.js 、require.js</li></ol><ul><li>CMD、AMD规范</li><li><p>区别：</p><p>html-&gt;js   use</p><p>js-&gt;  js   require</p></li></ul><ol start="2"><li><p>node.js模块化</p><ol><li>没有define</li><li>exports、require、module</li><li>引用自定义模块 1) 放到node_modules里,   2)前面加上./</li></ol><ul><li>引入: let mod = require(‘./aaa.js’)</li><li>输出: exports.xx = xxx; module.exports={x,x,x,y}</li></ul></li><li><p>ES6模块化</p><ul><li>import</li><li>export</li></ul><ul><li>引入:impo mod from = ‘./xx.js’</li><li>输出:expor{x,x,x}</li></ul></li></ol>]]></content>
       
       
       <categories>
           
-          <category> Git </category>
+          <category> JavaScript </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Git </tag>
+            <tag> ES6 </tag>
+            
+            <tag> 模块化 </tag>
             
         </tags>
       
@@ -1051,25 +1053,23 @@
     
     
     <entry>
-      <title>解构赋值</title>
-      <link href="/2018/07/05/js/%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
-      <url>/2018/07/05/js/%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
+      <title>Git常用操作</title>
+      <link href="/2018/07/05/GIt%E6%93%8D%E4%BD%9C/"/>
+      <url>/2018/07/05/GIt%E6%93%8D%E4%BD%9C/</url>
       
-        <content type="html"><![CDATA[<h4 id="结构赋值"><a href="#结构赋值" class="headerlink" title="结构赋值"></a>结构赋值</h4><ol><li>左右两边结构必须一样;</li><li>右边必须是个东西;</li><li>声明和赋值不能分开(必须在一句话里说完);<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 数组</span></span><br><span class="line"><span class="keyword">let</span> [aq,bq,cq]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"> <span class="built_in">console</span>.log(aq);<span class="comment">//1</span></span><br><span class="line"> <span class="built_in">console</span>.log(bq);<span class="comment">//2</span></span><br><span class="line"> <span class="built_in">console</span>.log(cq);<span class="comment">//3</span></span><br><span class="line"> <span class="comment">// 对象</span></span><br><span class="line"> <span class="keyword">let</span> &#123;w,z,y&#125; = &#123;<span class="attr">w</span>:<span class="number">12</span>,<span class="attr">z</span>:<span class="number">66</span>,<span class="attr">y</span>:<span class="number">15</span>&#125;;</span><br><span class="line"> <span class="built_in">console</span>.log(w,z,y);<span class="comment">// 12 66 15</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+        <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><code>git config --global user.name &quot;你的账号&quot;</code></p><p><code>git config --global user.email &quot;你的邮箱&quot;</code></p><p> 在文件中初始化Git（创建Git仓库）<code>git init</code></p><h3 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h3><ol><li>创建文件 <code>git touch a1.html</code> </li><li>文件提交到暂存区 <code>git add a1.html</code></li><li>文件提交描述 <code>git commit -m &#39;描述&#39;</code></li><li>查看文件状态 <code>git status</code></li><li>提交到仓库 <code>git push</code></li></ol><h3 id="Git克隆操作"><a href="#Git克隆操作" class="headerlink" title="Git克隆操作"></a>Git克隆操作</h3><p> <code>git clone 仓库地址</code></p><h3 id="新仓库添加本地文件"><a href="#新仓库添加本地文件" class="headerlink" title="新仓库添加本地文件"></a>新仓库添加本地文件</h3><ul><li>新建<b>码云/github</b>仓库</li><li>本地新建文件夹</li><li>新建的文件夹，点击鼠标右键，选择git bash here <code>git init</code></li><li>复制项目地址</li><li>然后<code>git remote add origin 地址</code></li><li>继续输入<code>git pull origin master</code> 命令，将码云上的仓库pull到本地文件夹</li><li>使用<code>git add -A  （. 表示所有的）或者 git add + 文件名</code>            // 将文件保存到缓存区</li><li>使用<code>git commit -m</code>‘新添加的文件内容描述’     //添加文件描述</li><li>使用<code>git push origin master</code> ，将本地仓库推送到远程仓库</li><li>ok了</li></ul><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><ul><li><p>找到<code>gitee/github</code>分支-新建分支或者<code>git checkout -b 新分支名</code></p></li><li><p>本地<code>git pull</code>拉取最新代码</p></li><li><p>查看分支<code>git branch</code></p></li><li><p>切换本地分支<code>git checkout 分支名</code></p></li><li><p>切换分支<code>git checkout 分支名字</code></p></li><li><p>合并线上分支到master </p><ol><li>切换到master <code>git checkout master</code></li><li>合并<code>git merge origin/分支名</code></li></ol></li></ul>]]></content>
       
       
       <categories>
           
-          <category> JavaScript </category>
+          <category> Git </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> ES6 </tag>
-            
-            <tag> JavaScript </tag>
+            <tag> Git </tag>
             
         </tags>
       
@@ -1128,11 +1128,11 @@
     
     
     <entry>
-      <title>模块化</title>
-      <link href="/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-      <url>/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
+      <title>解构赋值</title>
+      <link href="/2018/07/05/js/%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+      <url>/2018/07/05/js/%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
       
-        <content type="html"><![CDATA[<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul><li>模块-组件-元件</li><li>模块：</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  - 定义: model.js</span></span><br><span class="line">     define(<span class="function"><span class="keyword">function</span> (<span class="params">require,exports,module</span>) </span>&#123;</span><br><span class="line">    exports.a = <span class="number">12</span>;</span><br><span class="line">     exports.b=<span class="number">5</span>;</span><br><span class="line">&#125;);  </span><br><span class="line"></span><br><span class="line"><span class="comment">//   - 调用:  xx.html</span></span><br><span class="line">seajs.use([<span class="string">'xxxx.js'</span>,<span class="string">'xxx.js'</span>,...],<span class="function"><span class="keyword">function</span>(<span class="params">model1,model2,...</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ol><li>民间的–sea.js 、require.js</li></ol><ul><li>CMD、AMD规范</li><li><p>区别：</p><p>html-&gt;js   use</p><p>js-&gt;  js   require</p></li></ul><ol start="2"><li><p>node.js模块化</p><ol><li>没有define</li><li>exports、require、module</li><li>引用自定义模块 1) 放到node_modules里,   2)前面加上./</li></ol><ul><li>引入: let mod = require(‘./aaa.js’)</li><li>输出: exports.xx = xxx; module.exports={x,x,x,y}</li></ul></li><li><p>ES6模块化</p><ul><li>import</li><li>export</li></ul><ul><li>引入:impo mod from = ‘./xx.js’</li><li>输出:expor{x,x,x}</li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="结构赋值"><a href="#结构赋值" class="headerlink" title="结构赋值"></a>结构赋值</h4><ol><li>左右两边结构必须一样;</li><li>右边必须是个东西;</li><li>声明和赋值不能分开(必须在一句话里说完);<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 数组</span></span><br><span class="line"><span class="keyword">let</span> [aq,bq,cq]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"> <span class="built_in">console</span>.log(aq);<span class="comment">//1</span></span><br><span class="line"> <span class="built_in">console</span>.log(bq);<span class="comment">//2</span></span><br><span class="line"> <span class="built_in">console</span>.log(cq);<span class="comment">//3</span></span><br><span class="line"> <span class="comment">// 对象</span></span><br><span class="line"> <span class="keyword">let</span> &#123;w,z,y&#125; = &#123;<span class="attr">w</span>:<span class="number">12</span>,<span class="attr">z</span>:<span class="number">66</span>,<span class="attr">y</span>:<span class="number">15</span>&#125;;</span><br><span class="line"> <span class="built_in">console</span>.log(w,z,y);<span class="comment">// 12 66 15</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
       
       
       <categories>
@@ -1146,7 +1146,7 @@
             
             <tag> ES6 </tag>
             
-            <tag> 模块化 </tag>
+            <tag> JavaScript </tag>
             
         </tags>
       
