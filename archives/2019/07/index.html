@@ -221,8 +221,8 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/28/js/Class/">
-        Class类
+      <a href="/2019/07/28/js/面向对象/">
+        面向对象
       </a>
     </h2>
     
@@ -246,25 +246,28 @@
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/28/js/Class/" class="hhhh">
+      <a href="/2019/07/28/js/面向对象/" class="hhhh">
     
-    类的本质
+    创建对象的三中方式
+利用new object()创建对象
 
-class本质还是function
-类的所有方法都定义在类的prototype属性上
-类创建的实例,里面也有proto-指向类的prototype原型对象
-所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。
-所以ES6的类其实就是语法糖.
-语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功...
+1var obj1=new Object();
+
+利用 对象字面量创建对象
+
+1var obj1=&#123;&#125;
+
+通过构造函数创建对象
+12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
     
     <div class="readmore">
-      <a href="/2019/07/28/js/Class/">阅读全部</a>
+      <a href="/2019/07/28/js/面向对象/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/Class/">
-        Class</a>
+      <a href="/tags/面向对象/">
+        面向对象</a>
       
     </div>
     
@@ -335,8 +338,8 @@ Call可以改变函数this的指向
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/28/js/面向对象/">
-        面向对象
+      <a href="/2019/07/28/js/Class/">
+        Class类
       </a>
     </h2>
     
@@ -360,28 +363,25 @@ Call可以改变函数this的指向
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/28/js/面向对象/" class="hhhh">
+      <a href="/2019/07/28/js/Class/" class="hhhh">
     
-    创建对象的三中方式
-利用new object()创建对象
+    类的本质
 
-1var obj1=new Object();
-
-利用 对象字面量创建对象
-
-1var obj1=&#123;&#125;
-
-通过构造函数创建对象
-12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
+class本质还是function
+类的所有方法都定义在类的prototype属性上
+类创建的实例,里面也有proto-指向类的prototype原型对象
+所以ES6的类它的绝大部分功能, ES5都可以做到,新的class写法只是让对象原型的写法更加清晰、更像面向对编程的语法而已。
+所以ES6的类其实就是语法糖.
+语法糖语法糖就是一种便捷写法.简单理解,有两种方法可以实现同样的功...
     
     <div class="readmore">
-      <a href="/2019/07/28/js/面向对象/">阅读全部</a>
+      <a href="/2019/07/28/js/Class/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/面向对象/">
-        面向对象</a>
+      <a href="/tags/Class/">
+        Class</a>
       
     </div>
     
@@ -742,8 +742,8 @@ indexOf判断是否包含并且返回...
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Webpack/模板 - 副本/">
-        模板
+      <a href="/2019/07/05/node/Node.js介绍/">
+        Node.js
       </a>
     </h2>
     
@@ -753,7 +753,7 @@ indexOf判断是否包含并且返回...
     
 
 <div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
+    <a href="/categories/Node/">Node</a>
 </div>
 
     
@@ -767,19 +767,37 @@ indexOf判断是否包含并且返回...
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/05/Webpack/模板 - 副本/" class="hhhh">
+      <a href="/2019/07/05/node/Node.js介绍/" class="hhhh">
     
-    #模板
+    Node.js有什么特点优点
+异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写
+特别适用于I/O密集型应用
+事件循环机制 
+
+单线程 - 一个人多干活
+
+跨平台
+
+缺点
+回调函数嵌套太多、太深(俗称回调地狱)
+单线程,处理不好CPU密集型任务 
+
+
+应用场景
+Web服务API
+服务器渲染页面,提升速度
+后端的Web服务,例如跨域、服务器端的请求。
+
 
     
     <div class="readmore">
-      <a href="/2019/07/05/Webpack/模板 - 副本/">阅读全部</a>
+      <a href="/2019/07/05/node/Node.js介绍/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/generator/">
-        generator</a>
+      <a href="/tags/Node特点/">
+        Node特点</a>
       
     </div>
     
@@ -943,20 +961,25 @@ indexOf判断是否包含并且返回...
     
   </div>
 </footer>
-
   
-
   
-  <canvas id='evanyou'></div>
+  <!-- <div class='evanyou compensate-for-scrollbar'> -->
+  <canvas id='evanyou'></canvas>
+<!-- </div> -->
   <script src="/js/evanyou.js"></script>
   
-
+  
   
   <div id="aplayer-fixed"></div>
+  
   <script src="/js/aplayer.js"></script>
   
 
- 
+  <!-- <div class='evanyou compensate-for-scrollbar'> -->
+  <canvas id='evanyou'></canvas>
+<!-- </div> -->
+  
+  <div id="aplayer-fixed"></div>
   
   <script src="/js/pjax.js"></script>
   <script>NProgress.done();</script>
