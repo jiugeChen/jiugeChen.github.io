@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jiugework.gitee.io/2019/08/09/work/%E5%91%A8%E6%8A%A5/</loc>
+    <loc>http://jiugework.gitee.io/2018/07/05/js/Promise/</loc>
     
-    <lastmod>2019-09-03T09:05:05.336Z</lastmod>
+    <lastmod>2019-09-04T09:28:11.276Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jiugework.gitee.io/gallery/data.json</loc>
+    
+    <lastmod>2019-09-04T08:18:13.743Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jiugework.gitee.io/gallery/index.html</loc>
+    
+    <lastmod>2019-09-04T03:42:44.348Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jiugework.gitee.io/timeline/index.html</loc>
     
-    <lastmod>2019-09-02T08:25:18.563Z</lastmod>
+    <lastmod>2019-09-04T03:41:39.636Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jiugework.gitee.io/2019/08/09/work/%E5%91%A8%E6%8A%A5/</loc>
+    
+    <lastmod>2019-09-03T09:05:05.336Z</lastmod>
     
   </url>
   
@@ -282,14 +303,14 @@
   </url>
   
   <url>
-    <loc>http://jiugework.gitee.io/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/</loc>
+    <loc>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</loc>
     
     <lastmod>2019-07-28T01:46:26.346Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</loc>
+    <loc>http://jiugework.gitee.io/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/</loc>
     
     <lastmod>2019-07-28T01:46:26.346Z</lastmod>
     
@@ -320,13 +341,6 @@
     <loc>http://jiugework.gitee.io/2019/07/28/js/Call/</loc>
     
     <lastmod>2019-07-28T01:28:50.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jiugework.gitee.io/2018/07/05/js/Promise/</loc>
-    
-    <lastmod>2019-07-28T01:15:58.112Z</lastmod>
     
   </url>
   
@@ -376,13 +390,6 @@
     <loc>http://jiugework.gitee.io/2018/07/05/js/%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
     
     <lastmod>2019-07-11T09:53:42.647Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jiugework.gitee.io/gallery/index.html</loc>
-    
-    <lastmod>2019-07-10T14:26:50.234Z</lastmod>
     
   </url>
   
