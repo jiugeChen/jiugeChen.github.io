@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jiugework.gitee.io/2019/08/09/work/%E5%91%A8%E6%8A%A5/</loc>
+    
+    <lastmod>2019-09-06T06:22:36.342Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jiugework.gitee.io/about/index.html</loc>
+    
+    <lastmod>2019-09-05T10:00:16.369Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jiugework.gitee.io/gallery/index.html</loc>
     
     <lastmod>2019-09-05T09:45:35.871Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>http://jiugework.gitee.io/about/index.html</loc>
-    
-    <lastmod>2019-09-05T09:27:10.886Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://jiugework.gitee.io/2018/07/05/GIt%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2019-09-05T09:19:19.022Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jiugework.gitee.io/2019/08/09/work/%E5%91%A8%E6%8A%A5/</loc>
-    
-    <lastmod>2019-09-05T09:18:18.736Z</lastmod>
     
   </url>
   
@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>http://jiugework.gitee.io/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/</loc>
+    <loc>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</loc>
     
     <lastmod>2019-07-28T01:46:26.346Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://jiugework.gitee.io/2019/07/05/js/1bbbbb/</loc>
+    <loc>http://jiugework.gitee.io/2019/07/05/Webpack/%E6%A8%A1%E6%9D%BF%20-%20%E5%89%AF%E6%9C%AC/</loc>
     
     <lastmod>2019-07-28T01:46:26.346Z</lastmod>
     
