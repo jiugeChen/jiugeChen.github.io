@@ -450,6 +450,59 @@ indexOf判断是否包含并且返回...
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2019/07/05/Vue/路由/">
+        Vue-Router
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Vue/">Vue</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    <style>
+      a.hhhh{
+        color: #333;
+      }
+      a.hhhh:hover{
+        background-color: transparent;
+      }
+      </style>
+      <a href="/2019/07/05/Vue/路由/" class="hhhh">
+    
+    路由
+后端路由:对于普通的网站,所有的超链接都是URL地址,所有的URL地址都对应服务器上对应的资源;
+前端路由:对于单页面应用程序来说,主要通过URL中的hash(#号)来实现不同页面之间的切换,同时, hash有一个特点: HTTP请求中不会包含hash相关的内容;所以,单页面程序中的页面跳转主要用hash实现
+在单页面应用程序中,这种通过hash改变来切换页面的方式,称作前端路由(区别...
+    
+    <div class="readmore">
+      <a href="/2019/07/05/Vue/路由/">阅读全部</a>
+    </div>
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Router/">
+        Router</a>
+      
+    </div>
+    
+  </a>
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2019/07/05/node/模块化/">
         export default和export
       </a>
@@ -510,8 +563,8 @@ ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表�
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Vue/ref/">
-        ref传值与获取Dom
+      <a href="/2019/07/05/Vue/自定义指令/">
+        自定义指令
       </a>
     </h2>
     
@@ -535,122 +588,27 @@ ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表�
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/05/Vue/ref/" class="hhhh">
+      <a href="/2019/07/05/Vue/自定义指令/" class="hhhh">
     
-    ref寻找dom元素1234567891011121314151617181920&lt;body&gt;  &lt;div id="app"&gt;&lt;button @click="getElement" ref="zz" &gt;获取元素&lt;/button&gt;&lt;button @click="getElement" ref="zz1" &gt;获取元素&lt;/butto...
+    自定义指令
+使用vue.dizective ()定义全局的指令 v-focus
+参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 
+但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 
+参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作
+
+1234567891011121314151617181920212223...
     
     <div class="readmore">
-      <a href="/2019/07/05/Vue/ref/">阅读全部</a>
+      <a href="/2019/07/05/Vue/自定义指令/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/ref/">
-        ref</a>
+      <a href="/tags/指令/">
+        指令</a>
       
-      <a href="/tags/组件通讯/">
-        组件通讯</a>
-      
-      <a href="/tags/子组件/">
-        子组件</a>
-      
-    </div>
-    
-  </a>
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/Vue/cli/">
-        Cli
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    <style>
-      a.hhhh{
-        color: #333;
-      }
-      a.hhhh:hover{
-        background-color: transparent;
-      }
-      </style>
-      <a href="/2019/07/05/Vue/cli/" class="hhhh">
-    
-    安装1npm install -g @vue/cli
-创建项目
-123vue create my-project# ORvue ui
-
-    
-    <div class="readmore">
-      <a href="/2019/07/05/Vue/cli/">阅读全部</a>
-    </div>
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/Cli/">
-        Cli</a>
-      
-    </div>
-    
-  </a>
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/07/05/移动端/REM/">
-        移动端适配Rem
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2019
-    </time>
-    
-    
-  </section>
-  <section class="article typo">
-    <style>
-      a.hhhh{
-        color: #333;
-      }
-      a.hhhh:hover{
-        background-color: transparent;
-      }
-      </style>
-      <a href="/2019/07/05/移动端/REM/" class="hhhh">
-    
-    移动端适配12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始...
-    
-    <div class="readmore">
-      <a href="/2019/07/05/移动端/REM/">阅读全部</a>
-    </div>
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/移动端适配/">
-        移动端适配</a>
+      <a href="/tags/自定义/">
+        自定义</a>
       
     </div>
     
@@ -718,8 +676,8 @@ ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表�
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/移动端/模板 /">
-        移动端适配Rem
+      <a href="/2019/07/05/Vue/cli/">
+        Cli
       </a>
     </h2>
     
@@ -727,6 +685,11 @@ ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表�
       07-05, 2019
     </time>
     
+
+<div class='categories'>
+    <a href="/categories/Vue/">Vue</a>
+</div>
+
     
   </section>
   <section class="article typo">
@@ -738,18 +701,90 @@ ES6中导入模块,使用 import模块名称from ,模块标识符, import ,表�
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/05/移动端/模板 /" class="hhhh">
+      <a href="/2019/07/05/Vue/cli/" class="hhhh">
     
-    移动端适配12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始...
+    安装1npm install -g @vue/cli
+创建项目
+123vue create my-project# ORvue ui
+
     
     <div class="readmore">
-      <a href="/2019/07/05/移动端/模板 /">阅读全部</a>
+      <a href="/2019/07/05/Vue/cli/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/移动端适配/">
-        移动端适配</a>
+      <a href="/tags/Cli/">
+        Cli</a>
+      
+    </div>
+    
+  </a>
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/node/Node.js介绍/">
+        Node.js
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/Node/">Node</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    <style>
+      a.hhhh{
+        color: #333;
+      }
+      a.hhhh:hover{
+        background-color: transparent;
+      }
+      </style>
+      <a href="/2019/07/05/node/Node.js介绍/" class="hhhh">
+    
+    Node.js有什么特点优点
+异步非阻塞的I/O (I/O线程池) （文件/数据库）的读写
+特别适用于I/O密集型应用
+事件循环机制 
+
+单线程 - 一个人多干活
+
+跨平台
+
+缺点
+回调函数嵌套太多、太深(俗称回调地狱)
+单线程,处理不好CPU密集型任务 
+
+
+应用场景
+Web服务API
+服务器渲染页面,提升速度
+后端的Web服务,例如跨域、服务器端的请求。
+
+
+    
+    <div class="readmore">
+      <a href="/2019/07/05/node/Node.js介绍/">阅读全部</a>
+    </div>
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/Node特点/">
+        Node特点</a>
       
     </div>
     
