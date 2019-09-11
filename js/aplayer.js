@@ -4,6 +4,7 @@ const apFixed = new APlayer({
     order: 'random',
     lrcType: 3,
     fixed: true,
+    
 });
 $.ajax({
     url: 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=2663347612',
