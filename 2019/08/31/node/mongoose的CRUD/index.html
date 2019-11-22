@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="’’Sun--(*^▽^*)">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象) Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组  模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象])  模型对象.updateMany(查询条件,要更新">
+  <meta name="description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象)Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组 模型对象.find(查询对象,{age:0})过滤掉id 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongoose的增删改查">
 <meta property="og:url" content="http://jiugework.gitee.io/2019/08/31/node/mongoose的CRUD/index.html">
 <meta property="og:site_name" content="’’Sun--(*^▽^*)">
-<meta property="og:description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象) Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组  模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象])  模型对象.updateMany(查询条件,要更新">
+<meta property="og:description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象)Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组 模型对象.find(查询对象,{age:0})过滤掉id 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-31T15:46:59.356Z">
+<meta property="og:updated_time" content="2019-11-22T06:55:01.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoose的增删改查">
-<meta name="twitter:description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象) Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组  模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象])  模型对象.updateMany(查询条件,要更新">
+<meta name="twitter:description" content="Create 模型对象.create(文档对象，回调函数) 模型对象.create(文档对象)Read 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组 模型对象.find(查询对象,{age:0})过滤掉id 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null Update 模型对象.updateOne(查询条件,要更新的内容[,配置对象]">
   <meta name="baidu-site-verification" content="RcgDKTGgGT">
   <meta name="google-site-verification" content="uLxUm5wTv1GofV8_j9CYt1DPYi8JHoOwA1ZncffgYnw">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -231,7 +231,7 @@
 <time>#<span id="wordcount"></span></time>
 <time>#<span id="min2read"></span></time>
 <script>
-  count('&#34;Create\n模型对象.create(文档对象，回调函数)\n模型对象.create(文档对象)\nRead\n模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组\n\n模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null\nUpdate\n模型对象.updateOne(查询条件,要更新的内容[,配置对象])\n\n模型对象.updateMany(查询条件,要更新的内容[,配置对象]) 备注：存在update方法，但是即将废弃，查询条件匹配到多个时，依然只修改一个，强烈建议用updateOne或updateMany\nDelete\n模型对象.deleteOne(查询条件)\n\n模型对象.deleteMany(查询条件)  备注：没有delete方法，会报错！\n\n备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象\n&#34;');
+  count('&#34;Create\n模型对象.create(文档对象，回调函数)\n模型对象.create(文档对象)Read\n模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组\n模型对象.find(查询对象,{age:0})过滤掉id\n模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null\nUpdate\n模型对象.updateOne(查询条件,要更新的内容[,配置对象])\n\n模型对象.updateMany(查询条件,要更新的内容[,配置对象]) 备注：存在update方法，但是即将废弃，查询条件匹配到多个时，依然只修改一个，强烈建议用updateOne或updateMany\nDelete\n模型对象.deleteOne(查询条件)\n\n模型对象.deleteMany(查询条件)  备注：没有delete方法，会报错！\n\n新增字段模型对象.update({},{$set:{adj_close_price:&amp;#39;0.0&amp;#39;}},{multi:true})\n12345678910db.collection.update(   &amp;lt;query&amp;gt;,   &amp;lt;update&amp;gt;,   &amp;#123;     upsert: &amp;lt;boolean&amp;gt;,     multi: &amp;lt;boolean&amp;gt;,     writeConcern: &amp;lt;document&amp;gt;,     collation: &amp;lt;document&amp;gt;   &amp;#125;)\n\nquery字段，新增字段，全量查询，所以是{}\nupdate字段，就是利用$set操作符来 新增字段，并赋值\n后面的四个配置项，multi是必须的，如果不配置true, 默认只有第一列新增了。\n\n删除uname字段模型对象.update({},{$unset:{uname:&amp;quot;&amp;quot;}},false,true)\n修改字段，把content改为mcontentdb.atest.update({}, {$rename : {&amp;quot;content&amp;quot; : &amp;quot;mcontent&amp;quot;}}, false, true)\n\ncriteria：查询条件\n\nobjNew：update对象和一些更新操作符\n\nupsert：如果不存在update的记录，是否插入objNew这个新的文档，true为插入，默认为false，不插入。\n\nmulti：默认是false，只更新找到的第一条记录。如果为true，把按条件查询出来的记录全部更新。\n\n\n备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象&#34;');
 </script>
 
 		
@@ -263,10 +263,9 @@
 		<div class="article-entry" itemprop="articleBody">
 			<h4 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h4><ul>
 <li>模型对象.create(文档对象，回调函数)</li>
-<li><p>模型对象.create(文档对象)</p>
-<h4 id="Read"><a href="#Read" class="headerlink" title="Read"></a>Read</h4></li>
-<li><p>模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组</p>
-</li>
+<li>模型对象.create(文档对象)<h4 id="Read"><a href="#Read" class="headerlink" title="Read"></a>Read</h4></li>
+<li>模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组</li>
+<li>模型对象.find(查询对象,{age:0})过滤掉id</li>
 <li><p>模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null</p>
 <h4 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h4></li>
 <li><p>模型对象.updateOne(查询条件,要更新的内容[,配置对象])</p>
@@ -277,8 +276,26 @@
 </li>
 <li>模型对象.deleteMany(查询条件)<br>  备注：没有delete方法，会报错！</li>
 </ul>
-<p>备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象</p>
-
+<h3 id="新增字段"><a href="#新增字段" class="headerlink" title="新增字段"></a>新增字段</h3><p><code>模型对象.update({},{$set:{adj_close_price:&#39;0.0&#39;}},{multi:true})</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">db.collection.update(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &lt;update&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     upsert: <span class="xml"><span class="tag">&lt;<span class="name">boolean</span>&gt;</span>,</span></span><br><span class="line">     multi: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;,</span><br><span class="line">     collation: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>query字段，新增字段，全量查询，所以是{}</li>
+<li>update字段，就是利用$set操作符来 新增字段，并赋值</li>
+<li>后面的四个配置项，multi是必须的，如果不配置true, 默认只有第一列新增了。</li>
+</ul>
+<h3 id="删除uname字段"><a href="#删除uname字段" class="headerlink" title="删除uname字段"></a>删除uname字段</h3><p><code>模型对象.update({},{$unset:{uname:&quot;&quot;}},false,true)</code></p>
+<h3 id="修改字段，把content改为mcontent"><a href="#修改字段，把content改为mcontent" class="headerlink" title="修改字段，把content改为mcontent"></a>修改字段，把content改为mcontent</h3><p><code>db.atest.update({}, {$rename : {&quot;content&quot; : &quot;mcontent&quot;}}, false, true)</code></p>
+<ul>
+<li><p>criteria：查询条件</p>
+</li>
+<li><p>objNew：update对象和一些更新操作符</p>
+</li>
+<li><p>upsert：如果不存在update的记录，是否插入objNew这个新的文档，true为插入，默认为false，不插入。</p>
+</li>
+<li><p>multi：默认是false，只更新找到的第一条记录。如果为true，把按条件查询出来的记录全部更新。</p>
+</li>
+</ul>
+<h3 id="备注：-以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象"><a href="#备注：-以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象" class="headerlink" title="备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象"></a>备注： 以上所有方法，如果没有指定回调函数，则返回值是一个Promise对象</h3>
 		</div>
 		
 

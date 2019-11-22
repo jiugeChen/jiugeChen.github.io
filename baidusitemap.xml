@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jiugework.gitee.io/2019/08/31/node/mongoose%E7%9A%84CRUD/</loc>
+    <lastmod>2019-11-22</lastmod>
+  </url>  <url>
     <loc>http://jiugework.gitee.io/2019/09/11/work/%E5%91%A8%E6%8A%A5/</loc>
-    <lastmod>2019-11-20</lastmod>
+    <lastmod>2019-11-22</lastmod>
+  </url>  <url>
+    <loc>http://jiugework.gitee.io/2019/08/30/node/MongoDB/</loc>
+    <lastmod>2019-11-22</lastmod>
   </url>  <url>
     <loc>http://jiugework.gitee.io/2018/07/05/%E5%85%B6%E4%BB%96/GIt%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2019-09-11</lastmod>
@@ -50,12 +56,6 @@
     <lastmod>2019-08-31</lastmod>
   </url>  <url>
     <loc>http://jiugework.gitee.io/2019/07/16/css/css1/</loc>
-    <lastmod>2019-08-31</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/08/31/node/mongoose%E7%9A%84CRUD/</loc>
-    <lastmod>2019-08-31</lastmod>
-  </url>  <url>
-    <loc>http://jiugework.gitee.io/2019/08/30/node/MongoDB/</loc>
     <lastmod>2019-08-31</lastmod>
   </url>  <url>
     <loc>http://jiugework.gitee.io/2019/08/31/node/GET%E8%AF%B7%E6%B1%82%E4%B8%8EPOST%E8%AF%B7%E6%B1%82/</loc>

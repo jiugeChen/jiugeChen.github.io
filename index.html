@@ -685,15 +685,12 @@ http 1.1 （主流版本）———  优点：支持...
     
     Create
 模型对象.create(文档对象，回调函数)
-模型对象.create(文档对象)
-Read
+模型对象.create(文档对象)Read
 模型对象.find(查询条件[,投影])不管有没有数据，都返回一个数组
-
+模型对象.find(查询对象,{age:0})过滤掉id
 模型对象.findOne(查询条件[,投影])找到了返回一个对象，没找到返回null
 Update
-模型对象.updateOne(查询条件,要更新的内容[,配置对象])
-
-模型对象.updateMany(查询条件,...
+模型对象.updateOne(查询条件,要更新的内容[,配置...
     
     <div class="readmore">
       <a href="/2019/08/31/node/mongoose的CRUD/">阅读全部</a>
