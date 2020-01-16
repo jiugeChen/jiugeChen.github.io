@@ -221,8 +221,8 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/28/js/面向对象/">
-        面向对象
+      <a href="/2019/07/28/js/Call/">
+        Call
       </a>
     </h2>
     
@@ -246,28 +246,25 @@
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/28/js/面向对象/" class="hhhh">
+      <a href="/2019/07/28/js/Call/" class="hhhh">
     
-    创建对象的三中方式
-利用new object()创建对象
+    Call用法
 
-1var obj1=new Object();
+调用函数
 
-利用 对象字面量创建对象
+123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
 
-1var obj1=&#123;&#125;
-
-通过构造函数创建对象
-12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
+Call可以改变函数this的指向
+12345678function dr() &#123;   console.log("play");   ...
     
     <div class="readmore">
-      <a href="/2019/07/28/js/面向对象/">阅读全部</a>
+      <a href="/2019/07/28/js/Call/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/面向对象/">
-        面向对象</a>
+      <a href="/tags/Call/">
+        Call</a>
       
     </div>
     
@@ -338,8 +335,8 @@ class本质还是function
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/28/js/Call/">
-        Call
+      <a href="/2019/07/28/js/面向对象/">
+        面向对象
       </a>
     </h2>
     
@@ -363,25 +360,28 @@ class本质还是function
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/28/js/Call/" class="hhhh">
+      <a href="/2019/07/28/js/面向对象/" class="hhhh">
     
-    Call用法
+    创建对象的三中方式
+利用new object()创建对象
 
-调用函数
+1var obj1=new Object();
 
-123456function dr() &#123;   console.log("play");     console.log(this); //window     &#125; dr.call() //play
+利用 对象字面量创建对象
 
-Call可以改变函数this的指向
-12345678function dr() &#123;   console.log("play");   ...
+1var obj1=&#123;&#125;
+
+通过构造函数创建对象
+12345678function Star(name,sex)&#123;    this.name = name;    this.sex=sex;    this.sing=func...
     
     <div class="readmore">
-      <a href="/2019/07/28/js/Call/">阅读全部</a>
+      <a href="/2019/07/28/js/面向对象/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/Call/">
-        Call</a>
+      <a href="/tags/面向对象/">
+        面向对象</a>
       
     </div>
     
@@ -742,8 +742,8 @@ indexOf判断是否包含并且返回...
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Vue/监听/">
-        监听
+      <a href="/2019/07/05/Vue/cli/">
+        Cli
       </a>
     </h2>
     
@@ -767,22 +767,21 @@ indexOf判断是否包含并且返回...
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/05/Vue/监听/" class="hhhh">
+      <a href="/2019/07/05/Vue/cli/" class="hhhh">
     
-    监听文本框数据改变通过@keyup监听键盘
-1234567891011121314151617181920212223&lt;body&gt;  &lt;div id=&quot;app&quot;&gt;    &lt;input v-model=&quot;one&quot; @keyup=&quot;getAll&quot;&gt;    &lt;input v-model=&quot...
+    安装1npm install -g @vue/cli
+创建项目
+123vue create my-project# ORvue ui
+
     
     <div class="readmore">
-      <a href="/2019/07/05/Vue/监听/">阅读全部</a>
+      <a href="/2019/07/05/Vue/cli/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/监听/">
-        监听</a>
-      
-      <a href="/tags/watch/">
-        watch</a>
+      <a href="/tags/Cli/">
+        Cli</a>
       
     </div>
     
