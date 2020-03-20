@@ -400,8 +400,8 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/箭头函数/">
-        箭头函数
+      <a href="/2018/07/05/js/generator/">
+        generator
       </a>
     </h2>
     
@@ -425,30 +425,21 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
         background-color: transparent;
       }
       </style>
-      <a href="/2018/07/05/js/箭头函数/" class="hhhh">
+      <a href="/2018/07/05/js/generator/" class="hhhh">
     
-    
-之前的函数是这样写的
-123function 名字()&#123;   //  code&#125;
-
-而ES6是↓
-
-箭头函数
-
-如果只有一个参数，()可以省略
-如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
+    generatorgenerator-生成器
+普通函数- 一路到底
+generator函数- 中间可以停 走走停停
+12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
     
     <div class="readmore">
-      <a href="/2018/07/05/js/箭头函数/">阅读全部</a>
+      <a href="/2018/07/05/js/generator/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/ES6/">
-        ES6</a>
-      
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
+      <a href="/tags/generator/">
+        generator</a>
       
     </div>
     
@@ -588,8 +579,8 @@ ES6 常量 const
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/generator/">
-        generator
+      <a href="/2018/07/05/js/箭头函数/">
+        箭头函数
       </a>
     </h2>
     
@@ -613,21 +604,87 @@ ES6 常量 const
         background-color: transparent;
       }
       </style>
-      <a href="/2018/07/05/js/generator/" class="hhhh">
+      <a href="/2018/07/05/js/箭头函数/" class="hhhh">
     
-    generatorgenerator-生成器
-普通函数- 一路到底
-generator函数- 中间可以停 走走停停
-12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
+    
+之前的函数是这样写的
+123function 名字()&#123;   //  code&#125;
+
+而ES6是↓
+
+箭头函数
+
+如果只有一个参数，()可以省略
+如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
     
     <div class="readmore">
-      <a href="/2018/07/05/js/generator/">阅读全部</a>
+      <a href="/2018/07/05/js/箭头函数/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/generator/">
-        generator</a>
+      <a href="/tags/ES6/">
+        ES6</a>
+      
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
+      
+    </div>
+    
+  </a>
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/模块化/">
+        模块化
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    <style>
+      a.hhhh{
+        color: #333;
+      }
+      a.hhhh:hover{
+        background-color: transparent;
+      }
+      </style>
+      <a href="/2018/07/05/js/模块化/" class="hhhh">
+    
+    模块化
+模块-组件-元件
+模块：
+
+12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
+    
+    <div class="readmore">
+      <a href="/2018/07/05/js/模块化/">阅读全部</a>
+    </div>
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/ES6/">
+        ES6</a>
+      
+      <a href="/tags/模块化/">
+        模块化</a>
       
     </div>
     
@@ -689,63 +746,6 @@ Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
       
       <a href="/tags/ES6/">
         ES6</a>
-      
-    </div>
-    
-  </a>
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/js/模块化/">
-        模块化
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    <style>
-      a.hhhh{
-        color: #333;
-      }
-      a.hhhh:hover{
-        background-color: transparent;
-      }
-      </style>
-      <a href="/2018/07/05/js/模块化/" class="hhhh">
-    
-    模块化
-模块-组件-元件
-模块：
-
-12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
-    
-    <div class="readmore">
-      <a href="/2018/07/05/js/模块化/">阅读全部</a>
-    </div>
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/ES6/">
-        ES6</a>
-      
-      <a href="/tags/模块化/">
-        模块化</a>
       
     </div>
     
