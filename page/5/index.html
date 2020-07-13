@@ -220,8 +220,8 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Vue/cli/">
-        Cli
+      <a href="/2019/07/05/Vue/路由/">
+        Vue-Router
       </a>
     </h2>
     
@@ -245,21 +245,21 @@
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/05/Vue/cli/" class="hhhh">
+      <a href="/2019/07/05/Vue/路由/" class="hhhh">
     
-    安装1npm install -g @vue/cli
-创建项目
-123vue create my-project# ORvue ui
-
+    路由
+后端路由:对于普通的网站,所有的超链接都是URL地址,所有的URL地址都对应服务器上对应的资源;
+前端路由:对于单页面应用程序来说,主要通过URL中的hash(#号)来实现不同页面之间的切换,同时, hash有一个特点: HTTP请求中不会包含hash相关的内容;所以,单页面程序中的页面跳转主要用hash实现
+在单页面应用程序中,这种通过hash改变来切换页面的方式,称作前端路由(区别...
     
     <div class="readmore">
-      <a href="/2019/07/05/Vue/cli/">阅读全部</a>
+      <a href="/2019/07/05/Vue/路由/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/Cli/">
-        Cli</a>
+      <a href="/tags/Router/">
+        Router</a>
       
     </div>
     
@@ -342,8 +342,8 @@ Web服务API
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/Vue/自定义指令/">
-        自定义指令
+      <a href="/2019/07/05/移动端/模板 /">
+        移动端适配Rem
       </a>
     </h2>
     
@@ -351,11 +351,6 @@ Web服务API
       07-05, 2019
     </time>
     
-
-<div class='categories'>
-    <a href="/categories/Vue/">Vue</a>
-</div>
-
     
   </section>
   <section class="article typo">
@@ -367,27 +362,18 @@ Web服务API
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/05/Vue/自定义指令/" class="hhhh">
+      <a href="/2019/07/05/移动端/模板 /" class="hhhh">
     
-    自定义指令
-使用vue.dizective ()定义全局的指令 v-focus
-参数1 :指令的名称,注意,在定义的时候,指令的名称前面,不需要加v-前缀 
-但是:在调用的时候,必须在指令名称前加上v-前缀来进行调用 
-参数2:是一个对象,这个对象身上,有一些指令相关的函数,这些函数可以在特定的阶段,执行相关的操作
-
-1234567891011121314151617181920212223...
+    移动端适配12345678910111213141516171819202122232425var pageFontSize;var clientWidth;(function(doc, win) &#123;  var docEl = doc.documentElement,    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始...
     
     <div class="readmore">
-      <a href="/2019/07/05/Vue/自定义指令/">阅读全部</a>
+      <a href="/2019/07/05/移动端/模板 /">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/指令/">
-        指令</a>
-      
-      <a href="/tags/自定义/">
-        自定义</a>
+      <a href="/tags/移动端适配/">
+        移动端适配</a>
       
     </div>
     
@@ -578,63 +564,6 @@ PUT:发送东...
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/08/js/遍历方法/">
-        数据遍历
-      </a>
-    </h2>
-    
-    <time>
-      07-08, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    <style>
-      a.hhhh{
-        color: #333;
-      }
-      a.hhhh:hover{
-        background-color: transparent;
-      }
-      </style>
-      <a href="/2018/07/08/js/遍历方法/" class="hhhh">
-    
-    
-map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及格","不及格","及格","及格","及格","不及格"];// 1.使arr中数字乘以2，输出结果let arr = [12, 5, 8];let result = arr.map(item =&gt; item * 2)console.log(result);//(...
-    
-    <div class="readmore">
-      <a href="/2018/07/08/js/遍历方法/">阅读全部</a>
-    </div>
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
-      <a href="/tags/遍历/">
-        遍历</a>
-      
-      <a href="/tags/循环/">
-        循环</a>
-      
-    </div>
-    
-  </a>
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
       <a href="/2018/07/08/js/对象/">
         ES5中新增的方法
       </a>
@@ -693,8 +622,65 @@ valu...
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/结构赋值/">
-        解构赋值
+      <a href="/2018/07/08/js/遍历方法/">
+        数据遍历
+      </a>
+    </h2>
+    
+    <time>
+      07-08, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    <style>
+      a.hhhh{
+        color: #333;
+      }
+      a.hhhh:hover{
+        background-color: transparent;
+      }
+      </style>
+      <a href="/2018/07/08/js/遍历方法/" class="hhhh">
+    
+    
+map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及格","不及格","及格","及格","及格","不及格"];// 1.使arr中数字乘以2，输出结果let arr = [12, 5, 8];let result = arr.map(item =&gt; item * 2)console.log(result);//(...
+    
+    <div class="readmore">
+      <a href="/2018/07/08/js/遍历方法/">阅读全部</a>
+    </div>
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
+      
+      <a href="/tags/遍历/">
+        遍历</a>
+      
+      <a href="/tags/循环/">
+        循环</a>
+      
+    </div>
+    
+  </a>
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/模块化/">
+        模块化
       </a>
     </h2>
     
@@ -718,15 +704,16 @@ valu...
         background-color: transparent;
       }
       </style>
-      <a href="/2018/07/05/js/结构赋值/" class="hhhh">
+      <a href="/2018/07/05/js/模块化/" class="hhhh">
     
-    结构赋值
-左右两边结构必须一样;
-右边必须是个东西;
-声明和赋值不能分开(必须在一句话里说完);12345678 // 数组let [aq,bq,cq]=[1,2,3]; console.log(aq);//1 console.log(bq);//2 console.log(cq);//3 // 对象 let &#123;w,z,y&#125; = &#123;w:12,z:66,y:15&...
+    模块化
+模块-组件-元件
+模块：
+
+12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
     
     <div class="readmore">
-      <a href="/2018/07/05/js/结构赋值/">阅读全部</a>
+      <a href="/2018/07/05/js/模块化/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
@@ -734,8 +721,8 @@ valu...
       <a href="/tags/ES6/">
         ES6</a>
       
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
+      <a href="/tags/模块化/">
+        模块化</a>
       
     </div>
     
