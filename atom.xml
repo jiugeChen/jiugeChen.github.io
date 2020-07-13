@@ -59,11 +59,11 @@
   </entry>
   
   <entry>
-    <title>面向对象2</title>
+    <title>面向对象er</title>
     <link href="http://jiugework.gitee.io/2020/03/23/js/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/"/>
     <id>http://jiugework.gitee.io/2020/03/23/js/面向对象2/</id>
     <published>2020-03-23T09:15:21.324Z</published>
-    <updated>2020-03-25T07:31:16.163Z</updated>
+    <updated>2020-07-13T13:48:51.256Z</updated>
     
     <content type="html"><![CDATA[<h3 id="prototype、proto与constructor"><a href="#prototype、proto与constructor" class="headerlink" title="prototype、proto与constructor"></a>prototype、<strong>proto</strong>与constructor</h3><p>JS中的prototype、<strong>proto</strong>与constructor属性<br><img src="https://img.jiuge.site/imgbox/20200323/Lch2Cxx7P9Hw.png?imageslim" alt="mark"><br>右下角为图例，红色箭头表示<strong>proto</strong>属性指向、绿色箭头表示prototype属性的指向、棕色实线箭头表示本身具有的constructor属性的指向，棕色虚线箭头表示继承而来的constructor属性的指向；蓝色方块表示对象，浅绿色方块表示函数（这里为了更好看清，Foo()仅代表是函数，并不是指执行函数Foo后得到的结果，图中的其他函数同理）。图的中间部分即为它们之间的联系，图的最左边即为例子代码。</p><h4 id="proto"><a href="#proto" class="headerlink" title="proto"></a><strong>proto</strong></h4><ol><li><strong>proto</strong>和constructor属性是对象所独有的；</li><li>prototype属性是函数所独有的。但是由于JS中函数也是一种对象，所以函数也拥有<strong>proto</strong>和constructor属性</li></ol><p><strong>proto</strong> 属性，它是对象所独有的，可以看到<strong>proto</strong>属性都是由一个对象指向一个对象，即指向它们的原型对象（也可以理解为父对象），那么这个属性的作用是什么呢？它的作用就是当访问一个对象的属性时，如果该对象内部不存在这个属性，那么就会去它的<strong>proto</strong>属性所指向的那个对象（可以理解为父对象）里找，如果父对象也不存在这个属性，则继续往父对象的<strong>proto</strong>属性所指向的那个对象（可以理解为爷爷对象）里找，如果还没找到，则继续往上找…直到原型链顶端null（可以理解为原始人。。。），再往上找就相当于在null上取值，会报错（可以理解为，再往上就已经不是“人”的范畴了，找不到了，到此结束，null为原型链的终点），由以上这种通过<strong>proto</strong>属性来连接对象直到null的一条链即为我们所谓的原型链。<br>  其实我们平时调用的字符串方法、数组方法、对象方法、函数方法等都是靠<strong>proto</strong>继承而来的。</p><h4 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h4><p>  prototype属性，别忘了一点，就是我们前面提到要牢记的两点中的第二点，它是函数所独有的，它是从一个函数指向一个对象。<br>prototype属性，别忘了一点，就是我们前面提到要牢记的两点中的第二点，它是函数所独有的，它是从一个函数指向一个对象。它的含义是函数的原型对象，也就是这个函数（其实所有函数都可以作为构造函数）所创建的实例的原型对象，由此可知：f1.<strong>proto</strong> === Foo.prototype，它们两个完全一样。那prototype属性的作用又是什么呢？它的作用就是包含可以由特定类型的所有实例共享的属性和方法，也就是让该函数所实例化的对象们都可以找到公用的属性和方法。任何函数在创建的时候，其实会默认同时创建该函数的prototype对象。</p><h4 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h4><p>constructor属性也是对象才拥有的，它是从一个对象指向一个函数，含义就是指向该对象的构造函数，每个对象都有构造函数（本身拥有或继承而来，继承而来的要结合<strong>proto</strong>属性查看会更清楚点，如下图所示），从上图中可以看出Function这个对象比较特殊，它的构造函数就是它自己（因为Function可以看成是一个函数，也可以是一个对象），所有函数和对象最终都是由Function构造函数得来，所以constructor属性的终点就是Function这个函数。</p>]]></content>
     
