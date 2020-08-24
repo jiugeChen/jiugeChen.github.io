@@ -220,13 +220,13 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">
-        判断JS数据类型的四种方法
+      <a href="/2019/07/11/js/字符串常用操作/">
+        字符串常用操作
       </a>
     </h2>
     
     <time>
-      07-05, 2019
+      07-11, 2019
     </time>
     
 
@@ -245,24 +245,29 @@
         background-color: transparent;
       }
       </style>
-      <a href="/2019/07/05/js/判断JS数据类型的四种方法/" class="hhhh">
+      <a href="/2019/07/11/js/字符串常用操作/" class="hhhh">
     
-    
+    判断开头结尾
+startsWidth判断以什么开头  
+endsWidth判断以什么结尾 
+1let str='https://www.4399.com'; //   alert(str.startsWith('a'))  //判断是否以'a'开头，返回bool值 endsWidth同理
+
+
+判断包含
+includes判断是够包含某个字符串 返回bool值
+indexOf判断是否包含并且返回...
     
     <div class="readmore">
-      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">阅读全部</a>
+      <a href="/2019/07/11/js/字符串常用操作/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/数据类型/">
-        数据类型</a>
+      <a href="/tags/String/">
+        String</a>
       
-      <a href="/tags/判断数据类型/">
-        判断数据类型</a>
-      
-      <a href="/tags/检测类型/">
-        检测类型</a>
+      <a href="/tags/字符串/">
+        字符串</a>
       
     </div>
     
@@ -314,6 +319,62 @@
       
       <a href="/tags/generator/">
         generator</a>
+      
+    </div>
+    
+  </a>
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">
+        判断JS数据类型的四种方法
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2019
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    <style>
+      a.hhhh{
+        color: #333;
+      }
+      a.hhhh:hover{
+        background-color: transparent;
+      }
+      </style>
+      <a href="/2019/07/05/js/判断JS数据类型的四种方法/" class="hhhh">
+    
+    
+    
+    <div class="readmore">
+      <a href="/2019/07/05/js/判断JS数据类型的四种方法/">阅读全部</a>
+    </div>
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/数据类型/">
+        数据类型</a>
+      
+      <a href="/tags/判断数据类型/">
+        判断数据类型</a>
+      
+      <a href="/tags/检测类型/">
+        检测类型</a>
       
     </div>
     
@@ -486,73 +547,11 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
-      
       <a href="/tags/遍历/">
         遍历</a>
       
       <a href="/tags/循环/">
         循环</a>
-      
-    </div>
-    
-  </a>
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/js/箭头函数/">
-        箭头函数
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    <style>
-      a.hhhh{
-        color: #333;
-      }
-      a.hhhh:hover{
-        background-color: transparent;
-      }
-      </style>
-      <a href="/2018/07/05/js/箭头函数/" class="hhhh">
-    
-    
-之前的函数是这样写的
-123function 名字()&#123;   //  code&#125;
-
-而ES6是↓
-
-箭头函数
-
-如果只有一个参数，()可以省略
-如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
-    
-    <div class="readmore">
-      <a href="/2018/07/05/js/箭头函数/">阅读全部</a>
-    </div>
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/ES6/">
-        ES6</a>
       
       <a href="/tags/JavaScript/">
         JavaScript</a>
@@ -570,7 +569,7 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
     
     <h2 class="title">
       <a href="/2018/07/05/js/模块化/">
-        模块化
+        模块化规范
       </a>
     </h2>
     
@@ -596,11 +595,11 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
       </style>
       <a href="/2018/07/05/js/模块化/" class="hhhh">
     
-    模块化
+    CommonJS模块化
 模块-组件-元件
 模块：
 
-12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx.js',......
+12345678910//  - 定义: model.js     define(function (require,exports,module) &#123;    exports.a = 12;     exports.b=5;&#125;);  //   - 调用:  xx.htmlseajs.use(['xxxx.js','xxx...
     
     <div class="readmore">
       <a href="/2018/07/05/js/模块化/">阅读全部</a>
@@ -608,67 +607,8 @@ map      映射    一个对一个 123456789101112 [12,58,60,60,99,8] ["不及�
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/ES6/">
-        ES6</a>
-      
       <a href="/tags/模块化/">
         模块化</a>
-      
-    </div>
-    
-  </a>
-  </section>
-</article>
-  </div>
-  
-  <div class='post-wrapper'>
-    <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/07/05/js/结构赋值/">
-        解构赋值
-      </a>
-    </h2>
-    
-    <time>
-      07-05, 2018
-    </time>
-    
-
-<div class='categories'>
-    <a href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-    
-  </section>
-  <section class="article typo">
-    <style>
-      a.hhhh{
-        color: #333;
-      }
-      a.hhhh:hover{
-        background-color: transparent;
-      }
-      </style>
-      <a href="/2018/07/05/js/结构赋值/" class="hhhh">
-    
-    结构赋值
-左右两边结构必须一样;
-右边必须是个东西;
-声明和赋值不能分开(必须在一句话里说完);12345678 // 数组let [aq,bq,cq]=[1,2,3]; console.log(aq);//1 console.log(bq);//2 console.log(cq);//3 // 对象 let &#123;w,z,y&#125; = &#123;w:12,z:66,y:15&...
-    
-    <div class="readmore">
-      <a href="/2018/07/05/js/结构赋值/">阅读全部</a>
-    </div>
-    
-    <div class="full-width auto-padding tags">
-      
-      <a href="/tags/ES6/">
-        ES6</a>
-      
-      <a href="/tags/JavaScript/">
-        JavaScript</a>
       
     </div>
     
@@ -752,8 +692,8 @@ ES6 常量 const
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2018/07/05/js/generator/">
-        generator
+      <a href="/2018/07/05/js/Promise/">
+        Promise
       </a>
     </h2>
     
@@ -777,21 +717,91 @@ ES6 常量 const
         background-color: transparent;
       }
       </style>
-      <a href="/2018/07/05/js/generator/" class="hhhh">
+      <a href="/2018/07/05/js/Promise/" class="hhhh">
     
-    generatorgenerator-生成器
-普通函数- 一路到底
-generator函数- 中间可以停 走走停停
-12345678910 function *show() &#123;     alert('a');     yield;     alert('b') &#125; show(); let gentObj = show(); gentObj.next(); //a gent...
+    
+异步: 操作直接没啥关系,同时进行多个操作，代码复杂。
+同步: 同时只能做一件事 代码简单。
+本质：等待异步操作结束
+当状态改变的时候—调用之前挂起的then队列
+then的时候直接执行对应的函数，并且参数给人家。
+
+
+
+Promise 用法Promise.all  一个都不能错Promise.race 只要有一个对
+一个
+123456789101112131415161718192021...
     
     <div class="readmore">
-      <a href="/2018/07/05/js/generator/">阅读全部</a>
+      <a href="/2018/07/05/js/Promise/">阅读全部</a>
     </div>
     
     <div class="full-width auto-padding tags">
       
-      <a href="/tags/generator/">
-        generator</a>
+      <a href="/tags/ES6/">
+        ES6</a>
+      
+    </div>
+    
+  </a>
+  </section>
+</article>
+  </div>
+  
+  <div class='post-wrapper'>
+    <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/07/05/js/箭头函数/">
+        箭头函数
+      </a>
+    </h2>
+    
+    <time>
+      07-05, 2018
+    </time>
+    
+
+<div class='categories'>
+    <a href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+    
+  </section>
+  <section class="article typo">
+    <style>
+      a.hhhh{
+        color: #333;
+      }
+      a.hhhh:hover{
+        background-color: transparent;
+      }
+      </style>
+      <a href="/2018/07/05/js/箭头函数/" class="hhhh">
+    
+    
+之前的函数是这样写的
+123function 名字()&#123;   //  code&#125;
+
+而ES6是↓
+
+箭头函数
+
+如果只有一个参数，()可以省略
+如果只有一个return {}可以省略 1234567891011121314151617()=&gt;&#123; &#125;;window.onload= ()=&gt; alert('vb');let show=func...
+    
+    <div class="readmore">
+      <a href="/2018/07/05/js/箭头函数/">阅读全部</a>
+    </div>
+    
+    <div class="full-width auto-padding tags">
+      
+      <a href="/tags/ES6/">
+        ES6</a>
+      
+      <a href="/tags/JavaScript/">
+        JavaScript</a>
       
     </div>
     
@@ -858,7 +868,7 @@ generator函数- 中间可以停 走走停停
 <section class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/Call/" style="font-size: 14px; color: #808080">Call</a> <a href="/tags/Class/" style="font-size: 14px; color: #808080">Class</a> <a href="/tags/Cli/" style="font-size: 14px; color: #808080">Cli</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/GET/" style="font-size: 14px; color: #808080">GET</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 16.67px; color: #2b2b2b">JavaScript</a> <a href="/tags/Node特点/" style="font-size: 14px; color: #808080">Node特点</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/POST/" style="font-size: 14px; color: #808080">POST</a> <a href="/tags/Router/" style="font-size: 15.33px; color: #555">Router</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/Vue组件/" style="font-size: 14px; color: #808080">Vue组件</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/export/" style="font-size: 14px; color: #808080">export</a> <a href="/tags/generator/" style="font-size: 16.67px; color: #2b2b2b">generator</a> <a href="/tags/ref/" style="font-size: 14px; color: #808080">ref</a> <a href="/tags/watch/" style="font-size: 14px; color: #808080">watch</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/判断数据类型/" style="font-size: 14px; color: #808080">判断数据类型</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/命名视图/" style="font-size: 14px; color: #808080">命名视图</a> <a href="/tags/基本类型/" style="font-size: 14px; color: #808080">基本类型</a> <a href="/tags/子组件/" style="font-size: 14px; color: #808080">子组件</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/引用类型/" style="font-size: 14px; color: #808080">引用类型</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/拷贝/" style="font-size: 14px; color: #808080">拷贝</a> <a href="/tags/指令/" style="font-size: 15.33px; color: #555">指令</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #808080">数据类型</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/检测类型/" style="font-size: 14px; color: #808080">检测类型</a> <a href="/tags/模块化/" style="font-size: 15.33px; color: #555">模块化</a> <a href="/tags/监听/" style="font-size: 14px; color: #808080">监听</a> <a href="/tags/移动端适配/" style="font-size: 15.33px; color: #555">移动端适配</a> <a href="/tags/组件/" style="font-size: 14px; color: #808080">组件</a> <a href="/tags/组件传值/" style="font-size: 14px; color: #808080">组件传值</a> <a href="/tags/组件化/" style="font-size: 14px; color: #808080">组件化</a> <a href="/tags/组件通信/" style="font-size: 14px; color: #808080">组件通信</a> <a href="/tags/组件通讯/" style="font-size: 14px; color: #808080">组件通讯</a> <a href="/tags/自定义/" style="font-size: 14px; color: #808080">自定义</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/过滤器/" style="font-size: 14px; color: #808080">过滤器</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/面向对象/" style="font-size: 15.33px; color: #555">面向对象</a>
+        <a href="/tags/Array/" style="font-size: 14px; color: #808080">Array</a> <a href="/tags/Call/" style="font-size: 14px; color: #808080">Call</a> <a href="/tags/Class/" style="font-size: 14px; color: #808080">Class</a> <a href="/tags/Cli/" style="font-size: 14px; color: #808080">Cli</a> <a href="/tags/ES5新增方法/" style="font-size: 14px; color: #808080">ES5新增方法</a> <a href="/tags/ES6/" style="font-size: 18px; color: #000">ES6</a> <a href="/tags/GET/" style="font-size: 14px; color: #808080">GET</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #000">JavaScript</a> <a href="/tags/Node特点/" style="font-size: 14px; color: #808080">Node特点</a> <a href="/tags/Number/" style="font-size: 14px; color: #808080">Number</a> <a href="/tags/POST/" style="font-size: 14px; color: #808080">POST</a> <a href="/tags/Router/" style="font-size: 16px; color: #404040">Router</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Vue样式/" style="font-size: 14px; color: #808080">Vue样式</a> <a href="/tags/Vue组件/" style="font-size: 14px; color: #808080">Vue组件</a> <a href="/tags/ajax/" style="font-size: 14px; color: #808080">ajax</a> <a href="/tags/export/" style="font-size: 14px; color: #808080">export</a> <a href="/tags/generator/" style="font-size: 18px; color: #000">generator</a> <a href="/tags/ref/" style="font-size: 14px; color: #808080">ref</a> <a href="/tags/watch/" style="font-size: 14px; color: #808080">watch</a> <a href="/tags/函数进阶/" style="font-size: 14px; color: #808080">函数进阶</a> <a href="/tags/判断数据类型/" style="font-size: 14px; color: #808080">判断数据类型</a> <a href="/tags/变量/" style="font-size: 14px; color: #808080">变量</a> <a href="/tags/命名视图/" style="font-size: 14px; color: #808080">命名视图</a> <a href="/tags/基本类型/" style="font-size: 14px; color: #808080">基本类型</a> <a href="/tags/子组件/" style="font-size: 14px; color: #808080">子组件</a> <a href="/tags/字符串/" style="font-size: 14px; color: #808080">字符串</a> <a href="/tags/常用CSS/" style="font-size: 14px; color: #808080">常用CSS</a> <a href="/tags/引用类型/" style="font-size: 14px; color: #808080">引用类型</a> <a href="/tags/循环/" style="font-size: 14px; color: #808080">循环</a> <a href="/tags/拷贝/" style="font-size: 14px; color: #808080">拷贝</a> <a href="/tags/指令/" style="font-size: 16px; color: #404040">指令</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #808080">数据类型</a> <a href="/tags/数组/" style="font-size: 14px; color: #808080">数组</a> <a href="/tags/检测类型/" style="font-size: 14px; color: #808080">检测类型</a> <a href="/tags/模块化/" style="font-size: 16px; color: #404040">模块化</a> <a href="/tags/监听/" style="font-size: 14px; color: #808080">监听</a> <a href="/tags/移动端适配/" style="font-size: 16px; color: #404040">移动端适配</a> <a href="/tags/组件/" style="font-size: 14px; color: #808080">组件</a> <a href="/tags/组件传值/" style="font-size: 14px; color: #808080">组件传值</a> <a href="/tags/组件化/" style="font-size: 14px; color: #808080">组件化</a> <a href="/tags/组件通信/" style="font-size: 14px; color: #808080">组件通信</a> <a href="/tags/组件通讯/" style="font-size: 14px; color: #808080">组件通讯</a> <a href="/tags/自定义/" style="font-size: 14px; color: #808080">自定义</a> <a href="/tags/请求数据/" style="font-size: 14px; color: #808080">请求数据</a> <a href="/tags/过滤器/" style="font-size: 14px; color: #808080">过滤器</a> <a href="/tags/遍历/" style="font-size: 14px; color: #808080">遍历</a> <a href="/tags/面向对象/" style="font-size: 16px; color: #404040">面向对象</a>
     </div>
 </section>
 
@@ -910,7 +920,7 @@ generator函数- 中间可以停 走走停停
                         JavaScript
                     </div>
                     <div class='badget'>
-                        22
+                        23
                     </div>
                 </a></li>
             
